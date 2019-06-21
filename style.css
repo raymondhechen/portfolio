@@ -1,0 +1,53 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/*HEADER NAVBAR CSS*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7.5%;
+    padding: 10px;
+    display: block;
+    background-color: #333;
+}
+
+h1.navbar {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0px 0px 35px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #0059b3;
+}
+
+/*background-color: #181818*/
