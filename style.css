@@ -199,18 +199,18 @@ nav a:hover {
     display: flex;
     height: 10vh;
     color: black;
-    padding: 7.5vh 0 10vh 5vw;
-    border-width: 1px;
-    border-style: solid;
+    padding: 7.5vh 0 7.5vh 5vw;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
 }
 
 .research {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 115vh;
     background-color: #fdfdf8;
-    border-width: 1px;
-    border-style: solid;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
 }
 
 .research .row {
@@ -218,8 +218,8 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     float: left;
-    border-width: 1px;
-    border-style: solid;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
 }
 
 .research .row .card {
@@ -229,7 +229,11 @@ nav a:hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 22.5vw;
     height: 45vh;
-    margin: 5vh 4vw 5vh 4vw;
+    margin: 5vh 3vw 3.5vh 3vw;
+}
+
+.research .row .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .research .row .card .cimage {
@@ -246,8 +250,10 @@ nav a:hover {
 .research .row .card .ctext {
     width: auto;
     height: 15vh;
-    border-width: 1px;
-    border-style: solid;
+    font-size: 15px;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    padding: 1vh 1vw 0 1vw;
 }
 
 
