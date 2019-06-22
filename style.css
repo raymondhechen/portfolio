@@ -106,8 +106,8 @@ nav a:hover {
 
 .resume .rcol {
     width: 50%;
-    border-width: 1px;
-    border-style: solid;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
 }
 
 .resume .rsection {
@@ -141,6 +141,18 @@ nav a:hover {
     color: rgba(255, 255, 255, 0.904);
     font-size: 15px;
     margin: 10px 10px 5px 0;
+}
+
+.rpics {
+    display: flex;
+    background-color: #0a2f52;
+    height: 20vh;
+}
+
+.rpics .rpicscol {
+    width: 33.33%;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
 }
 
 /*background-color: #181818*/
