@@ -106,7 +106,7 @@ nav a:hover {
 }
 
 .rtitle .rpdf {
-    padding: 10vh 0 0 75vw;
+    padding: 8vh 0 0 75vw;
 }
 
 .rtitle .rpdf .icon {
@@ -172,6 +172,12 @@ nav a:hover {
     margin: 10px 10px 5px 0;
 }
 
+.resume .rcol .rsection .rsub4 {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 15px;
+    margin: 0 0 10px 5vh;
+}
+
 .rpics {
     display: flex;
     background-color: #0a2f52;
@@ -184,10 +190,20 @@ nav a:hover {
     /*border-style: solid;*/
 }
 
+.retitle {
+    display: flex;
+    height: 10vh;
+    color: black;
+    padding: 7.5vh 0 0 5vw;
+}
+
 .research {
     display: flex;
     height: 100vh;
     background-color: #fdfdf8;
 }
+
+
+
 
 /*background-color: #181818*/
