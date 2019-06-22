@@ -76,7 +76,7 @@ nav a:hover {
 }
 
 .icons {
-    padding: 2vh 42.5vw 0 0;
+    padding: 2vh 39.5vw 0 0;
 }
 
 .icons .icon {
@@ -88,17 +88,40 @@ nav a:hover {
 }
 
 .icons .icon:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .resume {
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
     margin-top: 30vh;
-    border-width: 1px;
-    border-style: solid;
-    border-block-color: blue;
+    padding: 10vh 0 0 0;
+    background-color: #0a2f52;
+}
+
+.resume .rcol {
+    width: 50%;
+}
+
+.resume .rsection {
+    margin: 10px 10px 0 10px;
+    padding: 0 0 1vh 5vw;
+}
+
+.resume .rhead {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 20px;
+}
+
+.resume .rsection ul {
+    list-style-type: disc;
+    margin: 0 0 0 3vw;
+}
+
+.resume .rsub {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 15px;
+    margin: 10px 10px 10px 0;
 }
 
 /*background-color: #181818*/
