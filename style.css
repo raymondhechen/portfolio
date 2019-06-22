@@ -17,6 +17,7 @@ header {
     padding: 10px;
     display: block;
     background-color: #333;
+    z-index: 99; /*Allows position: relative to go under header*/
 }
 
 h1.navbar {
@@ -214,17 +215,39 @@ nav a:hover {
 
 .research .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
     float: left;
     border-width: 1px;
     border-style: solid;
 }
 
 .research .row .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #0059b3;
     width: 22.5vw;
     height: 45vh;
-    margin: 5vh 5vw 5vh 5vw;
+    margin: 5vh 4vw 5vh 4vw;
+}
+
+.research .row .card .cimage {
+    width: auto;
+    height: 30vh;
+}
+
+.research .row .card .cimage .cpic {
+    width: 22.5vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.research .row .card .ctext {
+    width: auto;
+    height: 15vh;
+    border-width: 1px;
+    border-style: solid;
 }
 
 
