@@ -326,6 +326,24 @@ nav a:hover {
     align-items: center;
     min-height: 25vh;
     background-color: #333;
+    color: #fdfdf8;
+}
+
+.footer .icons {
+    padding: 7.5vh 0 0 0;
+}
+
+
+.footer .icons .icon {
+    display: block;
+    float: right;
+    padding: 5px 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.footer .icons .icon:hover {
+    opacity: 0.5;
 }
 
 
