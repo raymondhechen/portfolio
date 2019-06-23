@@ -1,0 +1,61 @@
+.retitle {
+    display: flex;
+    height: 10vh;
+    color: black;
+    padding: 7.5vh 0 7.5vh 5vw;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
+
+.research {
+    display: flex;
+    flex-direction: column;
+    min-height: 115vh;
+    background-color: #fdfdf8;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
+
+.research .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
+
+.research .row .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 22.5vw;
+    height: 45vh;
+    margin: 5vh 3vw 3.5vh 3vw;
+}
+
+.research .row .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.research .row .card .cimage {
+    width: auto;
+    height: 30vh;
+}
+
+.research .row .card .cimage .cpic {
+    width: 22.5vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.research .row .card .ctext {
+    width: auto;
+    height: 15vh;
+    font-size: 15px;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    padding: 1vh 1vw 0 1vw;
+}
+

@@ -1,0 +1,64 @@
+.ptitle {
+    display: flex;
+    height: 10vh;
+    background-color: #0a2f52;
+    color: rgba(255, 255, 255, 0.904);
+}
+
+.ptitle .pword {
+    display: flex;
+    height: 10vh;
+    color: #fdfdf8;
+    padding: 7.5vh 0 7.5vh 5vw;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+    background-color: #0a2f52;
+    padding: 5vh 0 0 0;
+}
+
+.projects .row .card {
+    display: flex;
+
+    justify-content: center;
+    float: left;
+}
+
+.projects .row .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 85vw;
+    height: 27.5vh;
+    margin: 5vh 3vw 3.5vh 3vw;
+    background-color: #fdfdf8;
+}
+
+.projects .row .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.projects .row .card .cimage {
+    width: auto;
+    height: 15vh;
+}
+
+.projects .row .card .cimage .cpic {
+    width: 85vw;
+    height: 15vh;
+    object-fit: cover;
+}
+
+.projects .row .card .ctext {
+    width: auto;
+    height: 15vh;
+    font-size: 15px;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    padding: 1vh 1vw 0 1vw;
+}

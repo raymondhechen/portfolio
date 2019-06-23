@@ -1,0 +1,97 @@
+.rtitle {
+    display: flex;
+    height: 10vh;
+    margin-top: 30vh;
+    background-color: #0a2f52;
+    color: rgba(255, 255, 255, 0.904);
+}
+
+.rtitle .rtitleword {
+    float: left;
+    padding: 10vh 0 0 5vw;
+}
+
+.rtitle .rpdf {
+    padding: 8vh 0 0 75vw;
+}
+
+.rtitle .rpdf .icon {
+    padding: 5px 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.resume {
+    display: flex;
+    height: 80vh;
+    padding: 10vh 0 0 0;
+    background-color: #0a2f52;
+}
+
+.resume a {
+    color: rgba(255, 255, 255, 0.904);
+    text-decoration: none;
+}
+
+.resume .rtitle {
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+}
+
+.resume .rcol {
+    width: 50%;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
+
+.resume .rsection {
+    margin: 10px 10px 0 10px;
+    padding: 0 0 1vh 5vw;
+}
+
+.resume .rhead {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 20px;
+}
+
+.resume .rsection ul {
+    list-style-type: disc;
+    margin: 0 0 0 3vw;
+}
+
+.resume .rcol .rsection .rsub {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 15px;
+    margin: 10px 10px 10px 0;
+}
+
+.resume .rcol .rsection .rsub2 {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 15px;
+    margin: 0 0 0 5vh;
+}
+
+.resume .rcol .rsection .rsub3 {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 15px;
+    margin: 10px 10px 5px 0;
+}
+
+.resume .rcol .rsection .rsub4 {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 15px;
+    margin: 0 0 10px 5vh;
+}
+
+.rpics {
+    display: flex;
+    background-color: #0a2f52;
+    height: 30vh;
+}
+
+.rpics .rpicscol {
+    width: 33.33%;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
