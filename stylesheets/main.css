@@ -1,29 +1,30 @@
 .main {
     display: flex;
-    padding-top: 100px;
+    padding-top: 15vh;
+    height: 70vh;
+    max-width: 100vw;
 }
 
 .main .portrait {
     float: left;
     object-fit: cover;
     border-radius: 75%;
-    width: 250px;
-    height: 250px;
-    margin: 125px 100px 0 300px;
-    align-self: flex-start;
+    max-width: 250px;
+    max-height: 250px;
+    width: 20vw;
+    height: 20vw;
+    margin: 16vh 7.5vw 0 22vw;
 }
 
 .main .about {
     float: right;
-    width: 50%;
-    margin: 125px 200px 0 0;
-    box-sizing: border-box;
+    margin: 16vh 15vw 0 0;
+    font-size: 1.175vw;
     justify-content: center;
-    flex: 1 1 auto;
 }
 
 .icons {
-    padding: 2vh 36.5vw 0 0;
+    margin: 0 36.5vw 30vh 0;
 }
 
 .icons .icon {

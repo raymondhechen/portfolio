@@ -1,7 +1,6 @@
 .rtitle {
     display: flex;
-    height: 10vh;
-    margin-top: 30vh;
+    margin-top: 25vh;
     background-color: #0a2f52;
     color: rgba(255, 255, 255, 0.904);
 }
@@ -9,6 +8,7 @@
 .rtitle .rtitleword {
     float: left;
     padding: 10vh 0 0 5vw;
+    font-size: 1.175vw;
 }
 
 .rtitle .rpdf {
@@ -23,8 +23,8 @@
 
 .resume {
     display: flex;
-    height: 80vh;
-    padding: 10vh 0 0 0;
+    height: 70vh;
+    padding: 4vh 0 0 0;
     background-color: #0a2f52;
 }
 
@@ -52,7 +52,8 @@
 
 .resume .rhead {
     color: rgba(255, 255, 255, 0.904);
-    font-size: 20px;
+    font-size: 1.475vw;
+    
 }
 
 .resume .rsection ul {
@@ -62,25 +63,25 @@
 
 .resume .rcol .rsection .rsub {
     color: rgba(255, 255, 255, 0.904);
-    font-size: 15px;
+    font-size: 1.1vw;
     margin: 10px 10px 10px 0;
 }
 
 .resume .rcol .rsection .rsub2 {
     color: rgba(255, 255, 255, 0.904);
-    font-size: 15px;
+    font-size: 1.1vw;
     margin: 0 0 0 5vh;
 }
 
 .resume .rcol .rsection .rsub3 {
     color: rgba(255, 255, 255, 0.904);
-    font-size: 15px;
+    font-size: 1.1vw;
     margin: 10px 10px 5px 0;
 }
 
 .resume .rcol .rsection .rsub4 {
     color: rgba(255, 255, 255, 0.904);
-    font-size: 15px;
+    font-size: 1.1vw;
     margin: 0 0 10px 5vh;
 }
 

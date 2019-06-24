@@ -7,12 +7,12 @@
     color: #fdfdf8;
 }
 
-.footer .icons {
+.footer .ficons {
     padding: 7.5vh 0 0 0;
 }
 
 
-.footer .icons .icon {
+.footer .ficons .ficon {
     display: block;
     float: right;
     padding: 5px 5px;
@@ -20,6 +20,6 @@
     height: 40px;
 }
 
-.footer .icons .icon:hover {
+.footer .ficons .ficon:hover {
     opacity: 0.5;
 }
