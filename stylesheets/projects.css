@@ -23,14 +23,9 @@
 
 .projects .row .card {
     display: flex;
-
+    flex-direction: column;
     justify-content: center;
     float: left;
-}
-
-.projects .row .card {
-    display: flex;
-    flex-direction: column;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 85vw;
@@ -58,6 +53,7 @@
     width: auto;
     height: 15vh;
     font-size: 15px;
+    color: black;
     /*border-width: 1px;*/
     /*border-style: solid;*/
     padding: 1vh 1vw 0 1vw;
