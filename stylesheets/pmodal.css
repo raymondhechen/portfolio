@@ -1,36 +1,67 @@
 .projects .row .pmodal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .projects .row .pmodal .pmodalc {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdf8;
+    margin: 7.5% auto; /* 5% from the top and centered */
+    padding: 5vh 4vw 2.5vh 4vw;
+    height: 70vh;
+    width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
-.projects .row .pmodal .pmodalhead .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.projects .row .pmodal .pmodalc .pmodalhead .close {
+    float: right;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.projects .row .pmodal .modalc .pmodalcol {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects .row .pmodal .pmodalc .pmodalcol .pmodalimg {
+    float: left;
+    width: 35vw;
+}
+
+.projects .row .pmodal .pmodalc .pmodalcol .pmodalimg .pmodalbodyimg {
+    width: 35vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.projects .row .pmodal .pmodalc .pmodalcol .pmodaltext {
+    width: 30vw;
+    height: 50vh;
+    float: right;
+    margin: 2.5vh 0 0 0;
+}
+
+.projects .row .pmodal .pmodalc .pmodalcol .pmodaltext .icon {
+    padding: 5px 5px;
+    width: 40px;
+    height: 40px;
 }
