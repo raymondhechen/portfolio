@@ -14,7 +14,7 @@ h1.navbar {
     display: block;
     float: left;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-align: center;
     text-decoration: none;
     color: white;
@@ -30,6 +30,7 @@ nav ul {
 
 nav li {
     float: right;
+    font-size: 1.175vw;
 }
 
 nav a {
