@@ -1,4 +1,4 @@
-.projects .row .pmodal {
+.research .row .rmodal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -12,7 +12,7 @@
 }
 
 /* Modal Content/Box */
-.projects .row .pmodal .pmodalc {
+.research .row .rmodal .rmodalc {
     display: flex;
     flex-direction: column;
     background-color: #fdfdf8;
@@ -23,7 +23,7 @@
 }
 
 /* The Close Button */
-.projects .row .pmodal .pmodalc .pmodalhead .close {
+.research .row .rmodal .rmodalc .rmodalhead .close {
     float: right;
     color: #aaa;
     float: right;
@@ -37,25 +37,26 @@
     cursor: pointer;
 }
 
-.projects .row .pmodal .pmodalc .pmodalcol .pmodalimg {
+.research .row .rmodal .rmodalc .rmodalcol .rmodalimg {
     float: left;
     width: 35vw;
 }
 
-.projects .row .pmodal .pmodalc .pmodalcol .pmodalimg .pmodalbodyimg {
+.research .row .rmodal .rmodalc .rmodalcol .rmodalimg .rmodalbodyimg {
+    padding: 3vh 0 0 0;
     width: 35vw;
-    height: 50vh;
+    height: 45vh;
     object-fit: cover;
 }
 
-.projects .row .pmodal .pmodalc .pmodalcol .pmodaltext {
+.research .row .rmodal .rmodalc .rmodalcol .rmodaltext {
     width: 30vw;
     height: 50vh;
     float: right;
     margin: 2.5vh 0 0 0;
 }
 
-.projects .row .pmodal .pmodalc .pmodalcol .pmodaltext .icon {
+.research .row .rmodal .rmodalc .rmodalcol .rmodaltext .icon {
     padding: 1vh 0 0 0;
     width: 2.5vw;
     height: 2.5vw;

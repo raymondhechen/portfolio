@@ -8,10 +8,12 @@
         <link rel="stylesheet" href="stylesheets/main.css">
         <link rel="stylesheet" href="stylesheets/resume.css">
         <link rel="stylesheet" href="stylesheets/research.css">
+        <link rel="stylesheet" href="stylesheets/rmodal.css">
         <link rel="stylesheet" href="stylesheets/projects.css">
         <link rel="stylesheet" href="stylesheets/pmodal.css">
         <link rel="stylesheet" href="stylesheets/footer.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <script src="scripts/rmodal.js"></script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
@@ -179,7 +181,7 @@
         <!--Research Content-->
         <div class="research">
             <div class="row">
-                <div class="card">
+                <div class="card" style="cursor:pointer" onclick="displayModal('rmodal6');">
                     <div class="cimage">
                         <img src="images/research6.png" class="cpic">
                         <h1 style="color: white; font-size: 1.5vw; position: absolute; left: 1vw; bottom: 16vh"><strong>Calcium Imaging Real Time Analysis & Stimulation Platform</strong></h1>
@@ -190,7 +192,32 @@
                         <p style="font-size: 0.9vw;">Constructing a real-time calcium-imaging analysis and stimulation platform using Python</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="rmodal" id="rmodal6">
+                    <div class="rmodalc">
+                        <div class="rmodalhead">
+                            <span class="close" onclick="closeModal('rmodal6');">&times;</span>
+                            <h2>Calcium Imaging Real Time Analysis & Stimulation Platform</h2>
+                            <h3>Pearson Lab, Duke University</h3>
+                            <h3>2019</h3>
+                        </div>
+                        <div class="rmodalcol">
+                            <div class="rmodalimg">
+                                <img src="images/research6.png" class="rmodalbodyimg">
+                            </div>
+                            <div class="rmodaltext">
+                                <h4>Description</h4>
+                                <p style="font-size: 1vw;">A real-time calcium imaging analysis and stimulation platform using CaImAn.</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p style="font-size: 1vw;">Python</p>
+                                <br>
+                                <h4>Links</h4>
+                                <a href="https://github.com/raymondhechen/rasp" target="_blank"><img src="images/github.svg" class="icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="cursor:pointer" onclick="displayModal('rmodal5');">
                     <div class="cimage">
                         <img src="images/research5.jpg" class="cpic">
                         <h1 style="color: white; font-size: 1.5vw; position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Analysis of Bcl2L12 on Melanoma in a Zebrafish Model</strong></h1>
@@ -201,7 +228,32 @@
                         <p style="font-size: 0.9vw;">Analyzing the effect of anti-apoptotic protein Bcl2L12 on Melanoma development</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="rmodal" id="rmodal5">
+                    <div class="rmodalc">
+                        <div class="rmodalhead">
+                            <span class="close" onclick="closeModal('rmodal5');">&times;</span>
+                            <h2>Analysis of Bcl2L12 on Melanoma in a Zebrafish Model</h2>
+                            <h3>Pingry School</h3>
+                            <h3>2018</h3>
+                        </div>
+                        <div class="rmodalcol">
+                            <div class="rmodalimg">
+                                <img src="images/research5.jpg" class="rmodalbodyimg">
+                            </div>
+                            <div class="rmodaltext">
+                                <h4>Description</h4>
+                                <p style="font-size: 1vw;">A study analyzing the effect of the anti-apoptotic protein, Bcl2L12, on cutaneous melanoma growth using a Tol2 zebrafish model.</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p style="font-size: 1vw;">Tol2 Gateway Cloning, DNA Minipreps, Bacterial Transformations, etc.</p>
+                                <br>
+                                <h4>Links</h4>
+                                <a href="pdf/research5.pdf" target="_blank"><img src="images/pdf.svg" class="icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="cursor:pointer" onclick="displayModal('rmodal4');">
                     <div class="cimage">
                         <img src="images/research4.jpg" class="cpic">
                         <h1 style="color: white; font-size: 1.5vw; position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Spatiotemporal Sequence Learning in Mouse V1</strong></h1>
@@ -209,12 +261,38 @@
                     <div class="ctext">
                         <p style="font-size: 1.10vw;"><strong>Gavornik Lab, Boston University</strong></p>
                         <p style="font-size: 1.15vw;"><strong>2017</strong></p>
-                        <p style="font-size: 0.9vw;">Understanding spatiotemporal sequence learning in mouse primary visual cortex V1</p>
+                        <p style="font-size: 0.9vw;">Understanding spatiotemporal sequence learning in mouse primary visual cortex</p>
+                    </div>
+                </div>
+                <div class="rmodal" id="rmodal4">
+                    <div class="rmodalc">
+                        <div class="rmodalhead">
+                            <span class="close" onclick="closeModal('rmodal4');">&times;</span>
+                            <h2>Spatiotemporal Sequence Learning in Mouse V1</h2>
+                            <h3>Gavornik Lab, Boston University</h3>
+                            <h3>2017</h3>
+                        </div>
+                        <div class="rmodalcol">
+                            <div class="rmodalimg">
+                                <img src="images/research4.jpg" class="rmodalbodyimg">
+                            </div>
+                            <div class="rmodaltext">
+                                <h4>Description</h4>
+                                <p style="font-size: 1vw;">Proposed and executed a project analyzing spatiotemporal sequence learning in mouse primary visual cortex using
+                                MATLAB, Electrophysiology, and Immunohistochemistry. Programmed a frame-by-frame video analyzer using MATLAB to track mouse motion inside a box</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p style="font-size: 1vw;">MATLAB, Electrophysiology, Immunohistochemistry</p>
+                                <br>
+                                <h4>Links</h4>
+                                <a href="pdf/research4.pdf" target="_blank"><img src="images/pdf.svg" class="icon"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         <div class="row">
-                <div class="card">
+                <div class="card" style="cursor:pointer" onclick="displayModal('rmodal3');">
                     <div class="cimage">
                         <img src="images/research3.jpg" class="cpic">
                         <h1 style="color: white; font-size: 1.5vw; position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Studying p53-knockout Glioblastoma in Mice</strong></h1>
@@ -225,7 +303,29 @@
                         <p style="font-size: 0.9vw;">Studying various gene-knockout methods and glioblastoma models</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="rmodal" id="rmodal3">
+                    <div class="rmodalc">
+                        <div class="rmodalhead">
+                            <span class="close" onclick="closeModal('rmodal3');">&times;</span>
+                            <h2>Studying p53-knockout Glioblastoma in Mice</h2>
+                            <h3>Zhu Lab, Children's National Medical Center</h3>
+                            <h3>2016</h3>
+                        </div>
+                        <div class="rmodalcol">
+                            <div class="rmodalimg">
+                                <img src="images/research3.jpg" class="rmodalbodyimg">
+                            </div>
+                            <div class="rmodaltext">
+                                <h4>Description</h4>
+                                <p style="font-size: 1vw;">Studied evolution of malignant gliomas in the subventricular zone stem-cell niche of p53-knockout mice</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p style="font-size: 1vw;">PCR, Gel Electrophoresis, Histology, Immunohistochemistry, Cell Culturing, Microscopy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="cursor:pointer" onclick="displayModal('rmodal2');">
                     <div class="cimage">
                         <img src="images/research2.jpg" class="cpic">
                         <h1 style="color: white; font-size: 1.5vw; position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Isolating and Analyzing Duckweed Genes</strong></h1>
@@ -236,15 +336,69 @@
                         <p style="font-size: 0.9vw;">Isolated and analyzed genes and proteins of the duckweed plant, landoltia punctata</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="rmodal" id="rmodal2">
+                    <div class="rmodalc">
+                        <div class="rmodalhead">
+                            <span class="close" onclick="closeModal('rmodal2');">&times;</span>
+                            <h2>Isolating and Analyzing Duckweed Genes</h2>
+                            <h3>Waksman Institute, Rutgers University</h3>
+                            <h3>2016</h3>
+                        </div>
+                        <div class="rmodalcol">
+                            <div class="rmodalimg">
+                                <img src="images/research2.jpg" class="rmodalbodyimg">
+                            </div>
+                            <div class="rmodaltext">
+                                <h4>Description</h4>
+                                <p style="font-size: 1vw;">Isolated and analyzed genes of the duckweed plant, landoltia punctata, using National Center for Biotechnology
+                                Information (NCBI) tools, SnapGene, PCR, bacterial transformation, miniprep, and gel electrophoresis. Published 2 EST
+                                cDNA entries in the NCBI database: JZ924396.1, JZ924376.1</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p style="font-size: 1vw;">PCR, Miniprep, Bacterial Transformations, NCBI Database Tools</p>
+                                <br>
+                                <h4>Links</h4>
+                                <a href="pdf/research2.pdf" target="_blank"><img src="images/pdf.svg" class="icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="cursor:pointer" onclick="displayModal('rmodal1');">
                     <div class="cimage">
                         <img src="images/research1.jpg" class="cpic">
                         <h1 style="color: white; font-size: 1.5vw; position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Analysis and Modeling of the FadR Protein</strong></h1>
                     </div>
                     <div class="ctext">
                         <p style="font-size: 1.135vw;"><strong>Kull Lab, Dartmouth University</strong></p>
-                        <p style="font-size: 1.15vw;"><strong>2014</strong></p>
+                        <p style="font-size: 1.15vw;"><strong>2015</strong></p>
                         <p style="font-size: 0.9vw;">Analyzing the structure and modeling the FadR protein in Vibrio Cholerae</p>
+                    </div>
+                </div>
+                <div class="rmodal" id="rmodal1">
+                    <div class="rmodalc">
+                        <div class="rmodalhead">
+                            <span class="close" onclick="closeModal('rmodal1');">&times;</span>
+                            <h2>Analysis and Modeling of the FadR Protein</h2>
+                            <h3>Kull Lab, Dartmouth University</h3>
+                            <h3>2015</h3>
+                        </div>
+                        <div class="rmodalcol">
+                            <div class="rmodalimg">
+                                <img src="images/research1.jpg" class="rmodalbodyimg">
+                            </div>
+                            <div class="rmodaltext">
+                                <h4>Description</h4>
+                                <p style="font-size: 1vw;">Completed an in-depth analysis of FadR, working with Dr. Jon Kull at Dartmouth University.
+                                Designed and 3D printed a model of the FadR protein; Presented research and model at SMART Team conference
+                                in Worcester, MA</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p style="font-size: 1vw;">PyMol</p>
+                                <br>
+                                <h4>Links</h4>
+                                <a href="pdf/research1.pdf" target="_blank"><img src="images/pdf.svg" class="icon"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,9 +412,9 @@
 
         <!--Project Content-->
         <div class="projects">
-            <script src="scripts/pmodal.js"></script>
+
             <div class="row">
-                <div class="card" style="cursor:pointer" onclick="displayModal()">
+                <div class="card" style="cursor:pointer" onclick="displayModal('pmodal1')">
                     <div class="cimage">
                         <img src="images/project1.png" class="cpic">
                         <h1 style="color: black; font-size: 1.5vw; position: absolute; left: 1vw; right: 1vw; bottom: 13.5vh"><strong>Personal Portfolio/Website</strong></h1>
@@ -270,10 +424,10 @@
                         <p style="font-size: 0.9vw;">Personal website and portfolio made with HTML and CSS</p>
                     </div>
                 </div>
-                <div class="pmodal" id="pmodal">
+                <div class="pmodal" id="pmodal1">
                     <div class="pmodalc">
                         <div class="pmodalhead">
-                            <span class="close" onclick="closeModal()">&times;</span>
+                            <span class="close" onclick="closeModal('pmodal1')">&times;</span>
                             <h2>Personal Website/Portfolio</h2>
                             <h3>2019</h3>
                         </div>
@@ -288,8 +442,9 @@
                                 <h4>Tools</h4>
                                 <p style="font-size: 1vw;">HTML, CSS, Javascript</p>
                                 <br>
+                                <h4>Links</h4>
+                                <a href="https://raymondhechen.com" target="_blank"><img src="images/world.svg" class="icon"></a>
                                 <a href="https://github.com/raymondhechen/raymondhechen.github.io" target="_blank"><img src="images/github.svg" class="icon"></a>
-
                             </div>
                         </div>
                     </div>
