@@ -5,6 +5,7 @@
     height: 100vh;
     background-color: #0a2f52;
     padding: 10vh 0 0 0;
+    opacity: 0.1;
 }
 
 .projects .row .card {

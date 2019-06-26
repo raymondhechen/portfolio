@@ -37,6 +37,7 @@ nav li {
     text-transform: uppercase;
     padding: 14px 16px;
     text-decoration: none;
+    pointer-events: auto;
 }
 
 nav li:hover {

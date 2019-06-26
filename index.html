@@ -29,21 +29,27 @@
         <script src="scripts/pagechange.js"></script>
     </head>
 
-    <body style="background-color:#fdfdf8">
+    <body style="background-color:#0a2f52">
         <!--HEADER NAVIGATION SECTION-->
-        <header>
+        <header onload="changeMainBtn();">
             <div class="navbar">
                 <h1 class="navbar">Raymond Chen</h1>
                 <nav>
                     <ul>
-                        <li onclick="changePage('projects');">Projects</li>
-                        <li onclick="changePage('research');">Research</li>
-                        <li onclick="changePage('resume');">Résumé</li>
-                        <li onclick="changePage('main');">Home</li>
+                        <li id="btnp" onclick="changePage('projects');">Projects</li>
+                        <li id="btnre" onclick="changePage('research');">Research</li>
+                        <li id="btnr" onclick="changePage('resume');">Résumé</li>
+                        <li id="btnm" onclick="changePage('main');">Home</li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <script>
+            var btn = document.getElementById('btnm');
+            btn.style.cursor = "default";
+            btn.style.color = "#0059b3";
+            btn.style.pointerEvents = "none";
+        </script>
 
         <!--MAIN SECTION-->
         <div class="main" id="main">

@@ -3,6 +3,7 @@
     height: 100%;
     padding: 10vh 0 0 0;
     background-color: #0a2f52;
+    opacity: 0.1;
 }
 
 .resume .rrow {
