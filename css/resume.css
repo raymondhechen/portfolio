@@ -1,31 +1,12 @@
-.rtitle {
-    display: flex;
-    margin-top: 25vh;
-    background-color: #0a2f52;
-    color: rgba(255, 255, 255, 0.904);
-}
-
-.rtitle .rtitleword {
-    float: left;
-    padding: 10vh 0 0 5vw;
-    font-size: 1.175vw;
-}
-
-.rtitle .rpdf {
-    padding: 8vh 0 0 75vw;
-}
-
-.rtitle .rpdf .icon {
-    padding: 5px 5px;
-    width: 50px;
-    height: 50px;
-}
-
 .resume {
-    display: flex;
-    height: 70vh;
-    padding: 4vh 0 0 0;
+    display: none;
+    height: 100%;
+    padding: 10vh 0 0 0;
     background-color: #0a2f52;
+}
+
+.resume .rrow {
+    display: flex;
 }
 
 .resume a {
@@ -33,13 +14,7 @@
     text-decoration: none;
 }
 
-.resume .rtitle {
-    display: flex;
-    width: 100vw;
-    height: 20vh;
-}
-
-.resume .rcol {
+.resume .rrow .rcol {
     width: 50%;
     /*border-width: 1px;*/
     /*border-style: solid;*/
@@ -61,38 +36,37 @@
     margin: 0 0 0 3vw;
 }
 
-.resume .rcol .rsection .rsub {
+.resume .rrow .rcol .rsection .rsub {
     color: rgba(255, 255, 255, 0.904);
     font-size: 1.1vw;
     margin: 10px 10px 10px 0;
 }
 
-.resume .rcol .rsection .rsub2 {
+.resume .rrow .rcol .rsection .rsub2 {
     color: rgba(255, 255, 255, 0.904);
     font-size: 1.1vw;
     margin: 0 0 0 5vh;
 }
 
-.resume .rcol .rsection .rsub3 {
+.resume .rrow .rcol .rsection .rsub3 {
     color: rgba(255, 255, 255, 0.904);
     font-size: 1.1vw;
     margin: 10px 10px 5px 0;
 }
 
-.resume .rcol .rsection .rsub4 {
+.resume .rrow .rcol .rsection .rsub4 {
     color: rgba(255, 255, 255, 0.904);
     font-size: 1.1vw;
     margin: 0 0 10px 5vh;
 }
 
-.rpics {
+.resume .rrow .rpics {
     display: flex;
+    flex-direction: row;
     background-color: #0a2f52;
-    height: 30vh;
+    height: 20vh;
 }
 
-.rpics .rpicscol {
+.resume .rrow .rpics .rpicscol {
     width: 33.33%;
-    /*border-width: 1px;*/
-    /*border-style: solid;*/
 }

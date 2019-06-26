@@ -22,19 +22,3 @@
     font-size: 1.175vw;
     justify-content: center;
 }
-
-.icons {
-    margin: 0 36.5vw 30vh 0;
-}
-
-.icons .icon {
-    display: block;
-    float: right;
-    padding: 5px 5px;
-    width: 40px;
-    height: 40px;
-}
-
-.icons .icon:hover {
-    opacity: 0.7;
-}

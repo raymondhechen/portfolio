@@ -1,23 +1,28 @@
 .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7.5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 25vh;
     background-color: #333;
-    color: #fdfdf8;
+    z-index: 99;
 }
 
 .footer .ficons {
-    padding: 7.5vh 0 0 0;
+    padding: 1.5vh 0 0 0;
 }
-
 
 .footer .ficons .ficon {
     display: block;
     float: right;
-    padding: 5px 5px;
-    width: 40px;
-    height: 40px;
+    margin: 0 0.1vw 0 0.1vw;
+    padding: 0 0.2vw 0 0.2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    min-width: 30px; 
+    min-height: 30px;
 }
 
 .footer .ficons .ficon:hover {

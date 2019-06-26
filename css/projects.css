@@ -1,25 +1,10 @@
-.ptitle {
-    display: flex;
-    height: 10vh;
-    background-color: #0a2f52;
-    color: rgba(255, 255, 255, 0.904);
-    font-size: 1.175vw;
-}
-
-.ptitle .pword {
-    display: flex;
-    height: 10vh;
-    color: #fdfdf8;
-    padding: 7.5vh 0 7.5vh 5vw;
-}
-
 .projects {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
-    min-height: 60vh;
+    height: 100vh;
     background-color: #0a2f52;
-    padding: 5vh 0 0 0;
+    padding: 10vh 0 0 0;
 }
 
 .projects .row .card {
@@ -28,7 +13,7 @@
     justify-content: center;
     float: left;
     position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
     width: 85vw;
     height: 27.5vh;
     margin: 5vh 3vw 3.5vh 3vw;
@@ -36,7 +21,7 @@
 }
 
 .projects .row .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
 }
 
 .projects .row .card .cimage {
