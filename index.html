@@ -35,11 +35,11 @@
     <body style="background-color:#0a2f52" onload="loadMobile();">
         <!--HEADER NAVIGATION SECTION-->
         <header>
-            <div class="navbar" onload="changeMainBtn();">
+            <div class="navbar">
                 <h1 class="navbar">Raymond Chen</h1>
                 <!--PC Nav-->
                 <!--mobileNav.js makes only one load by responsiveness-->
-                <nav id="pcNav">
+                <nav id="pcNav" onload="changeMainBtn();">
                     <ul>
                         <li id="btnp" onclick="changePage('projects');">Projects</li>
                         <li id="btnre" onclick="changePage('research');">Research</li>
