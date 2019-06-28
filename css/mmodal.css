@@ -9,10 +9,29 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: #333;
     opacity: 0.95;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Modal Content/Box */
 .navbar .mmodal .mmodalc {
     display: flex;
     flex-direction: column;
+    padding: 0 0 20vh 0;
+}
+
+.navbar .mmodal .mmodalc .close {
+    float: right;
+    color: #fdfdf8;
+    float: right;
+    font-size: 15vw;
+    font-weight: bold;
+    padding: 0 0 10vh 0;
+}
+
+.navbar .mmodal .mmodalc .mmodalt {
+    color: #fdfdf8;
+    margin: 5vh 0 0 0;
+    font-size: 7.5vw;
 }
