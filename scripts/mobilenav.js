@@ -6,7 +6,7 @@ function loadMobile() {
     else {
         document.getElementById("pcNav").style.display = "block";
         document.getElementById("mNav").style.display = "none";
-    }
+    }  
 }
 
 function checkMobile() {
