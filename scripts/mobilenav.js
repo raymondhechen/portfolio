@@ -22,3 +22,22 @@ function checkMobile() {
 window.addEventListener("resize", function () { 
     loadMobile()
 }, true);
+
+
+document.onclick = function (event) {
+    if (event.target == document.getElementById("mmodal")) {
+        fadeOut(document.getElementById("mmodal"));
+    }
+}
+
+function fadeOut(element) {
+    var op = 0.90;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0) {
+            clearInterval(timer);
+            element.style.display = "none";
+        }
+        element.style.opacity = op;
+        op -= 0.1;
+    }, 10);
+}
