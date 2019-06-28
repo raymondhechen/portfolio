@@ -12,6 +12,7 @@
         <!--STYLESHEETS-->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/mmodal.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/resume.css">
         <link rel="stylesheet" href="css/research.css">
@@ -25,16 +26,20 @@
         <style>body {font-family: 'Roboto Mono', monospace;}</style>
 
         <!--SCRIPTS-->
-        <script src="scripts/modal.js"></script>
+        <script src="scripts/cardmodal.js"></script>
         <script src="scripts/pagechange.js"></script>
+        <script src="scripts/mobilenav.js"></script>
+        <script src="scripts/menumodal.js"></script>
     </head>
 
-    <body style="background-color:#0a2f52">
+    <body style="background-color:#0a2f52" onload="loadMobile();">
         <!--HEADER NAVIGATION SECTION-->
-        <header onload="changeMainBtn();">
-            <div class="navbar">
+        <header>
+            <div class="navbar" onload="changeMainBtn();">
                 <h1 class="navbar">Raymond Chen</h1>
-                <nav>
+                <!--PC Nav-->
+                <!--mobileNav.js makes only one load by responsiveness-->
+                <nav id="pcNav">
                     <ul>
                         <li id="btnp" onclick="changePage('projects');">Projects</li>
                         <li id="btnre" onclick="changePage('research');">Research</li>
@@ -42,6 +47,19 @@
                         <li id="btnm" onclick="changePage('main');">Home</li>
                     </ul>
                 </nav>
+                <!--Mobile Nav-->
+                <nav id="mNav">
+                    <img class="img" onclick="loadMenuModal();" src="images/menu.svg">
+                </nav>
+                <div class="mmodal" id="mmodal">
+                    <div class="mmodalc">
+                        <span onclick="closeMenuModal();">&times;</span>
+                        <h1 class="mmodalcontent">Home</h1>
+                        <h1 class="mmodalcontent">Résumé</h1>
+                        <h1 class="mmodalcontent">Research</h1>
+                        <h1 class="mmodalcontent">Projects</h1>
+                    </div>
+                </div>
             </div>
         </header>
         <script>

@@ -20,6 +20,10 @@ h1.navbar {
     padding: 10px 0px 0px 35px;
 }
 
+nav {
+    display: none;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -42,4 +46,16 @@ nav li {
 
 nav li:hover {
     color: #0059b3;
+}
+
+#mNav {
+    display: none;
+    float: right;
+}
+
+#mNav .img {
+    width: 7vw;
+    height: 7vw;
+    margin: 1.25vh 5vw 0 0;
+    cursor: pointer;
 }
