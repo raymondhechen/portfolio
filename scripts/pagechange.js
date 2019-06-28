@@ -22,12 +22,7 @@ function changePage(nextID) {
     curr.style.display = "none"; // Remove curr display
 
     // Turn on next display
-    if (next == document.getElementById("about")) {
-        next.style.display = "block";
-    }
-    else {
-        next.style.display = "flex";
-    }
+    next.style.display = "flex";
 
     curr.style.opacity = 0.1; // Set curr opacity to original
     fadeIn(next); // Fade in next

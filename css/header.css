@@ -42,7 +42,6 @@ nav li {
     padding: 14px 16px;
     text-decoration: none;
     pointer-events: auto;
-    -webkit-tap-highlight-color: rbga(255,255,255,0);
 }
 
 nav li:hover {

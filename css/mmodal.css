@@ -18,7 +18,7 @@
 .navbar .mmodal .mmodalc {
     display: flex;
     flex-direction: column;
-    padding: 0 0 20vh 0;
+    margin: 0 0 20vh 0;
 }
 
 .navbar .mmodal .mmodalc .close {
