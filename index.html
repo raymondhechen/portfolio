@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/mmodal.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/resume.css">
+        <link rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="css/research.css">
         <link rel="stylesheet" href="css/rmodal.css">
         <link rel="stylesheet" href="css/projects.css">
@@ -41,10 +41,10 @@
                 <!--mobileNav.js makes only one load by responsiveness-->
                 <nav id="pcNav" onload="changeMainBtn();">
                     <ul>
-                        <li id="btnp" onclick="changePage('projects');">Projects</li>
-                        <li id="btnre" onclick="changePage('research');">Research</li>
-                        <li id="btnr" onclick="changePage('resume');">Résumé</li>
-                        <li id="btnm" onclick="changePage('main');">Home</li>
+                        <li id="btnp" class="noSelect" onclick="changePage('projects');">Projects</li>
+                        <li id="btnr" class="noSelect" onclick="changePage('research');">Research</li>
+                        <li id="btna" class="noSelect" onclick="changePage('about');">About</li>
+                        <li id="btnm" class="noSelect" onclick="changePage('main');">Home</li>
                     </ul>
                 </nav>
                 <!--Mobile Nav-->
@@ -54,10 +54,10 @@
                 <div class="mmodal" id="mmodal">
                     <div class="mmodalc">
                         <span class="close" onclick="closeMenuModal();">&times;</span>
-                        <h1 class="mmodalt" onclick="changePageMobile('main');">Home</h1>
-                        <h1 class="mmodalt" onclick="changePageMobile('resume');">Résumé</h1>
-                        <h1 class="mmodalt" onclick="changePageMobile('research');">Research</h1>
-                        <h1 class="mmodalt" onclick="changePageMobile('projects');">Projects</h1>
+                        <h1 class="mmodalt" onclick="changePageMobile('main');">HOME</h1>
+                        <h1 class="mmodalt" onclick="changePageMobile('about');">ABOUT</h1>
+                        <h1 class="mmodalt" onclick="changePageMobile('research');">RESEARCH</h1>
+                        <h1 class="mmodalt" onclick="changePageMobile('projects');">PROJECTS</h1>
                     </div>
                 </div>
             </div>
@@ -72,110 +72,33 @@
         <!--MAIN SECTION-->
         <div class="main" id="main">
             <img class="portrait" src="images/ray.jpg">
-            <p class="about" style="color: rgba(255, 255, 255, 0.65);">
-                <strong style="font-size: 1.9em; color: white;">RAYMOND CHEN</strong> <br>
-                I am a second-year Trinity student and Huang Fellow at Duke University planning to double major in Computer Science and Neuroscience. I am
-                passionate about applying interdisciplinary approaches to solving real problems in science and industry. I adapt well to
-                new environments and situations, and I am eager to identify issues in order to begin designing and implementing
-                solutions. I have demonstrated consistent teamwork and leadership skills through my multiple research internships and
-                academic projects.
+            <p class="mabout">
+                <strong style="font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300))); color: #fdfdf8;">RAYMOND CHEN</strong> <br>
+                Student at Duke Univeristy <br>
+                Huang Fellow <br>
+                Badminton Competitor
             </p>
         </div>
 
-        <!--RESUME SECTION-->
-        <div class="resume" id="resume">
-            <div class="rrow">
-                <div class="rcol">
-                    <div class="rsection">
-                        <h1 class="rhead">EDUCATION</h1>
-                        <ul>
-                            <li>
-                                <p class="rsub"><a href="https://www.duke.edu/" target="_blank"><strong>Duke University</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;&nbsp;May 2022</p>
-                            </li>
-                            <li>
-                                <p class="rsub"><a href="https://www.pingry.org/" target="_blank"><strong>Pingry School</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;June 2018</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="rsection">
-                        <h1 class="rhead">HONORS & AWARDS</h1>
-                        <ul>
-                            <li>
-                                <p class="rsub"><a href="https://scienceandsociety.duke.edu/learn/undergraduate-programs/huang-fellows-program/" target="_blank"><strong>Huang Fellow</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&ensp;&nbsp;Feb 2019</p>
-                            </li>
-                            <li>
-                                <p class="rsub"><strong>Pingry School Cum Laude Chapter</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;April 2018</p>
-                            </li>
-                            <li>
-                                <p class="rsub"><strong>Rennselaer Mathematics & Science Award</strong>&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;Aug 2017</p>
-                            </li>
-                            <li>
-                                <p class="rsub"><strong>National Merit Scholarship Commended</strong>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;Aug 2017</p>
-                            </li>
-                            <li>
-                                <p class="rsub"><strong>AP National Scholar</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&ensp;&ensp;&nbsp;&nbsp;June 2017</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="rsection">
-                        <h1 class="rhead">SKILLS & INTERESTS</h1>
-                        <ul>
-                            <li>
-                                <p class="rsub"><strong>Skills:</strong> Java, Python, C, MATLAB, HTML, CSS, Javascript</p>
-                            </li>
-                            <li>
-                                <p class="rsub"><strong>Interests:</strong> Data Science, ML/AI, Tech, Neuroscience, Healthcare, Environment, Photography, Badminton</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="rcol">
-                    <div class="rsection">
-                        <h1 class="rhead">RESEARCH/INTERNSHIP EXPERIENCES</h1>
-                        <ul>
-                            <li>
-                                <p class="rsub3"><a href="https://pearsonlab.github.io/" target="_blank"><strong>Pearson Lab, Duke University</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2019</p>
-                                <p class="rsub2">Huang Fellows Program</p>
-                            </li>
-                            <li>
-                                <p class="rsub3"><a href="https://gavorniklab.bu.edu/" target="_blank"><strong>Gavornik Lab, Boston University</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;2018</p>
-                                <p class="rsub2">RISE Program</p>
-                            </li>
-                            <li>
-                                <p class="rsub3"><a href="https://www.hopkinsmedicine.org/profiles/results/directory/profile/9609418/mingyao-ying" target="_blank"><strong>Ying Lab, Johns Hopkins University</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;2017</p>
-                                <p class="rsub2">Kennedy Krieger Institute</p>
-                            </li>
-                            <li>
-                                <p class="rsub3"><a href="https://zhulab.wordpress.com/" target="_blank"><strong>Zhu Lab, Children's National Medical Center</strong></a>&emsp;&emsp;&emsp;2016</p>
-                                <p class="rsub2">Center for Cancer & Immunology Research</p>
-                            </li>
-                            <li>
-                                <p class="rsub3"><a href="https://wssp.rutgers.edu/" target="_blank"><strong>Waksman Institute, Rutgers University</strong></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;2016</p>
-                                <p class="rsub4">Waksman Student Scholars Program</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="rsection">
-                        <h1 class="rhead">LEADERSHIP EXPERIENCES</h1>
-                        <ul>
-                            <li>
-                                <p class="rsub">Pingry Student Technology Committee</p>
-                            </li>
-                            <li>
-                                <p class="rsub">Pingry Math and Science Center</p>
-                            </li>
-                            <li>
-                                <p class="rsub">Northeast Badminton Club</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <!--ABOUT SECTION-->
+        <div class="about" id="about">
+            <p class="aabout">
+                <strong style="font-size: calc(15px + (30    - 15) * ((100vw - 300px) / (1600 - 300))); color: #fdfdf8;">Hey!</strong> <br>
+                I am a second-year Trinity student and Huang Fellow at Duke University from Martinsville, NJ.
+                I am planning to double major in Computer Science and Neuroscience. 
+                Academically, the human brain has been the center of my fascination with biology for years. The idea that
+                chemicals, proteins, and cells can construct a complex organ with the capability of sensing, understanding, and acting
+                on the world is mind-blowing to me. Alongside, I grew interested in the computational analysis involved in systems
+                neuroscience research. Ever since, computer science has been the focus of my academic studies.
+                <br> <br>
+                Outside the classroom, I am interested in technology, environment, and photography.
+                I am also a badminton player with over a decade of competitive experience.
+            </p>
             <div class="rrow">
                 <!--Resume Pictures-->
                 <div class="rpics">
                     <div class="rpicscol">
-                        <a href="https://scienceandsociety.duke.edu/learn/undergraduate-programs/huang-fellows-program/" target="_blank"><img src=images/huang.png style="object-fit: contain; width: 70%; height: 70%; margin: 0 0 0 11vw;"></a>
+                        <a href="https://scienceandsociety.duke.edu/learn/undergraduate-programs/huang-fellows-program/" target="_blank"><img src=images/huang.png style="object-fit: contain; width: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300))); height: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300))); margin: 2.6vh 0 0 16.5vw;"></a>
                     </div>
                     <div class="rpicscol">
                         <a href="https://www.duke.edu/" target="_blank"><img src=images/duke.png style="object-fit: contain; width: 60%; height: 60%; margin: 2vh 0 0 5vw;"></a>
@@ -304,7 +227,7 @@
                 <div class="card noSelect" style="cursor:pointer" onclick="displayModal('rmodal3');">
                     <div class="cimage">
                         <img src="images/research3.jpg" class="cpic">
-                        <h1 style="color: white; font-size: calc(12.5px + (20 - 12.5) * ((100vw - 300px) / (1600 - 300))); position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Studying p53-knockout Glioblastoma in Mice</strong></h1>
+                        <h1 style="color: white; word-wrap: break-word; font-size: calc(12.5px + (20 - 12.5) * ((100vw - 300px) / (1600 - 300))); position: absolute; left: 1vw; right: 1vw; bottom: 16vh"><strong>Studying p53-knockout Glioblastoma in Mice</strong></h1>
                     </div>
                     <div class="ctext">
                         <p style="font-size: calc(7.5px + (16.5 - 10) * ((100vw - 300px) / (1600 - 300)));"><strong>Zhu Lab, Children's National</strong></p>

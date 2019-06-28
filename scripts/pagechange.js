@@ -1,8 +1,8 @@
 // Change page function
 function changePage(nextID) {
     // vars
-    var bodyIDs = ["main","resume","research","projects"];
-    var btnIds = ["btnm","btnr","btnre","btnp"];
+    var bodyIDs = ["main","about","research","projects"];
+    var btnIds = ["btnm","btna","btnr","btnp"];
     var curr = document.getElementById("main");
     var currBtn = document.getElementById("btnm")
 
@@ -22,7 +22,7 @@ function changePage(nextID) {
     curr.style.display = "none"; // Remove curr display
 
     // Turn on next display
-    if (next == document.getElementById("resume")) {
+    if (next == document.getElementById("about")) {
         next.style.display = "block";
     }
     else {

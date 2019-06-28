@@ -55,8 +55,8 @@ nav li:hover {
 }
 
 #mNav .img {
-    width: 7vw;
-    height: 7vw;
-    margin: 1.25vh 5vw 0 0;
+    width: 3.75vh;
+    height: 3.75vh;
+    margin: 1vh 5vw 0 0;
     cursor: pointer;
 }

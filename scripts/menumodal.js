@@ -12,7 +12,7 @@ function closeMenuModal() {
 
 function changePageMobile(nextID) {
     // vars
-    var bodyIDs = ["main", "resume", "research", "projects"];
+    var bodyIDs = ["main", "about", "research", "projects"];
     var curr = document.getElementById("main");
 
     // Find current element
