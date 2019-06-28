@@ -1,6 +1,8 @@
 // When the user clicks on the button, open the modal 
 function loadMenuModal() {
     document.getElementById("mmodal").style.display = "flex";
+    document.getElementById("mmodal").style.opacity = "0.0";
+    menuFadeIn(document.getElementById("mmodal"));
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -37,4 +39,16 @@ function changePageMobile(nextID) {
     curr.style.opacity = 0.1; // Set curr opacity to original
     document.getElementById("mmodal").style.display = "none";   
     fadeIn(next); // Fade in next
+}
+
+// Fade in Function
+function menuFadeIn(element) {
+    var op = 0.0;  // initial opacity
+    var timer = setInterval(function () {
+        if (op >= 0.80) {
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        op += 0.1;
+    }, 10);
 }

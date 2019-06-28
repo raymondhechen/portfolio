@@ -66,7 +66,7 @@
 @media only screen and (max-width: 600px) {
     .main .about {
         float: right;
-        padding: 5vh 15vw 30vh 15vw;
+        padding: 0 15vw 15vh 15vw;
         font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
         justify-content: center;
         margin: auto;

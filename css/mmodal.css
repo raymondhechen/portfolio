@@ -23,15 +23,17 @@
 
 .navbar .mmodal .mmodalc .close {
     float: right;
-    color: #fdfdf8;
+    color: #fdfdf86b;
     float: right;
     font-size: 15vw;
     font-weight: bold;
     padding: 0 0 7.5vh 0;
+    cursor: pointer;
 }
 
 .navbar .mmodal .mmodalc .mmodalt {
     color: #fdfdf8;
     margin: 5vh 0 0 0;
-    font-size: 7.5vw;
+    font-size: 7vw;
+    cursor: pointer;
 }
