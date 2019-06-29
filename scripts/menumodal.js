@@ -5,11 +5,6 @@ function loadMenuModal() {
     menuFadeIn(document.getElementById("mmodal"));
 }
 
-// When the user clicks on <span> (x), close the modal
-function closeMenuModal() {
-    document.getElementById("mmodal").style.display = "none";
-}
-
 function changePageMobile(nextID) {
     // vars
     var bodyIDs = ["main", "about", "research", "projects"];
