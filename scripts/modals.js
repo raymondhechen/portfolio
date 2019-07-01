@@ -11,7 +11,7 @@ function closeModal(i) {
 // When the user clicks anywhere outside of the modal, close it
 document.onclick = function (event) {
     if (event.target == document.getElementById("mmodal")) {
-        fadeOut(document.getElementById("mmodal"));
+        menufadeOut(document.getElementById("mmodal"));
     }
     else {
         var cards = ["rmodal1", "rmodal2", "rmodal3", "rmodal4", "rmodal5", "rmodal6", "pmodal1"];
@@ -30,7 +30,7 @@ document.onclick = function (event) {
     }
 }
 
-function fadeOut(element) {
+function menufadeOut(element) {
     var op = 0.90;  // initial opacity
     var timer = setInterval(function () {
         if (op <= 0) {

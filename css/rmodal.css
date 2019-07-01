@@ -22,13 +22,25 @@
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc {
+        margin: 25% auto; /* 5% from the top and centered */
+        padding: 5vh 4vw 2.5vh 4vw;
+    }
+}
+
 /* The Close Button */
 .research .row .rmodal .rmodalc .rmodalhead .close {
     float: right;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc .rmodalhead {
+        font-size: calc(12.5px + (17.5 - 12.5) * ((100vw - 300px) / (1600 - 300)));
+    }
 }
 
 .close:hover, .close:focus {
@@ -42,6 +54,12 @@
     width: 35vw;
 }
 
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc .rmodalcol .rmodalimg {
+        width: 30vw;
+    }
+}
+
 .research .row .rmodal .rmodalc .rmodalcol .rmodalimg .rmodalbodyimg {
     padding: 3vh 0 0 0;
     width: 35vw;
@@ -49,15 +67,50 @@
     object-fit: cover;
 }
 
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc .rmodalcol .rmodalimg .rmodalbodyimg {
+        width: 30vw;
+        height: 40vh;
+    }
+}
+
 .research .row .rmodal .rmodalc .rmodalcol .rmodaltext {
     width: 30vw;
     height: 50vh;
     float: right;
     margin: 2.5vh 0 0 0;
+    font-size: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc .rmodalcol .rmodaltext {
+        width: 35vw;
+        font-size: 5vw;
+    }
+}
+
+.research .row .rmodal .rmodalc .rmodalcol .rmodaltext p {
+        width: 35vw;
+        font-size: 1vw;
+        padding: 0 5vw 0 0;
+    }
+
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc .rmodalcol .rmodaltext p {
+        width: 35vw;
+        font-size: 2.5vw;
+    }
 }
 
 .research .row .rmodal .rmodalc .rmodalcol .rmodaltext .icon {
     padding: 1vh 0 0 0;
     width: 2.5vw;
     height: 2.5vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .research .row .rmodal .rmodalc .rmodalcol .rmodaltext .icon {
+        width: 7.5vw;
+        height: 7.5vw;
+    }
 }
