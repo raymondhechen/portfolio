@@ -29,7 +29,7 @@
         <script src="scripts/mobilenav.js"></script>
         <script src="scripts/pagechange.js"></script>
         <script src="scripts/menumodal.js"></script>
-        <script src="scripts/cardmodal.js"></script>
+        <script src="scripts/modals.js"></script>
     </head>
 
     <body style="background-color:#0a2f52" onload="loadMobile();">
@@ -39,7 +39,7 @@
                 <h1 class="navbar">Raymond Chen</h1>
                 <!--PC Nav-->
                 <!--mobileNav.js makes only one load by responsiveness-->
-                <nav id="pcNav" onload="changeMainBtn();">
+                <nav id="pcNav">
                     <ul>
                         <li id="btnp" class="noSelect" onclick="changePage('projects');">Projects</li>
                         <li id="btnr" class="noSelect" onclick="changePage('research');">Research</li>
@@ -53,19 +53,25 @@
                 </nav>
                 <div class="mmodal" id="mmodal">
                     <div class="mmodalc">
-                        <h1 class="mmodalt" onclick="changePageMobile('main');">HOME</h1>
-                        <h1 class="mmodalt" onclick="changePageMobile('about');">ABOUT</h1>
-                        <h1 class="mmodalt" onclick="changePageMobile('research');">RESEARCH</h1>
-                        <h1 class="mmodalt" onclick="changePageMobile('projects');">PROJECTS</h1>
+                        <h1 id="mbtnm" class="mmodalt" onclick="changePageMobile('main');">HOME</h1>
+                        <h1 id="mbtna" class="mmodalt" onclick="changePageMobile('about');">ABOUT</h1>
+                        <h1 id="mbtnr" class="mmodalt" onclick="changePageMobile('research');">RESEARCH</h1>
+                        <h1 id="mbtnp" class="mmodalt" onclick="changePageMobile('projects');">PROJECTS</h1>
                     </div>
                 </div>
             </div>
         </header>
         <script>
+            // Default main nav button
             var btn = document.getElementById('btnm');
             btn.style.cursor = "default";
             btn.style.color = "#0059b3";
             btn.style.pointerEvents = "none";
+            // Default mobile main nav button
+            var mBtn = document.getElementById('mbtnm');
+            mBtn.style.cursor = "default";
+            mBtn.style.color = "#0059b3";
+            mBtn.style.pointerEvents = "none";
         </script>
 
         <!--MAIN SECTION-->
@@ -73,9 +79,9 @@
             <img class="portrait" src="images/ray.jpg">
             <p class="mabout">
                 <strong style="font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300))); color: #fdfdf8;">RAYMOND CHEN</strong> <br>
-                Student at Duke <br>
-                Huang Fellow <br>
-                Badminton Player
+                <strong style="color: #0099ff;">Student at Duke</strong> <br>
+                <strong style="color: rgb(219, 155, 92);">Huang Fellow</strong> <br>
+                <strong style="color: rgb(111, 199, 162)">Badminton Player</strong>
             </p>
         </div>
 

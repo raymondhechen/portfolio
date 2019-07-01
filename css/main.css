@@ -50,7 +50,7 @@
 .main .mabout {
     float: right;
     margin-top: calc(75px + (140 - 75) * ((100vw - 300px) / (1600 - 300)));
-    font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(15px + (27.5 - 15) * ((100vw - 300px) / (1600 - 300)));
     justify-content: center;
     color: rgba(255, 255, 255, 0.65);
 }
