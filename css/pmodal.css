@@ -65,6 +65,7 @@
     width: 35vw;
     height: 50vh;
     object-fit: cover;
+    padding-top: 2.5vh;
 }
 
 @media only screen and (max-width: 600px) {

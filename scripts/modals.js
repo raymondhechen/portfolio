@@ -16,7 +16,7 @@ document.onclick = function (event) {
         menufadeOut(document.getElementById("mmodal"));
     }
     else {
-        var cards = ["rmodal1", "rmodal2", "rmodal3", "rmodal4", "rmodal5", "rmodal6", "pmodal1"];
+        var cards = ["rmodal1", "rmodal2", "rmodal3", "rmodal4", "rmodal5", "rmodal6", "pmodal1", "pmodal2"];
         var curr;
 
         for (var i = 0; i < cards.length; i++) {

@@ -12,12 +12,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    float: left;
     position: relative;
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
     width: 85vw;
     height: 25vh;
-    margin: 5vh 3vw 3.5vh 3vw;
+    margin: 5vh 3vw 5vh 3vw;
     background-color: #fdfdf8;
 }
 

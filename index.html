@@ -81,7 +81,7 @@
             <p class="mabout">
                 <strong style="font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300))); color: #fdfdf8;">RAYMOND CHEN</strong> <br>
                 <strong style="color: #0099ff;">Student at Duke</strong> <br>
-                <strong style="color: #e65461;">Developer</strong> <br>
+                <strong style="color: #e65461;">Aspiring Developer</strong> <br>
                 <strong style="color: rgb(214, 145, 75);">Huang Fellow</strong> <br>
                 <strong style="color: rgb(63, 194, 139)">Badminton Player</strong>
             </p>
@@ -349,10 +349,46 @@
         <!--PROJECTS SECTION-->
         <div class="projects" id="projects">
             <div class="row">
+                <div class="card noSelect" style="cursor:pointer" onclick="displayModal('pmodal2')">
+                    <div class="cimage">
+                        <img src="images/project2.png" class="cpic">
+                        <h1 style="color: white; font-size: calc(20px + (22.5 - 20) * ((100vw - 300px) / (1600 - 300))); position: absolute; left: 1vw; right: 1vw; bottom: 12vh"><strong>BadRank</strong></h1>
+                    </div>
+                    <div class="ctext">
+                        <p style="font-size: calc(15px + (17.5 - 15) * ((100vw - 300px) / (1600 - 300)));"><strong>2019</strong></p>
+                        <p style="font-size: calc(10px + (17.5 - 10) * ((100vw - 300px) / (1600 - 300)));">Automated ELO rank tracking system for Duke Club Badminton</p>
+                    </div>
+                </div>
+                <div class="pmodal" id="pmodal2">
+                    <div class="pmodalc">
+                        <div class="pmodalhead">
+                            <span class="close" onclick="closeModal('pmodal2')">&times;</span>
+                            <h2>BadRank</h2>
+                            <h3>2019</h3>
+                        </div>
+                        <div class="pmodalcol">
+                            <div class="pmodalimg">
+                                <img src="images/project2.png" class="pmodalbodyimg">
+                            </div>
+                            <div class="pmodaltext">
+                                <h4>Description</h4>
+                                <p>An automated full-stack match tracking and ELO ranking system for Duke Club Badminton</p>
+                                <br>
+                                <h4>Tools</h4>
+                                <p>Python, Flask, SQLite, SQLAlchemy, ReactJS</p>
+                                <br>
+                                <h4>Links</h4>
+                                <a href="http://dukebadminton.org" target="_blank"><img src="images/world.svg" class="icon"></a>
+                                <a href="https://github.com/raymondhechen/badrank" target="_blank"><img src="images/github.svg" class="icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card noSelect" style="cursor:pointer" onclick="displayModal('pmodal1')">
                     <div class="cimage">
                         <img src="images/project1.png" class="cpic">
-                        <h1 style="color: black; font-size: calc(20px + (22.5 - 20) * ((100vw - 300px) / (1600 - 300))); position: absolute; left: 1vw; right: 1vw; bottom: 10vh"><strong>Personal Portfolio/Website</strong></h1>
+                        <h1 style="color: white; font-size: calc(20px + (22.5 - 20) * ((100vw - 300px) / (1600 - 300))); position: absolute; left: 1vw; right: 1vw; bottom: 12vh"><strong>Personal Portfolio</strong></h1>
                     </div>
                     <div class="ctext">
                         <p style="font-size: calc(15px + (17.5 - 15) * ((100vw - 300px) / (1600 - 300)));"><strong>2019</strong></p>
@@ -363,12 +399,12 @@
                     <div class="pmodalc">
                         <div class="pmodalhead">
                             <span class="close" onclick="closeModal('pmodal1')">&times;</span>
-                            <h2>Personal Website/Portfolio</h2>
+                            <h2>Personal Portfolio</h2>
                             <h3>2019</h3>
                         </div>
                         <div class="pmodalcol">
                             <div class="pmodalimg">
-                                <img src="resource/project1.png" class="pmodalbodyimg">
+                                <img src="images/project1.png" class="pmodalbodyimg">
                             </div>
                             <div class="pmodaltext">
                                 <h4>Description</h4>

@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    float: left;
     /*border-width: 1px;*/
     /*border-style: solid;*/
 }
