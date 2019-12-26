@@ -1,0 +1,71 @@
+.desc {
+    padding: 0 10vw;
+}
+
+.desc h1 {
+    color: white;
+    font-family: 'proxima-nova', 'ProximaNova', sans-serif;
+}
+
+.desc p {
+    color: white;
+    font-family: 'proxima-nova', 'ProximaNova', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.25em;
+}
+
+.Aflex {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding-top: 2vh;
+}
+
+.Aflex h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.75em;
+    font-family: 'proxima-nova', 'ProximaNova', sans-serif;
+}
+
+.Afex .edu {
+    padding-right: 10vw;
+    color: rgb(255, 200, 85);
+}
+
+.Aflex .exp {
+    padding-left: 10vw;
+}
+
+
+@media only screen and (max-width: 720px) {
+    .Aflex {
+        flex-direction: column;
+        padding-left: 10vw;
+    }
+
+    .Afex .edu {
+        padding-right: 0;
+    }
+    
+    .Aflex .exp {
+        padding-left: 0;
+        padding-top: 2vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .desc {
+        font-size: 0.9em;
+    }
+
+    .Afex .edu {
+        font-size: 0.9em;
+    }
+    
+    .Aflex .exp {
+        font-size: 0.9em;
+    }
+}

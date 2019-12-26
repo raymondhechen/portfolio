@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+    transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -webkit-transition: opacity .15s ease-in-out;
+}
+
+.container:hover {
+    opacity: 0.925;
+}
+
+.container .logo {
+    background-color: white;
+    height: 100%;
+    width: auto;
+}
+
+.container .logo .icon {
+    width: auto;
+    height: 100%;
+}
+
+.container .text1 {
+    color: rgb(240, 240, 240);
+    font-size: 25px;
+    font-family: 'proxima-nova', 'ProximaNova', sans-serif;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 5px;
+    line-height: 80%;
+}
+
+.container .text2 {
+    font-size: 17.5px;
+    color: rgb(210, 210, 210);
+    line-height: 0.5em;
+}
+
+.container .text3 {
+    font-size: 15px;
+    color: rgb(210, 210, 210);
+}
+
+@media only screen and (max-width: 720px) {
+    .container .text1 {
+        font-size: 20px;
+        line-height: 0.95em;
+    }
+    
+    .container .text2 {
+        font-size: 15px;
+    }
+    
+    .container .text3 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container .text1 {
+        font-size: 17.5px;
+        line-height: 0.95em;
+    }
+    
+    .container .text2 {
+        font-size: 12.5px;
+    }
+    
+    .container .text3 {
+        font-size: 12.5px;
+    }
+}
