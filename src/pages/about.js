@@ -11,7 +11,7 @@ class About extends Component {
                     <h1>Hey!</h1>
                     <p>
                     I'm a second-year Trinity student and Huang Fellow at Duke University from New Jersey. 
-                    Academically, computer science, software engineering, and data science are my main focuses, although I'm also interested in business and medicine.
+                    Academically, computer science, statistics, software engineering, and data science are my main focuses, although I'm also interested in business and medicine.
                     Outside the classroom, I am passionate about design, photography, and astronomy.
                     I am also a badminton player with over a decade of international competitive experience. 
                     Feel free to contact me with any comments or questions!
@@ -25,7 +25,7 @@ class About extends Component {
                     </div>
                     <div className="exp">
                         <h1>Experience</h1>
-                        <Bar link="https://hackduke.org" img="/images/hackduke.png" text1="Software Engineer" text2="HackDuke" text3="2020"/>
+                        <Bar link="https://hackduke.org" img="/images/hackduke.png" text1="Developer" text2="HackDuke" text3="2020"/>
                         <Bar link="https://pearsonlab.github.io" img="/images/pearson.png" text1="Software Engineer" text2="Pearson Lab, Internship" text3="2019"/>
                         <Bar link="https://scienceandsociety.duke.edu/learn/undergraduate-programs/huang-fellows-program" img="/images/scisoc.png" text1="Huang Fellow" text2="Duke Science & Society, Fellowship" text3="2019"/>
                     </div>

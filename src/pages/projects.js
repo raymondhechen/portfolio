@@ -17,7 +17,7 @@ class Projects extends Component {
                     />
                     <Card 
                         img="/images/project2.png" 
-                        text1="BadRank" 
+                        text1="ShuttleRank" 
                         text2="Web App for Duke Badminton" 
                         text3="2019"
                         linkW="http://rank.dukebadminton.org"
