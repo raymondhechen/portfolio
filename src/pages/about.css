@@ -31,12 +31,16 @@
 }
 
 .Afex .edu {
-    padding-right: 10vw;
+    padding-right: 5vw;
     color: rgb(255, 200, 85);
 }
 
 .Aflex .exp {
-    padding-left: 10vw;
+    padding-left: 5vw;
+}
+
+.Aflex .extra {
+    padding-left: 5vw;
 }
 
 
@@ -54,6 +58,10 @@
         padding-left: 0;
         padding-top: 2vh;
     }
+
+    .Aflex .extra {
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -66,6 +74,10 @@
     }
     
     .Aflex .exp {
+        font-size: 0.9em;
+    }
+
+    .Aflex .extra {
         font-size: 0.9em;
     }
 }
