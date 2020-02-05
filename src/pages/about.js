@@ -25,13 +25,14 @@ class About extends Component {
                     </div>
                     <div className="exp">
                         <h1>Experience</h1>
+                        <Bar link="https://www.dukeimpact.org/" img="/images/diig.jpeg" text1="Project Manager" text2="Duke Impact Investing Group" text3="2020"/>
+                        <Bar link="https://hackduke.org" img="/images/hackduke.png" text1="Developer" text2="HackDuke Planning Committee" text3="2020"/>
                         <Bar link="https://pearsonlab.github.io" img="/images/pearson.png" text1="Software Engineering Intern" text2="Pearson Lab" text3="2019"/>
                     </div>
                     <div className="extra">
                         <h1>Others</h1>
-                        <Bar link="https://www.dukeimpact.org/" img="/images/diig.jpeg" text1="Project Manager" text2="Duke Impact Investing Group" text3="2020"/>
-                        <Bar link="https://hackduke.org" img="/images/hackduke.png" text1="Developer" text2="HackDuke Planning Committee" text3="2019"/>
-                        <Bar link="https://scienceandsociety.duke.edu/learn/undergraduate-programs/huang-fellows-program" img="/images/scisoc.png" text1="Huang Fellow" text2="Duke Science & Society" text3="2019"/>
+                        <Bar link="https://dukethecube.com/" img="/images/cube.png" text1="Member" text2="The Cube" text3="2020"/>
+                        <Bar link="https://scienceandsociety.duke.edu/learn/undergraduate-programs/huang-fellows-program" img="/images/huang.png" text1="Huang Fellow" text2="Duke Science & Society" text3="2019"/>
                     </div>
                 </div>
                 <div className="footer"></div>
