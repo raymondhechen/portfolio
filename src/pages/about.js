@@ -25,6 +25,7 @@ class About extends Component {
                     </div>
                     <div className="exp">
                         <h1>Experience</h1>
+                        <Bar link="https://www.pendo.io/" img="/images/pendo.jpg" text1="Incoming Software Engineering Intern" text2="Pendo" text3="2020"/>
                         <Bar link="https://www.dukeimpact.org/" img="/images/diig.jpeg" text1="Project Manager" text2="Duke Impact Investing Group" text3="2020"/>
                         <Bar link="https://hackduke.org" img="/images/hackduke.png" text1="Developer" text2="HackDuke Planning Committee" text3="2020"/>
                         <Bar link="https://pearsonlab.github.io" img="/images/pearson.png" text1="Software Engineering Intern" text2="Pearson Lab" text3="2019"/>
