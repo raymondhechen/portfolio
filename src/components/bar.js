@@ -8,7 +8,9 @@ class Bar extends Component {
         return (
             <div className="container">
                 <div className="logo">
-                    <a href={this.props.link} target="_blank"><img className="icon" src={this.props.img}/></a>
+                    <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+                        <img className="icon" alt="" src={this.props.img}/>
+                    </a>
                 </div>
                 <div>
                     <div className="text1">

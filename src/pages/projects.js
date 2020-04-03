@@ -9,11 +9,12 @@ class Projects extends Component {
             <div>
                  <div className="flex">
                     <Card 
-                        img="/images/project3.jpg" 
-                        text1="Yeet" 
-                        text2="Messaging Mobile App"
+                        img="/images/project4.jpg" 
+                        text1="Cold Call" 
+                        text2="Empowering the Students" 
                         text3="2020"
-                        linkW="/projects"
+                        linkW="https://coldcall-frontend.herokuapp.com/"
+                        linkG="https://github.com/raymondhechen/coldcall" 
                     />
                     <Card 
                         img="/images/project2.png" 
@@ -21,7 +22,7 @@ class Projects extends Component {
                         text2="Web App for Duke Badminton" 
                         text3="2019"
                         linkW="http://rank.dukebadminton.org"
-                        linkG="https://github.com/raymondhechen/badrank" 
+                        linkG="https://github.com/raymondhechen/shuttlerank" 
                     />
                     <Card 
                         img="/images/project1.jpeg"

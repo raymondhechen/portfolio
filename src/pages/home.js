@@ -13,7 +13,7 @@ class Home extends Component {
     done = () => {
         this.setState({i: this.state.i+1});
 
-        if (this.state.i == this.state.words.length-1) {
+        if (this.state.i === this.state.words.length-1) {
             this.setState({i: 0});
         }
 
@@ -45,12 +45,20 @@ class Home extends Component {
                 </div>
                 <div className="links">
                     <div className="row">
-                        <a href="https://github.com/raymondhechen" target="_blank"><img className="icon" src="/images/github.svg"/></a>
-                        <a href="https://www.linkedin.com/in/raymondhechen/" target="_blank"><img className="icon" src="/images/linkedin.svg"/></a>
+                        <a href="https://github.com/raymondhechen" target="_blank" rel="noopener noreferrer">
+                            <img className="icon" alt="github" src="/images/github.svg"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/raymondhechen/" target="_blank" rel="noopener noreferrer">
+                            <img className="icon" alt="linkedin" src="/images/linkedin.svg"/>
+                        </a>
                     </div>
                     <div className="row">
-                        <a href="/assets/resume.pdf" target="_blank"><img className="icon" src="/images/resume.svg"/></a>
-                        <a href="mailto:rc284@duke.edu" target="_blank"><img className="icon" src="/images/mail.svg"/></a>
+                        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <img className="icon" alt="resume" src="/images/resume.svg"/>
+                        </a>
+                        <a href="mailto:rc284@duke.edu" target="_blank" rel="noopener noreferrer">
+                            <img className="icon" alt="email" src="/images/mail.svg"/>
+                        </a>
                     </div>
                 </div>
             </div>
