@@ -1,44 +1,43 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React from 'react';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Header from './components/header';
 import Home from './pages/home';
 import About from './pages/about';
-import Research from './pages/research';
 import Projects from './pages/projects';
-import page404 from './pages/404';
+import Misc from './pages/misc';
 
-import './app.css'
-import './transitions.css'
+import Menu from './pages/mobilemenu';
 
-class App extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <Header/>
+import Portfolio from './subpages/portfolio';
+import Improv from './subpages/improv';
+import Shuttlerank from './subpages/shuttlerank';
+import Coldcall from './subpages/coldcall';
+import Nomenclature from './subpages/nomenclature';
+import Position from './subpages/SubPagePosition';
 
-                <Route render={({location}) => (
-                    <TransitionGroup>
-                        <CSSTransition 
-                        key={location.key}
-                        appear={true}
-                        classNames="fade"
-                        timeout={{enter: 300, exit: 0}}
-                        >
-                            <Switch location={location}>
-                                <Route exact path="/" component={Home}/>
-                                <Route path="/about" component={About}/>
-                                <Route path="/research" component={Research}/>
-                                <Route path="/projects" component={Projects}/>
-                                <Route component={page404}/>
-                            </Switch>
-                        </CSSTransition>
-                </TransitionGroup>
-                )} />
-            </BrowserRouter>
-        )
-    }
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/misc" component={Misc} />
+
+                <Route exact path="/menu" component={Menu} />
+
+                <Route exact path="/projects/portfolio" component={Portfolio} />
+                <Route exact path="/projects/improv" component={Improv} />
+                <Route exact path="/projects/shuttlerank" component={Shuttlerank} />
+                <Route exact path="/projects/coldcall" component={Coldcall} />
+                <Route exact path="/projects/nomenclature" component={Nomenclature} />
+                <Route exact path="/projects/position" component={Position} />
+
+                <Route component={Home} />
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;
