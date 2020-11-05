@@ -8,6 +8,7 @@ import GithubIcon from './icons/github.svg';
 import TwitterIcon from './icons/twitter.svg';
 import InstagramIcon from './icons/instagram.svg';
 
+import FacebookLogo from './logos/facebook.svg';
 import AndurilLogo from './logos/anduril.svg';
 import PearLogo from './logos/pear.svg';
 import ColdcallLogo from './logos/coldcall.svg';
@@ -165,11 +166,18 @@ function App() {
             <Row>
                 <Table>
                     <Card
+                        style={{ backgroundColor: '#4267B2' }}
+                        onClick={() => {
+                            window.open('https://www.facebook.com/');
+                        }}>
+                        <Image style={{ width: '50%' }} src={FacebookLogo} />
+                    </Card>
+                    <Card
                         style={{ backgroundColor: '#111111' }}
                         onClick={() => {
                             window.open('https://www.anduril.com/');
                         }}>
-                        <Image style={{ width: '35%' }} src={AndurilLogo} />
+                        <Image style={{ width: '50%' }} src={AndurilLogo} />
                     </Card>
                 </Table>
             </Row>
