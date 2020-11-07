@@ -28,11 +28,17 @@ const Container = styled.div`
     margin: 0 5vw;
     max-width: 1100px;
     animation: fadeIn 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    @media (max-width: 768px) {
+        margin: 0;
+    }
 `;
 
 const Row = styled.div`
     display: flex;
     color: #333333;
+    @media (max-width: 768px) {
+        padding: 0 7.5vw;
+    }
 `;
 
 const Link = styled.a`
@@ -51,28 +57,46 @@ const Icon = styled.img`
     :active {
         transform: scale(0.95);
     }
+    @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+    }
 `;
 
 const T1 = styled.div`
     font-weight: 700;
     font-size: 55px;
+
+    @media (max-width: 768px) {
+        font-size: 37.5px;
+    }
 `;
 
 const T2 = styled.div`
     font-weight: 500;
     font-size: 35px;
+    @media (max-width: 768px) {
+        font-size: 25px;
+    }
 `;
 
 const T3 = styled.div`
     font-weight: 500;
     font-size: 30px;
     color: #555555;
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 const T4 = styled.div`
     font-weight: 600;
     font-size: 40px;
     margin-bottom: 25px;
+    @media (max-width: 768px) {
+        font-size: 35px;
+    }
 `;
 
 const Table = styled.div`
@@ -94,6 +118,11 @@ const Card = styled.div`
     transition: all 0.2s ease;
     :hover {
         transform: scale(0.99);
+    }
+    @media (max-width: 768px) {
+        margin: 0 0 15px 0;
+        min-width: 200px;
+        min-height: 125px;
     }
 `;
 
