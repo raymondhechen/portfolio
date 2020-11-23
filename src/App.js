@@ -12,7 +12,7 @@ import FacebookLogo from './logos/facebook.svg';
 import AndurilLogo from './logos/anduril.svg';
 import PearLogo from './logos/pear.svg';
 import ColdcallLogo from './logos/coldcall.svg';
-import CapletLogo from './logos/caplet.svg';
+// import CapletLogo from './logos/caplet.svg';
 import CubeLogo from './logos/cube.svg';
 import DiigLogo from './logos/diig.svg';
 import HackdukeLogo from './logos/hackduke.svg';
@@ -216,11 +216,11 @@ function App() {
             <Row>
                 <Table>
                     <Card
-                        style={{ backgroundColor: '#1E73E8' }}
+                        style={{ backgroundColor: '#1E73E8', width: '100%' }}
                         onClick={() => {
                             window.open('http://coldcall.co/');
                         }}>
-                        <Image style={{ width: '60%' }} src={ColdcallLogo} />
+                        <Image style={{ width: '35%' }} src={ColdcallLogo} />
                     </Card>
                     <Card
                         style={{ backgroundColor: '#b6e305' }}
@@ -229,33 +229,19 @@ function App() {
                         }}>
                         <Image style={{ width: '40%' }} src={PearLogo} />
                     </Card>
-                    <Card
+                    {/* <Card
                         style={{ backgroundColor: '#E4564D' }}
                         onClick={() => {
                             window.open('https://caplet.io/');
                         }}>
                         <Image style={{ width: '50%' }} src={CapletLogo} />
-                    </Card>
+                    </Card> */}
                     <Card
                         style={{ backgroundColor: '#54ADFF' }}
                         onClick={() => {
                             window.open('https://dukethecube.com/');
                         }}>
                         <Image style={{ width: '20%' }} src={CubeLogo} />
-                    </Card>
-                    <Card
-                        style={{ backgroundColor: '#ECECEC' }}
-                        onClick={() => {
-                            window.open('https://www.dukeimpact.org/');
-                        }}>
-                        <Image style={{ width: '32.5%' }} src={DiigLogo} />
-                    </Card>
-                    <Card
-                        style={{ backgroundColor: '#3c257d' }}
-                        onClick={() => {
-                            window.open('https://hackduke.org/');
-                        }}>
-                        <Image style={{ width: '50%' }} src={HackdukeLogo} />
                     </Card>
                 </Table>
             </Row>
@@ -276,7 +262,21 @@ function App() {
                         onClick={() => {
                             window.open('https://www.ul.com/');
                         }}>
-                        <Image style={{ width: '20%' }} src={UlLogo} />
+                        <Image style={{ width: '22.5%' }} src={UlLogo} />
+                    </Card>
+                    <Card
+                        style={{ backgroundColor: '#ECECEC' }}
+                        onClick={() => {
+                            window.open('https://www.dukeimpact.org/');
+                        }}>
+                        <Image style={{ width: '32.5%' }} src={DiigLogo} />
+                    </Card>
+                    <Card
+                        style={{ backgroundColor: '#3c257d' }}
+                        onClick={() => {
+                            window.open('https://hackduke.org/');
+                        }}>
+                        <Image style={{ width: '50%' }} src={HackdukeLogo} />
                     </Card>
                 </Table>
             </Row>
