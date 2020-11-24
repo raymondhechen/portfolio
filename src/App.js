@@ -206,7 +206,7 @@ function App() {
                         onClick={() => {
                             window.open('https://www.anduril.com/');
                         }}>
-                        <Image style={{ width: '50%' }} src={AndurilLogo} />
+                        <Image style={{ width: '55%' }} src={AndurilLogo} />
                     </Card>
                 </Table>
             </Row>
@@ -241,7 +241,7 @@ function App() {
                         onClick={() => {
                             window.open('https://dukethecube.com/');
                         }}>
-                        <Image style={{ width: '20%' }} src={CubeLogo} />
+                        <Image style={{ width: '17.5%' }} src={CubeLogo} />
                     </Card>
                 </Table>
             </Row>
