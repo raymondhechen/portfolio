@@ -173,7 +173,7 @@ function App() {
                         <span style={{ color: '#1E73E8' }}>Coldcall</span>
                     </Link>
                     . Try this out:{' '}
-                    <Link href='https://mural.so/' target='_blank'>
+                    <Link href='https://scope.so/' target='_blank'>
                         <span
                             style={{
                                 color: '#25BF75',
