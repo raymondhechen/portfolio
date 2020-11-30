@@ -11,6 +11,7 @@ import InstagramIcon from './icons/instagram.svg';
 import FacebookLogo from './logos/facebook.svg';
 import AndurilLogo from './logos/anduril.svg';
 import PearLogo from './logos/pear.svg';
+import ScopeLogo from './logos/scope.svg';
 import ColdcallLogo from './logos/coldcall.svg';
 // import CapletLogo from './logos/caplet.svg';
 import CubeLogo from './logos/cube.svg';
@@ -216,11 +217,18 @@ function App() {
             <Row>
                 <Table>
                     <Card
-                        style={{ backgroundColor: '#1E73E8', width: '100%' }}
+                        style={{ backgroundColor: '#18D3A2' }}
                         onClick={() => {
-                            window.open('http://coldcall.co/');
+                            window.open('https://scope.so/');
                         }}>
-                        <Image style={{ width: '35%' }} src={ColdcallLogo} />
+                        <Image style={{ width: '60%' }} src={ScopeLogo} />
+                    </Card>
+                    <Card
+                        style={{ backgroundColor: '#1E73E8' }}
+                        onClick={() => {
+                            window.open('https://coldcall.co/');
+                        }}>
+                        <Image style={{ width: '60%' }} src={ColdcallLogo} />
                     </Card>
                     <Card
                         style={{ backgroundColor: '#b6e305' }}
