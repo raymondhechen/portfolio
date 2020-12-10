@@ -68,7 +68,6 @@ class Navbar extends Component {
             <Container>
                 <Row>
                     <StyledLink exact to='/' activeStyle={{ color: 'rgb(30, 115, 232)' }}>Home</StyledLink>
-                    <StyledLink exact to='/design' activeStyle={{ color: 'rgb(30, 115, 232)' }}>Design</StyledLink>
                     <StyledLink exact to='/blog' activeStyle={{ color: 'rgb(30, 115, 232)' }}>Blog</StyledLink>
                 </Row>
                 <Row>
