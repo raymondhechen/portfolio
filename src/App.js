@@ -92,20 +92,20 @@ function App() {
                     <Link href='https://duke.edu/' target='_blank'>
                         <span style={{ color: '#012169' }}>Duke</span>
                     </Link>{' '}
-                    studying computer science and statistics. I'm currently
-                    learning to center a {'<div>'} @{' '}
+                    studying computer science and statistics. I was previously @{' '}
                     <Link href='https://www.facebook.com/' target='_blank'>
                         <span style={{ color: '#1778F2' }}>Facebook</span>
-                    </Link>{' '}
-                    and incoming @{' '}
-                    <Link href='https://www.anduril.com/' target='_blank'>
-                        <span style={{ color: '#a3a3a3' }}>Anduril</span>
-                    </Link>
-                    . I was previously @{' '}
+                    </Link>{' '} improving ad controls
+                    and @{' '}
                     <Link href='https://www.pendo.io/' target='_blank'>
                         <span style={{ color: '#EC2059' }}>Pendo</span>
                     </Link>{' '}
-                    working on Adopt. I'm building{' '}
+                    working on Adopt.
+                    I'll be joining {' '}
+                    <Link href='https://www.anduril.com/' target='_blank'>
+                        <span style={{ color: '#a3a3a3' }}>Anduril</span>
+                    </Link> this summer, and
+                    I'm building{' '}
                     <Link href='https://scope.so/' target='_blank'>
                         <span style={{ color: '#f76c6c' }}>Scope</span>
                     </Link>{' '}
