@@ -83,7 +83,8 @@ function App() {
         <Container>
             <Row>
                 <T1>
-                    Hey! <br /> I'm Raymond!
+                    Hey! <span role="img" aria-label="wave">👋</span>
+                    <br /> I'm Raymond!
                 </T1>
             </Row>
             <Row style={{ margin: '20px 0 0 0' }}>
