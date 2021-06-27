@@ -116,9 +116,12 @@ function App() {
             <Row style={{ margin: '15px 0 0 0' }}>
                 <T2 style={{ color: '#555', fontSize: '25px' }}>
                     InVEsToR @{' '}
+                    <Link href='https://customer.io/' target='_blank'>
+                        <span style={{ color: '#5721cc' }}>Customer.io</span>
+                    </Link>, {' '}
                     <Link href='https://www.alphaflow.com/' target='_blank'>
                         <span style={{ color: '#03c4f8' }}>AlphaFlow</span>
-                    </Link>, {" "}
+                    </Link>, {' '}
                     <Link href='https://gumroad.com/' target='_blank'>
                         <span style={{ color: '#FF7F50' }}>Gumroad</span>
                     </Link>;
