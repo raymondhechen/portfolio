@@ -89,43 +89,34 @@ function App() {
             </Row>
             <Row style={{ margin: '20px 0 0 0' }}>
                 <T2>
-                    I’m a junior @{' '}
+                    I’m a senior @{' '}
                     <Link href='https://duke.edu/' target='_blank'>
                         <span style={{ color: '#012169' }}>Duke</span>
                     </Link>{' '}
                     studying computer science and statistics. I was previously @{' '}
+                    <Link href='https://www.anduril.com/' target='_blank'>
+                        <span style={{ color: '#a3a3a3' }}>Anduril</span>
+                    </Link>{' '} supporting data infra and perception, @{' '}
                     <Link href='https://www.facebook.com/' target='_blank'>
                         <span style={{ color: '#1778F2' }}>Facebook</span>
-                    </Link>{' '} improving ad controls
+                    </Link>{' '} improving ad controls,
                     and @{' '}
                     <Link href='https://www.pendo.io/' target='_blank'>
                         <span style={{ color: '#EC2059' }}>Pendo</span>
                     </Link>{' '}
-                    working on Adopt.
-                    I'll be joining {' '}
-                    <Link href='https://www.anduril.com/' target='_blank'>
-                        <span style={{ color: '#a3a3a3' }}>Anduril</span>
-                    </Link> this summer, and
+                    working on digital adoption. 
+                    I'm also a fellow @{' '}
+                    <Link href='https://pear.vc/' target='_blank'>
+                        <span style={{ color: '#bada55' }}>Pear</span>
+                    </Link> and {' '}
+                    <Link href='https://contrarycap.com/' target='_blank'>
+                        <span style={{ color: '#4d53fe' }}>Contrary</span>
+                    </Link>, and
                     I'm building{' '}
                     <Link href='https://scope.so/' target='_blank'>
                         <span style={{ color: '#f76c6c' }}>Scope</span>
                     </Link>{' '}
                     in my free time.
-                </T2>
-            </Row>
-            <Row style={{ margin: '15px 0 0 0' }}>
-                <T2 style={{ color: '#555', fontSize: '25px' }}>
-                    InVEsToR @{' '}
-                    <Link href='https://customer.io/' target='_blank'>
-                        <span style={{ color: '#5721cc' }}>Customer.io</span>
-                    </Link>, {' '}
-                    <Link href='https://www.alphaflow.com/' target='_blank'>
-                        <span style={{ color: '#03c4f8' }}>AlphaFlow</span>
-                    </Link>, {' '}
-                    <Link href='https://gumroad.com/' target='_blank'>
-                        <span style={{ color: '#FF7F50' }}>Gumroad</span>
-                    </Link>;
-                    LP @{' '} <span style={{ color: '#18D3A2' }}>Yosemite</span>
                 </T2>
             </Row>
             <Row style={{ margin: '20px 0 0 0' }}>
