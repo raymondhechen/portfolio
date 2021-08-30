@@ -104,14 +104,17 @@ function App() {
                     <Link href='https://www.pendo.io/' target='_blank'>
                         <span style={{ color: '#EC2059' }}>Pendo</span>
                     </Link>{' '}
-                    working on digital adoption. 
+                    working on digital adoption.
                     I'm also a fellow @{' '}
                     <Link href='https://pear.vc/' target='_blank'>
                         <span style={{ color: '#bada55' }}>Pear</span>
-                    </Link> and {' '}
+                    </Link>,{' '}
                     <Link href='https://contrarycap.com/' target='_blank'>
                         <span style={{ color: '#4d53fe' }}>Contrary</span>
-                    </Link>, and
+                    </Link>, and {' '}
+                    <Link href='https://beondeck.com/' target='_blank'>
+                        <span style={{ color: '#202c46' }}>OnDeck</span>
+                    </Link>.
                     I'm building{' '}
                     <Link href='https://scope.so/' target='_blank'>
                         <span style={{ color: '#f76c6c' }}>Scope</span>
