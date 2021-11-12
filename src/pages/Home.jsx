@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import './Home.css';
 
 import LinkedinIcon from '../icons/linkedin.svg';
-import GithubIcon from '../icons/github.svg';
-import InstagramIcon from '../icons/instagram.svg';
+import TwitterIcon from '../icons/twitter.svg';
 
 const Container = styled.div`
     display: flex;
@@ -21,7 +20,7 @@ const Container = styled.div`
 
 const Row = styled.div`
     display: flex;
-    color: #333333;
+    color: #222;
     @media (max-width: 768px) {
         padding: 0 7.5vw;
     }
@@ -29,14 +28,14 @@ const Row = styled.div`
 
 const Link = styled.a`
     text-decoration: none;
-    color: #333;
+    color: #222;
 `;
 
 const Icon = styled.img`
     width: 35px;
     height: 35px;
     margin-right: 10px;
-    opacity: 0.95;
+    opacity: 0.75;
     cursor: pointer;
     transition: all 0.2s ease;
     user-select: none;
@@ -67,14 +66,7 @@ const T2 = styled.div`
     line-height: 37.5px;
     @media (max-width: 768px) {
         font-size: 25px;
-    }
-`;
-
-const T3 = styled.div`
-    font-weight: 400;
-    font-size: 20px;
-    @media (max-width: 768px) {
-        font-size: 25px;
+        line-height: normal;
     }
 `;
 
@@ -88,30 +80,36 @@ export default class HomePage extends Component {
                         <br /> I'm Raymond!
                     </T1>
                 </Row>
-                <Row style={{ margin: '20px 0 0 0' }}>
+                <Row style={{ marginTop: '20px' }}>
                     <T2>
                         I’m a senior @{' '}
                         <Link href='https://duke.edu/' target='_blank'>
                             <span style={{ color: '#012169' }}>Duke</span>
-                        </Link>{' '}
-                        studying computer science and statistics. I was previously @{' '}
+                        </Link>, and I'll be joining{' '}
+                        <Link href='https://retool.com/' target='_blank'>
+                            <span style={{ color: '#6875d9' }}>Retool</span>
+                        </Link>{' '} after graduation.
+                        I was previously @{' '}
                         <Link href='https://www.anduril.com/' target='_blank'>
                             <span style={{ color: '#a3a3a3' }}>Anduril</span>
                         </Link>{' '} supporting data infra and perception, @{' '}
-                        <Link href='https://www.facebook.com/' target='_blank'>
-                            <span style={{ color: '#1778F2' }}>Facebook</span>
+                        <Link href='https://www.meta.com/' target='_blank'>
+                            <span style={{ color: '#1778F2' }}>Meta</span>
                         </Link>{' '} improving ad controls,
                         and @{' '}
                         <Link href='https://www.pendo.io/' target='_blank'>
                             <span style={{ color: '#EC2059' }}>Pendo</span>
                         </Link>{' '}
                         working on digital adoption.
-                        I'm also a fellow @{' '}
-                        <Link href='https://pear.vc/' target='_blank'>
-                            <span style={{ color: '#bada55' }}>Pear</span>
-                        </Link>,{' '}
+                        I'm also a partner at{' '}
+                        <Link href='https://www.dormroomfund.com/' target='_blank'>
+                            <span style={{ color: '#391463' }}>Dorm Room Fund</span>
+                        </Link> and a fellow @{' '}
                         <Link href='https://contrarycap.com/' target='_blank'>
                             <span style={{ color: '#4d53fe' }}>Contrary</span>
+                        </Link>,{' '}
+                        <Link href='https://pear.vc/' target='_blank'>
+                            <span style={{ color: '#bada55' }}>Pear</span>
                         </Link>, and {' '}
                         <Link href='https://beondeck.com/' target='_blank'>
                             <span style={{ color: '#202c46' }}>OnDeck</span>
@@ -123,28 +121,14 @@ export default class HomePage extends Component {
                         in my free time.
                     </T2>
                 </Row>
-                <Row style={{ margin: '20px 0 0 0' }}>
-                    <T3>
-                        <Link
-                            href='https://twitter.com/raymondhechen'
-                            target='_blank'>
-                            @raymondhechen
-                        </Link>
-                    </T3>
-                </Row>
-                <Row style={{ margin: '20px 0 0 0' }}>
+                <Row style={{ marginTop: '25px' }}>
                     <Link
                         href='https://www.linkedin.com/in/raymondhechen/'
                         target='_blank'>
                         <Icon src={LinkedinIcon} />
                     </Link>
-                    <Link href='https://github.com/raymondhechen' target='_blank'>
-                        <Icon src={GithubIcon} />
-                    </Link>
-                    <Link
-                        href='https://www.instagram.com/raymondhechen/'
-                        target='_blank'>
-                        <Icon src={InstagramIcon} />
+                    <Link href='https://twitter.com/raymondhechen' target='_blank'>
+                        <Icon src={TwitterIcon} />
                     </Link>
                 </Row>
             </Container>
