@@ -101,7 +101,7 @@ export default class HomePage extends Component {
                             <span style={{ color: '#EC2059' }}>Pendo</span>
                         </Link>{' '}
                         working on digital adoption.
-                        I'm also a partner at{' '}
+                        I'm also a partner @{' '}
                         <Link href='https://www.dormroomfund.com/' target='_blank'>
                             <span style={{ color: '#391463' }}>Dorm Room Fund</span>
                         </Link> and a fellow @{' '}
