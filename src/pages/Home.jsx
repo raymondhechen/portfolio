@@ -118,6 +118,10 @@ export default class HomePage extends Component {
                         <Link href='https://scope.so/' target='_blank'>
                             <span style={{ color: '#f76c6c' }}>Scope</span>
                         </Link>{' '}
+                        and running the {' '}
+                        <Link href='https://connoisseury.xyz/' target='_blank'>
+                            <span style={{ color: '#534e61' }}>Connoisseury</span>
+                        </Link>{' '}
                         in my free time.
                     </T2>
                 </Row>
