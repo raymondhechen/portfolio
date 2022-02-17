@@ -89,6 +89,10 @@ export default class HomePage extends Component {
                         <Link href='https://retool.com/' target='_blank'>
                             <span style={{ color: '#6875d9' }}>Retool</span>
                         </Link>{' '} after graduation.
+                        I'm currently promoting growth @{' '}
+                        <Link href='https://www.charliehealth.com/' target='_blank'>
+                            <span style={{ color: '#23424b' }}>Charlie Health</span>
+                        </Link>.
                         I was previously @{' '}
                         <Link href='https://www.anduril.com/' target='_blank'>
                             <span style={{ color: '#a3a3a3' }}>Anduril</span>
@@ -119,7 +123,7 @@ export default class HomePage extends Component {
                             <span style={{ color: '#f76c6c' }}>Scope</span>
                         </Link>{' '}
                         and running the {' '}
-                        <Link href='https://connoisseury.xyz/' target='_blank'>
+                        <Link href='https://instagram.com/emp_connoisseurs' target='_blank'>
                             <span style={{ color: '#534e61' }}>Connoisseury</span>
                         </Link>{' '}
                         in my free time.
