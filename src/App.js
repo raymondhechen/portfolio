@@ -5,7 +5,6 @@ import HomePage from './pages/Home';
 import ZoomPage from './pages/Links/Zoom';
 import CalendlyPage from './pages/Links/Calendly';
 import ResumePage from './pages/Links/Resume';
-import WritingPage from './pages/Writing';
 
 function App() {
     return (
@@ -13,7 +12,6 @@ function App() {
             <Route exact path="/zoom" component={ZoomPage} />
             <Route exact path="/calendly" component={CalendlyPage} />
             <Route exact path="/resume" component={ResumePage} />
-            <Route exact path="/writing" component={WritingPage} />
             <Route path="/" component={HomePage} />
         </Switch>
     );

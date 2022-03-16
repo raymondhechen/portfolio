@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import Text from '../components/Text';
 import '../components/FadeIn.css';
@@ -24,11 +23,6 @@ const Row = styled.div`
     @media (max-width: 768px) {
         padding: 0 7.5vw;
     }
-`;
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: #222;
 `;
 
 const ExternalLink = styled.a`
@@ -97,11 +91,12 @@ export default class HomePage extends Component {
                 </Row>
                 <Row style={{ marginTop: '25px', flexDirection: "column" }}>
                     <Text type="b1">
-                        <StyledLink
+                        <ExternalLink
                             style={{ textDecoration: "underline" }}
-                            to='/writing'>
+                            href='https://raymondchen.notion.site/Raymond-Chen-s-Writing-3ac1cca001f84cf79b3cc4aeca5e32fb'
+                            target='_blank'>
                             Writing
-                        </StyledLink>
+                        </ExternalLink>
                     </Text>
                     <Text type="b1">
                         <ExternalLink
