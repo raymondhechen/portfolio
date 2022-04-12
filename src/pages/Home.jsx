@@ -51,7 +51,7 @@ export default class HomePage extends Component {
                         </ExternalLink>{' '} after graduation.
                         I'm currently promoting growth @{' '}
                         <ExternalLink href='https://www.charliehealth.com/' target='_blank'>
-                            <span style={{ color: '#23424b' }}>Charlie Health</span>
+                            <span style={{ color: '#23a67f' }}>Charlie Health</span>
                         </ExternalLink>.
                         I was previously @{' '}
                         <ExternalLink href='https://www.anduril.com/' target='_blank'>
@@ -76,15 +76,15 @@ export default class HomePage extends Component {
                             <span style={{ color: '#bada55' }}>Pear</span>
                         </ExternalLink>, and {' '}
                         <ExternalLink href='https://beondeck.com/' target='_blank'>
-                            <span style={{ color: '#202c46' }}>OnDeck</span>
+                            <span style={{ color: '#121a34' }}>OnDeck</span>
                         </ExternalLink>.
                         I'm building{' '}
                         <ExternalLink href='https://scope.so/' target='_blank'>
                             <span style={{ color: '#f76c6c' }}>Scope</span>
                         </ExternalLink>{' '}
-                        and running the {' '}
+                        and {' '}
                         <ExternalLink href='https://instagram.com/emp_connoisseurs' target='_blank'>
-                            <span style={{ color: '#534e61' }}>Connoisseury</span>
+                            <span style={{ color: '#edac07' }}>Future Connoisseurs</span>
                         </ExternalLink>{' '}
                         in my free time.
                     </Text>
