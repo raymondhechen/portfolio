@@ -2,32 +2,17 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Text from '../components/Text';
+import Row from '../components/Row'
+import Link from '../components/Link'
 import '../components/FadeIn.css';
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 5vw;
-    height: 90vh;
-    max-width: 1100px;
+    width: 100%;
     color: #222;
     animation: fadeIn 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    @media (max-width: 768px) {
-        margin: 0 3vw;
-    }
-`;
-
-const Row = styled.div`
-    display: flex;
-    @media (max-width: 768px) {
-        padding: 0 7.5vw;
-    }
-`;
-
-const ExternalLink = styled.a`
-    text-decoration: none;
-    color: #222;
 `;
 
 export default class HomePage extends Component {
@@ -36,84 +21,86 @@ export default class HomePage extends Component {
             <Container>
                 <Row>
                     <Text type="h1">
-                        Hey! <span role="img" aria-label="wave">👋</span>
-                        <br /> I'm Raymond!
+                        <span role="img" aria-label="wave">👋</span>{' '}
+                        Hey, I'm Raymond!
                     </Text>
                 </Row>
                 <Row style={{ marginTop: '20px' }}>
                     <Text type="h2">
                         I'm an engineer at{' '}
-                        <ExternalLink href='https://retool.com/' target='_blank'>
+                        <Link external to='https://retool.com/'>
                             <span style={{ color: '#6875d9' }}>Retool</span>
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         from{' '}
-                        <ExternalLink href='https://duke.edu/' target='_blank'>
+                        <Link external to='https://duke.edu/' >
                             <span style={{ color: '#012169' }}>Duke</span>
-                        </ExternalLink>.
+                        </Link>.
                         I was previously at{' '}
-                        <ExternalLink href='https://www.charliehealth.com/' target='_blank'>
+                        <Link external to='https://www.charliehealth.com/' >
                             <span style={{ color: '#23a67f' }}>Charlie Health</span>
-                        </ExternalLink> supporting growth,
+                        </Link> supporting growth,
                         {' '}
-                        <ExternalLink href='https://www.anduril.com/' target='_blank'>
+                        <Link external to='https://www.anduril.com/' >
                             <span style={{ color: '#a3a3a3' }}>Anduril</span>
-                        </ExternalLink>{' '} supporting data infra and perception, {' '}
-                        <ExternalLink href='https://www.meta.com/' target='_blank'>
+                        </Link>{' '} supporting data infra and perception, {' '}
+                        <Link external to='https://www.meta.com/' >
                             <span style={{ color: '#1778F2' }}>Meta</span>
-                        </ExternalLink>{' '} improving ad controls,
+                        </Link>{' '} improving ad controls,
                         and {' '}
-                        <ExternalLink href='https://www.pendo.io/' target='_blank'>
+                        <Link external to='https://www.pendo.io/' >
                             <span style={{ color: '#EC2059' }}>Pendo</span>
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         working on digital adoption.
                         I was previously a partner at{' '}
-                        <ExternalLink href='https://www.dormroomfund.com/' target='_blank'>
+                        <Link to='https://www.dormroomfund.com/' >
                             <span style={{ color: '#391463' }}>Dorm Room Fund</span>
-                        </ExternalLink>, and I'm a fellow at{' '}
-                        <ExternalLink href='https://contrarycap.com/' target='_blank'>
+                        </Link>, and I'm a fellow at{' '}
+                        <Link external to='https://contrarycap.com/' >
                             <span style={{ color: '#4d53fe' }}>Contrary</span>
-                        </ExternalLink>,{' '}
-                        <ExternalLink href='https://pear.vc/' target='_blank'>
+                        </Link>,{' '}
+                        <Link external to='https://pear.vc/' >
                             <span style={{ color: '#bada55' }}>Pear</span>
-                        </ExternalLink>, and {' '}
-                        <ExternalLink href='https://beondeck.com/' target='_blank'>
+                        </Link>, and {' '}
+                        <Link external to='https://beondeck.com/' >
                             <span style={{ color: '#121a34' }}>OnDeck</span>
-                        </ExternalLink>.
+                        </Link>.
                         I'm building{' '}
-                        <ExternalLink href='https://scope.so/' target='_blank'>
+                        <Link external to='https://scope.so/' >
                             <span style={{ color: '#f76c6c' }}>Scope</span>
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         and {' '}
-                        <ExternalLink href='https://instagram.com/emp_connoisseurs' target='_blank'>
+                        <Link external to='https://instagram.com/emp_connoisseurs' >
                             <span style={{ color: '#edac07' }}>Future Connoisseurs</span>
-                        </ExternalLink>{' '}
+                        </Link>{' '}
                         in my free time.
                     </Text>
                 </Row>
                 <Row style={{ marginTop: '25px', flexDirection: "column" }}>
                     <Text type="b1">
-                        <ExternalLink
+                        <Link
                             style={{ textDecoration: "underline" }}
-                            href='https://raymondchen.notion.site/Raymond-Chen-s-Writing-3ac1cca001f84cf79b3cc4aeca5e32fb'
-                            target='_blank'>
+                            to='/writing'
+                        >
                             Writing
-                        </ExternalLink>
+                        </Link>
                     </Text>
                     <Text type="b1">
-                        <ExternalLink
+                        <Link
+                            external
                             style={{ textDecoration: "underline" }}
-                            href='https://www.linkedin.com/in/raymondhechen/'
-                            target='_blank'>
+                            to='https://www.linkedin.com/in/raymondhechen/'
+                        >
                             LinkedIn
-                        </ExternalLink>
+                        </Link>
                     </Text>
                     <Text type="b1">
-                        <ExternalLink
+                        <Link
+                            external
                             style={{ textDecoration: "underline" }}
-                            href='https://twitter.com/raymondhechen'
-                            target='_blank'>
+                            to='https://twitter.com/raymondhechen'
+                        >
                             Twitter
-                        </ExternalLink>
+                        </Link>
                     </Text>
                 </Row>
             </Container>
