@@ -14,6 +14,18 @@ const Container = styled.div`
     animation: fadeIn 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 `;
 
+const PostList = [
+    "Duke: The Last Dance",
+    "How to Build Community",
+    "Expected Value of Lifelines",
+    "Pervasivness of Restaurant Group",
+    "test"
+]
+
+function transformSlug(str) {
+    return str.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+}
+
 export default class WritingPage extends Component {
     render() {
         return (
@@ -33,26 +45,13 @@ export default class WritingPage extends Component {
                     </Text>
                 </Row>
                 <Row style={{ marginTop: '40px', flexDirection: "column" }}>
-                    <Text type="h3" monospace style={{ marginBottom: "5px" }}>
-                        <Link>
-                            Duke: The Last Dance
-                        </Link>
-                    </Text>
-                    <Text type="h3" monospace style={{ marginBottom: "5px" }}>
-                        <Link>
-                            How to Build Community
-                        </Link>
-                    </Text>
-                    <Text type="h3" monospace style={{ marginBottom: "5px" }}>
-                        <Link>
-                            Expected Value of Lifelines
-                        </Link>
-                    </Text>
-                    <Text type="h3" monospace style={{ marginBottom: "5px" }}>
-                        <Link>
-                            Restaurant Group Monopolies
-                        </Link>
-                    </Text>
+                    {PostList.map((postName) =>
+                        <Text monospace type="h3" style={{ marginBottom: "10px" }}>
+                            <Link to={"/writing/" + transformSlug(postName)}>
+                                {postName}
+                            </Link>
+                        </Text>
+                    )}
                 </Row>
             </Container>
         )

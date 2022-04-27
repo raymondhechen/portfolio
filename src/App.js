@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/Home';
 import WritingPage from './pages/Writing';
+import PostPage from './pages/Post';
 import ZoomPage from './pages/Links/Zoom';
 import CalendlyPage from './pages/Links/Calendly';
 import ResumePage from './pages/Links/Resume';
@@ -15,6 +16,12 @@ const Container = styled.div`
     box-sizing: border-box;
     width: 100vw;
     min-height: 100vh;
+    @media (max-width: 800px) {
+        padding: 10vh 10vw;
+    }
+    @media (max-width: 500px) {
+        padding: 7.5vh 5vw;
+    }
 `;
 
 function App() {
@@ -24,6 +31,7 @@ function App() {
                 <Route exact path="/zoom" component={ZoomPage} />
                 <Route exact path="/calendly" component={CalendlyPage} />
                 <Route exact path="/resume" component={ResumePage} />
+                <Route exact path="/writing/:postname" component={PostPage} />
                 <Route path="/writing" component={WritingPage} />
                 <Route path="/" component={HomePage} />
             </Switch>
