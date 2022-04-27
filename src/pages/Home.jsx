@@ -42,33 +42,34 @@ export default class HomePage extends Component {
                 </Row>
                 <Row style={{ marginTop: '20px' }}>
                     <Text type="h2">
-                        I’m a senior @{' '}
-                        <ExternalLink href='https://duke.edu/' target='_blank'>
-                            <span style={{ color: '#012169' }}>Duke</span>
-                        </ExternalLink>, and I'll be joining{' '}
+                        I'm an engineer at{' '}
                         <ExternalLink href='https://retool.com/' target='_blank'>
                             <span style={{ color: '#6875d9' }}>Retool</span>
-                        </ExternalLink>{' '} after graduation.
-                        I'm currently promoting growth @{' '}
+                        </ExternalLink>{' '}
+                        from{' '}
+                        <ExternalLink href='https://duke.edu/' target='_blank'>
+                            <span style={{ color: '#012169' }}>Duke</span>
+                        </ExternalLink>.
+                        I was previously at{' '}
                         <ExternalLink href='https://www.charliehealth.com/' target='_blank'>
                             <span style={{ color: '#23a67f' }}>Charlie Health</span>
-                        </ExternalLink>.
-                        I was previously @{' '}
+                        </ExternalLink> supporting growth,
+                        {' '}
                         <ExternalLink href='https://www.anduril.com/' target='_blank'>
                             <span style={{ color: '#a3a3a3' }}>Anduril</span>
-                        </ExternalLink>{' '} supporting data infra and perception, @{' '}
+                        </ExternalLink>{' '} supporting data infra and perception, {' '}
                         <ExternalLink href='https://www.meta.com/' target='_blank'>
                             <span style={{ color: '#1778F2' }}>Meta</span>
                         </ExternalLink>{' '} improving ad controls,
-                        and @{' '}
+                        and {' '}
                         <ExternalLink href='https://www.pendo.io/' target='_blank'>
                             <span style={{ color: '#EC2059' }}>Pendo</span>
                         </ExternalLink>{' '}
                         working on digital adoption.
-                        I'm also a partner @{' '}
+                        I was previously a partner at{' '}
                         <ExternalLink href='https://www.dormroomfund.com/' target='_blank'>
                             <span style={{ color: '#391463' }}>Dorm Room Fund</span>
-                        </ExternalLink> and a fellow @{' '}
+                        </ExternalLink>, and I'm a fellow at{' '}
                         <ExternalLink href='https://contrarycap.com/' target='_blank'>
                             <span style={{ color: '#4d53fe' }}>Contrary</span>
                         </ExternalLink>,{' '}
