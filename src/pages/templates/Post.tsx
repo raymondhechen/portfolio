@@ -53,7 +53,7 @@ const PostPage = () => {
                         h2: ({ node, ...props }) => <Text type="h2" {...props} style={{ marginBottom: "15px" }} />,
                         h3: ({ node, ...props }) => <Text type="h3" {...props} style={{ marginBottom: "15px" }} />,
                         p: ({ node, ...props }) => <Text type="b1" {...props} />,
-                        br: ({ node, ...props }) => <div {...props} style={{ height: "20px" }} />,
+                        br: ({ node, ...props }) => <span {...props} style={{ height: "20px" }} />,
                         img: ({ node, ...props }) => ImageRenderer(props),
                         blockquote: ({ node, ...props }) => <Text type="b1" {...props} style={{ color: "#555", margin: "20px 0 20px 30px" }} />,
                     }}

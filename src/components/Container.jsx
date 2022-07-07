@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const TemplateContainer = (props) => {
-    return <Container>{props.children}</Container>
+    return <Container style={props.style}>{props.children}</Container>
 }
 
 export default TemplateContainer
