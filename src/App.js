@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-
 import HomePage from './pages/Home';
 import WritingPage from './pages/Writing';
-import PostPage from './pages/Post';
-import ZoomPage from './pages/Links/Zoom';
-import CalendlyPage from './pages/Links/Calendly';
-import ResumePage from './pages/Links/Resume';
+import PostPage from './pages/templates/Post';
+import ZoomPage from './pages/links/Zoom';
+import CalendlyPage from './pages/links/Calendly';
+import ResumePage from './pages/links/Resume';
 import PhotographyPage from './pages/Photography';
 
 const Container = styled.div`

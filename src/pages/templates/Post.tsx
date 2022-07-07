@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
-import Text from '../components/Text';
-import Row from '../components/Row'
-import Link from '../components/Link';
-import Container from '../components/Container'
+import Text from '../../components/Text';
+import Row from '../../components/Row'
+import Link from '../../components/Link';
+import Container from '../../components/Container'
 
 const ImageRenderer = (props) => {
     console.log(window.location.origin + "/" + props.src)

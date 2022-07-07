@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
 import Text from '../components/Text';
 import Row from '../components/Row'
 import Link from '../components/Link';
 import Container from '../components/Container'
-
-import WarriorsAlbum from './Albums/warriors.json'
-import PrideAlbum from './Albums/pride.json'
-import SalesforceAlbum from './Albums/salesforce.json'
+import { ALBUM_NAMES } from '../sources';
 
 const AlbumGrid = styled.div`
     display: grid;
@@ -58,7 +54,20 @@ const RenderAlbum = (album) => {
 
 
 const PhotographyPage = () => {
-    const albums = [WarriorsAlbum, PrideAlbum, SalesforceAlbum]
+    const [albums, setAlbums] = useState([])
+    useEffect(() => {
+        const fetchAlbums = async () => {
+            let fetchedAlbums = []
+            for (const albumName of ALBUM_NAMES) {
+                const res = await fetch(`albums/${albumName}.json`)
+                const jsonData = await res.json()
+                fetchedAlbums.push(jsonData)
+            }
+            setAlbums(fetchedAlbums)
+        }
+        fetchAlbums()
+    }, [])
+
 
     return (
         <Container>
