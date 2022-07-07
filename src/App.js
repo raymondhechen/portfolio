@@ -8,6 +8,7 @@ import PostPage from './pages/Post';
 import ZoomPage from './pages/Links/Zoom';
 import CalendlyPage from './pages/Links/Calendly';
 import ResumePage from './pages/Links/Resume';
+import PhotographyPage from './pages/Photography';
 
 const Container = styled.div`
     display: flex;
@@ -33,6 +34,7 @@ function App() {
                 <Route exact path="/resume" component={ResumePage} />
                 <Route exact path="/writing/:postname" component={PostPage} />
                 <Route path="/writing" component={WritingPage} />
+                <Route path="/photography" component={PhotographyPage} />
                 <Route path="/" component={HomePage} />
             </Switch>
         </Container>

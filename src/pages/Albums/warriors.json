@@ -1,0 +1,38 @@
+{
+    "title": "Golden State Warriors Parade",
+    "year": "2022",
+    "images": [
+        {
+            "name": "warriors1",
+            "src": "https://raymond-photography.s3.amazonaws.com/warriors1.jpg",
+            "colStart": 5,
+            "colEnd": 9,
+            "rowStart": 1,
+            "rowEnd": 4
+        },
+        {
+            "name": "warriors2",
+            "src": "https://raymond-photography.s3.amazonaws.com/warriors2.jpg",
+            "colStart": 1,
+            "colEnd": 5,
+            "rowStart": 6,
+            "rowEnd": 9
+        },
+        {
+            "name": "warriors3",
+            "src": "https://raymond-photography.s3.amazonaws.com/warriors3.jpg",
+            "colStart": 5,
+            "colEnd": 9,
+            "rowStart": 4,
+            "rowEnd": 9
+        },
+        {
+            "name": "warriors4",
+            "src": "https://raymond-photography.s3.amazonaws.com/warriors4.jpg",
+            "colStart": 1,
+            "colEnd": 5,
+            "rowStart": 1,
+            "rowEnd": 6
+        }
+    ]
+}

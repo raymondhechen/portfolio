@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 import Text from '../components/Text';
 import Row from '../components/Row'
 import Link from '../components/Link';
-import '../components/FadeIn.css';
+import Container from '../components/Container'
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: #222;
-    animation: fadeIn 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-`;
+const ImageRenderer = (props) => {
+    console.log(window.location.origin + "/" + props.src)
+    return (
+        <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+            <img alt="" src={window.location.origin + "/" + props.src} style={{ width: "75%" }} />
+        </div>
+    )
+}
+
 
 const PostPage = () => {
     const [markdownText, setMarkdownText] = useState(null);
@@ -22,16 +23,15 @@ const PostPage = () => {
 
     useEffect(() => {
         const loadData = async () => {
-            fetch(`../blog/${postname}.md`)
+            fetch(`../blog/${postname}/${postname}.md`)
                 .then((data) => data.text())
                 .then((text) => {
-                    console.log(text)
                     setMarkdownText(text)
                 })
         }
 
         loadData();
-    }, [])
+    }, [postname])
 
     return (
         <Container>
@@ -47,12 +47,15 @@ const PostPage = () => {
             <Row style={{ marginTop: '75px', flexDirection: "column" }}>
                 <ReactMarkdown
                     children={markdownText}
+                    linkTarget="_blank"
                     components={{
                         h1: ({ node, ...props }) => <Text type="h1" {...props} style={{ marginBottom: "15px" }} />,
                         h2: ({ node, ...props }) => <Text type="h2" {...props} style={{ marginBottom: "15px" }} />,
                         h3: ({ node, ...props }) => <Text type="h3" {...props} style={{ marginBottom: "15px" }} />,
                         p: ({ node, ...props }) => <Text type="b1" {...props} />,
-                        br: ({ node, ...props }) => <div {...props} style={{ height: "20px" }} />
+                        br: ({ node, ...props }) => <div {...props} style={{ height: "20px" }} />,
+                        img: ({ node, ...props }) => ImageRenderer(props),
+                        blockquote: ({ node, ...props }) => <Text type="b1" {...props} style={{ color: "#555", margin: "20px 0 20px 30px" }} />,
                     }}
                 />
             </Row>

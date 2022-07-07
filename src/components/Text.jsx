@@ -10,14 +10,14 @@ const Text = (props) => {
         case "h1":
             if (isSmallScreen) {
                 style = {
-                    fontWeight: "700",
-                    fontSize: "35px",
+                    fontWeight: "600",
+                    fontSize: "32.5px",
                 }
             }
             else {
                 style = {
-                    fontWeight: "700",
-                    fontSize: "42.5px",
+                    fontWeight: "600",
+                    fontSize: "40px",
                 }
             }
             break;
@@ -66,6 +66,22 @@ const Text = (props) => {
                     fontWeight: "500",
                     fontSize: "20px",
                     lineHeight: "32.5px"
+                }
+            }
+            break;
+        case "b2":
+            if (isSmallScreen) {
+                style = {
+                    fontWeight: "400",
+                    fontSize: "15px",
+                    lineHeight: "20px"
+                }
+            }
+            else {
+                style = {
+                    fontWeight: "400",
+                    fontSize: "17.5px",
+                    lineHeight: "25px"
                 }
             }
             break;

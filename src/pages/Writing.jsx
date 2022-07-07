@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 
 import Text from '../components/Text';
 import Row from '../components/Row'
 import Link from '../components/Link';
-import '../components/FadeIn.css';
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: #222;
-    animation: fadeIn 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-`;
+import Container from '../components/Container'
 
 const PostList = [
-    "Duke: The Last Dance",
-    "How to Build Community",
-    "Expected Value of Lifelines",
-    "Pervasivness of Restaurant Group",
-    "test"
+    // "Duke: The Last Dance",
+    // "Hedging Your Life",
+    // "How to Build Community",
+    // "Your Expected Value",
+    // "Pervasivness of Restaurant Group",
+    // "test"
 ]
 
 function transformSlug(str) {
@@ -41,7 +33,7 @@ export default class WritingPage extends Component {
                 </Row>
                 <Row style={{ marginTop: '50px' }}>
                     <Text type="h1">
-                        🖊️ Raymond's Writing
+                        🖊️ Writing
                     </Text>
                 </Row>
                 <Row style={{ marginTop: '40px', flexDirection: "column" }}>

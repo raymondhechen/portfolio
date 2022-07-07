@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Text from '../components/Text';
 import Row from '../components/Row'
 import Link from '../components/Link'
-import '../components/FadeIn.css';
 
 const Container = styled.div`
     display: flex;
@@ -12,7 +11,6 @@ const Container = styled.div`
     justify-content: center;
     width: 100%;
     color: #222;
-    animation: fadeIn 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 `;
 
 export default class HomePage extends Component {
@@ -69,14 +67,14 @@ export default class HomePage extends Component {
                             <span style={{ color: '#f76c6c' }}>Scope</span>
                         </Link>{' '}
                         and {' '}
-                        <Link external to='https://instagram.com/emp_connoisseurs' >
+                        <Link external to='https://futureconnoisseurs.com/' >
                             <span style={{ color: '#edac07' }}>Future Connoisseurs</span>
                         </Link>{' '}
                         in my free time.
                     </Text>
                 </Row>
                 <Row style={{ marginTop: '25px', flexDirection: "column" }}>
-                    <Text type="b1">
+                    <Text type="b2">
                         <Link
                             style={{ textDecoration: "underline" }}
                             to='/writing'
@@ -84,7 +82,15 @@ export default class HomePage extends Component {
                             Writing
                         </Link>
                     </Text>
-                    <Text type="b1">
+                    <Text type="b2">
+                        <Link
+                            style={{ textDecoration: "underline" }}
+                            to='/photography'
+                        >
+                            Photography
+                        </Link>
+                    </Text>
+                    <Text type="b2">
                         <Link
                             external
                             style={{ textDecoration: "underline" }}
@@ -93,7 +99,7 @@ export default class HomePage extends Component {
                             LinkedIn
                         </Link>
                     </Text>
-                    <Text type="b1">
+                    <Text type="b2">
                         <Link
                             external
                             style={{ textDecoration: "underline" }}
