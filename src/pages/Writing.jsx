@@ -31,7 +31,7 @@ export default class WritingPage extends Component {
                         </Link>
                     </Text>
                 </Row>
-                <Row style={{ marginTop: '50px' }}>
+                <Row style={{ marginTop: '15px' }}>
                     <Text type="h1">
                         🖊️ Writing
                     </Text>

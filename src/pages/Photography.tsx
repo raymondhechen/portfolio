@@ -7,6 +7,8 @@ import Link from '../components/Link';
 import Container from '../components/Container'
 
 import WarriorsAlbum from './Albums/warriors.json'
+import PrideAlbum from './Albums/pride.json'
+import SalesforceAlbum from './Albums/salesforce.json'
 
 const AlbumGrid = styled.div`
     display: grid;
@@ -31,10 +33,10 @@ const AlbumImage = styled.img`
 
 const RenderAlbum = (album) => {
     return (
-        <div style={{ marginBottom: "25px" }}>
+        <div style={{ marginBottom: "50px", width: "100%" }}>
             <Row style={{ marginBottom: "20px", justifyContent: "space-between" }}>
-                <Text type="h2">{album.title}</Text>
-                <Text type="h2">{album.year} 🗓️</Text>
+                <Text type="h2" monospace>{album.title}</Text>
+                <Text type="h2" monospace>{album.year}</Text>
             </Row>
             <AlbumGrid>
                 {album.images.map((image) =>
@@ -56,7 +58,7 @@ const RenderAlbum = (album) => {
 
 
 const PhotographyPage = () => {
-    console.log(WarriorsAlbum)
+    const albums = [WarriorsAlbum, PrideAlbum, SalesforceAlbum]
 
     return (
         <Container>
@@ -69,14 +71,16 @@ const PhotographyPage = () => {
                     </Link>
                 </Text>
             </Row>
-            <Row style={{ margin: '50px 0' }}>
+            <Row style={{ margin: '15px 0 50px 0' }}>
                 <Text type="h1">
                     📷 Photography
                 </Text>
             </Row>
-            <Row>
-                {RenderAlbum(WarriorsAlbum)}
-            </Row>
+            {albums.map((album) =>
+                <Row>
+                    {RenderAlbum(album)}
+                </Row>
+            )}
         </Container>
     )
 }
