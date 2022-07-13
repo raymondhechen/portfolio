@@ -1,4 +1,5 @@
 export const ALBUM_NAMES = [
+    'hudson',
     "pride",
     "salesforce",
     "warriors"

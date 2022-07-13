@@ -26,7 +26,7 @@ const HomePage = () => {
                     I was previously at{' '}
                     <Link external to='https://www.charliehealth.com/' >
                         <span style={{ color: '#23a67f' }}>Charlie Health</span>
-                    </Link> supporting growth,
+                    </Link> sustaining growth,
                     {' '}
                     <Link external to='https://www.anduril.com/' >
                         <span style={{ color: '#a3a3a3' }}>Anduril</span>
