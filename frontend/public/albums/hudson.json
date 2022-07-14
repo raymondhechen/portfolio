@@ -1,37 +1,29 @@
 {
-    "title": "Hudson Yards",
+    "title": "Vessel in the Yards",
     "year": "July 2022",
     "images": [
         {
             "name": "hudson1",
             "src": "https://raymond-photography.s3.amazonaws.com/hudson1.jpg",
             "colStart": 1,
-            "colEnd": 4,
+            "colEnd": 5,
             "rowStart": 1,
-            "rowEnd": 7
+            "rowEnd": 9
         },
         {
             "name": "hudson2",
             "src": "https://raymond-photography.s3.amazonaws.com/hudson2.jpg",
-            "colStart": 4,
+            "colStart": 5,
             "colEnd": 9,
             "rowStart": 1,
-            "rowEnd": 5
-        },
-        {
-            "name": "hudson3",
-            "src": "https://raymond-photography.s3.amazonaws.com/hudson3.jpg",
-            "colStart": 1,
-            "colEnd": 4,
-            "rowStart": 7,
-            "rowEnd": 9
+            "rowEnd": 6
         },
         {
             "name": "hudson4",
             "src": "https://raymond-photography.s3.amazonaws.com/hudson4.jpg",
-            "colStart": 4,
+            "colStart": 5,
             "colEnd": 9,
-            "rowStart": 5,
+            "rowStart": 6,
             "rowEnd": 9
         }
     ]
