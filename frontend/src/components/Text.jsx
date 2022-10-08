@@ -10,13 +10,13 @@ const Text = (props) => {
         case "h1":
             if (isSmallScreen) {
                 style = {
-                    fontWeight: "600",
+                    fontWeight: "500",
                     fontSize: "32.5px",
                 }
             }
             else {
                 style = {
-                    fontWeight: "600",
+                    fontWeight: "500",
                     fontSize: "40px",
                 }
             }
