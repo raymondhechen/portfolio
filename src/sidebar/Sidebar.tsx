@@ -1,7 +1,9 @@
 import { useContext } from 'react'
+import { useMatch } from 'react-router'
 import styled, { ThemeContext } from 'styled-components'
 import Button from '../components/Button'
 import Column from '../components/Column'
+import Link from '../components/Link'
 
 const SidebarContainer = styled.div`
   width: auto;
@@ -22,13 +24,34 @@ type Props = {
 
 const Sidebar = ({ toggleTheme }: Props) => {
   const theme = useContext(ThemeContext)
+  const homePathMatch = useMatch('/')
+  const photographyPathMatch = useMatch('/photography')
+  const writingPathMatch = useMatch('/writing')
 
   return (
     <SidebarContainer>
       <Column>
-        <Button type="tertiary" icon="home" />
+        <Link url="/">
+          <Button type="tertiary" icon="home" active={!!homePathMatch} />
+        </Link>
+        <div style={{ height: '12px' }} />
+        <Link url="/photography">
+          <Button type="tertiary" icon="photo" active={!!photographyPathMatch} />
+        </Link>
+        <div style={{ height: '12px' }} />
+        <Link url="/writing">
+          <Button type="tertiary" icon="pencil" active={!!writingPathMatch} />
+        </Link>
       </Column>
       <Column>
+        <Link url="https://twitter.com/raymondhechen" external>
+          <Button type="tertiary" icon="twitter" />
+        </Link>
+        <div style={{ height: '12px' }} />
+        <Link url="https://www.linkedin.com/in/raymondhechen/" external>
+          <Button type="tertiary" icon="linkedin" />
+        </Link>
+        <div style={{ height: '12px' }} />
         <Button
           type="tertiary"
           icon="shadow"
