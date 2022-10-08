@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import Sidebar from './sidebar/Sidebar'
 import { lightTheme, darkTheme } from './styles/theme'
@@ -13,21 +13,21 @@ const AppContainer = styled.div`
 `
 
 const App = () => {
-  const [theme, setTheme] = useState(lightTheme)
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true)
 
-  const toggleTheme = (themeName: ThemeName) => {
-    switch (themeName) {
-      case 'dark':
-        setTheme(darkTheme)
-        break
-      case 'light':
-      default:
-        setTheme(lightTheme)
+  useEffect(() => {
+    const prefersLightTheme = window.matchMedia('(prefers-color-scheme: light)')
+    if (prefersLightTheme.matches) {
+      setIsDarkTheme(false)
     }
+  }, [])
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme)
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <AppContainer>
         <Sidebar toggleTheme={toggleTheme} />
       </AppContainer>

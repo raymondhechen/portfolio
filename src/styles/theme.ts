@@ -14,6 +14,7 @@ import {
 export type CustomTheme = typeof lightTheme
 
 export const lightTheme = {
+  type: 'light',
   colors: {
     gray1: mauve.mauve1,
     gray2: mauve.mauve2,
@@ -49,6 +50,7 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
+  type: 'dark',
   colors: {
     gray1: mauveDark.mauve1,
     gray2: mauveDark.mauve2,

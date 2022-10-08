@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import styled from 'styled-components'
-import { ThemeName } from '../App'
+import { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 import Button from '../components/Button'
 import Column from '../components/Column'
 
@@ -18,21 +17,11 @@ const SidebarContainer = styled.div`
 `
 
 type Props = {
-  toggleTheme: (themeName: ThemeName) => void
+  toggleTheme: () => void
 }
 
 const Sidebar = ({ toggleTheme }: Props) => {
-  const [themeName, setThemeName] = useState<ThemeName>('light')
-
-  const handleThemeChange = () => {
-    if (themeName === 'light') {
-      setThemeName('dark')
-      toggleTheme('dark')
-    } else {
-      setThemeName('light')
-      toggleTheme('light')
-    }
-  }
+  const theme = useContext(ThemeContext)
 
   return (
     <SidebarContainer>
@@ -43,8 +32,8 @@ const Sidebar = ({ toggleTheme }: Props) => {
         <Button
           type="tertiary"
           icon="shadow"
-          onClick={handleThemeChange}
-          active={themeName === 'dark'}
+          onClick={toggleTheme}
+          active={theme.type === 'dark'}
         />
       </Column>
     </SidebarContainer>
