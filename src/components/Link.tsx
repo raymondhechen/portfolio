@@ -1,5 +1,10 @@
 import { FC, ReactNode } from 'react'
 import { Link as InternalLink } from 'react-router-dom'
+import styled from 'styled-components'
+
+const StyledExternalLink = styled.a`
+  text-decoration: none;
+`
 
 type Props = {
   external?: boolean
@@ -10,9 +15,9 @@ type Props = {
 const Link: FC<Props> = ({ external, url, children }) => {
   if (external) {
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
         {children}
-      </a>
+      </StyledExternalLink>
     )
   }
 
