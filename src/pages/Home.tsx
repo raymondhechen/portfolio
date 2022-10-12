@@ -10,7 +10,6 @@ const Content = styled.div`
   align-items: center;
   font-size: 40px;
   color: ${(props) => props.theme.colors.gray12};
-  margin-left: 30px;
 `
 
 const Title = styled.div`
@@ -28,7 +27,7 @@ const HomePage = () => {
     <Page>
       <Content>
         <div>
-          <Title>Hey I&apos;m Raymond!</Title>
+          <Title>Hey, I&apos;m Raymond!</Title>
           <Section>
             I&apos;m an engineer at{' '}
             <Link external url="https://retool.com/">

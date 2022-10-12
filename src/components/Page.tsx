@@ -5,7 +5,8 @@ const PageContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 50px;
+  overflow-y: scroll;
 `
 
 type Props = {
