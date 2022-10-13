@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from 'react'
-import Link from 'next/link'
+import { FC, ReactNode } from 'react'
+import { Link as InternalLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledExternalLink = styled.a`
@@ -12,7 +12,7 @@ type Props = {
   children: ReactNode
 }
 
-const LinkComponent: FC<Props> = ({ external, url, children }) => {
+const Link: FC<Props> = ({ external, url, children }) => {
   if (external) {
     return (
       <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
@@ -21,7 +21,7 @@ const LinkComponent: FC<Props> = ({ external, url, children }) => {
     )
   }
 
-  return <Link href={url}>{children}</Link>
+  return <InternalLink to={url}>{children}</InternalLink>
 }
 
-export default LinkComponent
+export default Link

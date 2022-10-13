@@ -1,6 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
 import Link from '../components/Link'
-import Page from '../components/Page'
+import Page from '../modules/Page'
 
 const Content = styled.div`
   display: flex;
@@ -37,6 +38,10 @@ const HomePage = () => {
             <Link external url="https://duke.edu/">
               <span style={{ color: '#012169' }}>Duke</span>
             </Link>
+            . I like taking photos, which I sell at{' '}
+            <Link external url="https://paracosm.design/">
+              <span style={{ color: '#7D7876' }}>Paracosm</span>
+            </Link>
             .
           </Section>
           I was previously at{' '}
@@ -45,7 +50,7 @@ const HomePage = () => {
           </Link>{' '}
           sustaining growth,{' '}
           <Link external url="https://www.anduril.com/">
-            <span style={{ color: '#a3a3a3' }}>Anduril</span>
+            <span style={{ color: '#7D7876' }}>Anduril</span>
           </Link>{' '}
           supporting data infra and perception,{' '}
           <Link external url="https://www.meta.com/">
