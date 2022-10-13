@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Text from '../components/Text'
 import Page from '../modules/Page'
 import PhotoGrid from '../modules/PhotoGrid'
 import { fetchAlbum, fetchAlbums, PhotoType } from '../notion/photography.requests'
@@ -13,7 +14,6 @@ const AlbumHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 35px;
   margin-bottom: 10px;
 `
 
@@ -21,11 +21,6 @@ const AlbumHeaderRight = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-size: 25px;
-`
-
-const AlbumHeaderSubtitle = styled.div`
-  font-size: 15px;
 `
 
 export type Album = {
@@ -53,10 +48,10 @@ const PhotographyPage = ({ albums }: Props) => {
         return (
           <AlbumSection key={album.id}>
             <AlbumHeader>
-              <span>{album.title}</span>
+              <Text type="h3">{album.title}</Text>
               <AlbumHeaderRight>
-                <span>{album.location}</span>
-                <AlbumHeaderSubtitle>{dateString}</AlbumHeaderSubtitle>
+                <Text type="h5">{album.location}</Text>
+                <Text type="b1">{dateString}</Text>
               </AlbumHeaderRight>
             </AlbumHeader>
             <PhotoGrid photos={album.photos} />
