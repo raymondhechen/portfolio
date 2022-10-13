@@ -12,16 +12,20 @@ type Props = {
   children: ReactNode
 }
 
-const LinkComponent: FC<Props> = ({ external, url, children }) => {
+const LinkComponent: FC<Props> = ({ external, children, url }) => {
   if (external) {
     return (
-      <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
-        {children}
-      </StyledExternalLink>
+      <Link href={url} passHref>
+        <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
+          {children}
+        </StyledExternalLink>
+      </Link>
     )
   }
 
   return <Link href={url}>{children}</Link>
 }
+
+LinkComponent.displayName = 'LinkComponent'
 
 export default LinkComponent
