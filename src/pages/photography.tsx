@@ -75,7 +75,6 @@ export const getStaticProps = async () => {
     props: {
       albums,
     },
-    revalidate: 1, // In seconds
   }
 }
 
