@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Page from '../modules/Page'
 import PhotoGrid from '../modules/PhotoGrid'
-import { fetchAlbum, fetchAlbums } from '../notion/photography.requests'
+import { fetchAlbum, fetchAlbums, PhotoType } from '../notion/photography.requests'
 
 const AlbumSection = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ export type Album = {
   title: string
   date: string
   location: string
-  photos: string[]
+  photos: PhotoType[]
 }
 
 type Props = {
