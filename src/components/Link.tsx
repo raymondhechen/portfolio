@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import styled from 'styled-components'
 
 const StyledExternalLink = styled.a`
@@ -12,20 +12,20 @@ type Props = {
   children: ReactNode
 }
 
-const LinkComponent: FC<Props> = ({ external, children, url }) => {
+const Link: FC<Props> = ({ external, children, url }) => {
   if (external) {
     return (
-      <Link href={url} passHref>
+      <NextLink href={url} passHref>
         <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
           {children}
         </StyledExternalLink>
-      </Link>
+      </NextLink>
     )
   }
 
-  return <Link href={url}>{children}</Link>
+  return <NextLink href={url}>{children}</NextLink>
 }
 
-LinkComponent.displayName = 'LinkComponent'
+Link.displayName = 'Link'
 
-export default LinkComponent
+export default Link

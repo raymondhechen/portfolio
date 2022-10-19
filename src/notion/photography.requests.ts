@@ -23,7 +23,7 @@ export const fetchAlbum = async (albumId: string): Promise<Album> => {
   const blocks = await getBlocks(page.id)
   const photos = await Promise.all(
     blocks.map<Promise<PhotoType>>(async (block: any) => {
-      const url = block.image.file.url
+      const url = block.image.external.url
       const { width, height } = await fetchImageDimensions(url)
 
       return {

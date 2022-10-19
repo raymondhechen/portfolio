@@ -9,8 +9,8 @@ export const getDatabase = async (databaseId: string) => {
     database_id: databaseId,
     sorts: [
       {
-        property: 'Name',
-        direction: 'ascending',
+        property: 'Date',
+        direction: 'descending',
       },
     ],
   })
