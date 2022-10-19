@@ -28,7 +28,7 @@ const Sidebar = ({ toggleTheme }: Props) => {
 
   const theme = useContext(ThemeContext)
   const homePathMatch = router.pathname === '/'
-  const photographyPathMatch = router.pathname === '/photography'
+  const photographyPathMatch = router.pathname.startsWith('/photography')
   const writingPathMatch = router.pathname === '/writing'
 
   return (

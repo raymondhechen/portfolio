@@ -1,6 +1,6 @@
 import { fetchAlbum, fetchAlbums } from '../../notion/photography.requests'
 import { Album } from '../photography'
-import PhotographyMenu from './PhotographyMenu'
+import PhotographyMenu from '../../modules/PhotographyMenu'
 import { createSlug, createSlugMap, IParams, SlugMap } from '../../utilities/slugs'
 
 type Props = {
