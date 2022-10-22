@@ -8,15 +8,16 @@ type TextProps = {
   type: TextType
   color?: string
   children: ReactNode
+  style?: CSSProperties
 }
 
 const TextContainer = styled.div`
   color: ${(props) => props.theme.colors.gray12};
+  transition: var(--transition);
 `
 
-const Text: FC<TextProps> = ({ type, color, children }) => {
+const Text: FC<TextProps> = ({ style: styleProp, type, color, children }) => {
   let style: CSSProperties
-
   switch (type) {
     case 'h1':
       style = {
@@ -65,7 +66,7 @@ const Text: FC<TextProps> = ({ type, color, children }) => {
       }
   }
 
-  return <TextContainer style={{ ...style, color }}>{children}</TextContainer>
+  return <TextContainer style={{ ...style, ...styleProp, color }}>{children}</TextContainer>
 }
 
 export default Text

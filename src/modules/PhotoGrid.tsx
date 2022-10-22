@@ -22,11 +22,11 @@ const PhotoGrid = ({ photos }: Props) => {
 
   useEffect(() => {
     const gap = 0.3
-    const halfContainerWidth = containerWidth / 2
+    const margin = containerWidth / 3
 
-    const resizedPhotos = computeResizedPhotos(photos, halfContainerWidth)
-    const photoPositions = computePhotoPositions(resizedPhotos, halfContainerWidth / 2, gap) // halfContainerWidth / 2 is a bit arbitrary
-    const numPages = computeNumberPages(resizedPhotos, containerWidth, gap)
+    const resizedPhotos = computeResizedPhotos(photos, containerWidth / 2)
+    const photoPositions = computePhotoPositions(resizedPhotos, margin, gap) // halfContainerWidth / 2 is a bit arbitrary
+    const numPages = computeNumberPages(resizedPhotos, containerWidth, margin, gap)
     setNumPages(numPages)
     setRenderPhotos(resizedPhotos)
     setRenderPositions(photoPositions)
@@ -41,7 +41,6 @@ const PhotoGrid = ({ photos }: Props) => {
             url={photo.url}
             position={[renderPositions[i].x, 0, 0]}
             scale={[photo.width, photo.height]}
-            allPhotos={renderPhotos}
           />
         ))}
       </Scroll>

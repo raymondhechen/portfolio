@@ -11,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  --transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
 html, body {
