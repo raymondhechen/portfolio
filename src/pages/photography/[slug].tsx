@@ -3,7 +3,7 @@ import { Album } from '../photography'
 import PhotographyMenu from '../../modules/PhotoMenu'
 import { createSlug, createSlugMap, IParams, SlugMap } from '../../utilities/slugs'
 import styled from 'styled-components'
-import PhotoGrid from '../../modules/PhotoGrid'
+import PhotoGrid from '../../modules/PhotoGrid/PhotoGrid'
 import { Canvas } from '@react-three/fiber'
 
 const FullContainer = styled.div`

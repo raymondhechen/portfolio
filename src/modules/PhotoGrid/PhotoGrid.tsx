@@ -1,5 +1,5 @@
 import { ScrollControls, Scroll } from '@react-three/drei'
-import { PhotoType } from '../notion/photography.requests'
+import { PhotoType } from '../../notion/photography.requests'
 import { useThree } from '@react-three/fiber'
 import PhotoGridItem from './PhotoGridItem'
 import { useEffect, useState } from 'react'
@@ -21,19 +21,24 @@ const PhotoGrid = ({ photos }: Props) => {
   const [numPages, setNumPages] = useState<number>(1)
 
   useEffect(() => {
+    console.log('Container Width', containerWidth)
+
     const gap = 0.3
     const margin = containerWidth / 3
 
     const resizedPhotos = computeResizedPhotos(photos, containerWidth / 2)
     const photoPositions = computePhotoPositions(resizedPhotos, margin, gap) // halfContainerWidth / 2 is a bit arbitrary
     const numPages = computeNumberPages(resizedPhotos, containerWidth, margin, gap)
+
+    console.log('Photo Positions', photoPositions)
+
     setNumPages(numPages)
     setRenderPhotos(resizedPhotos)
     setRenderPositions(photoPositions)
   }, [photos, containerWidth])
 
   return (
-    <ScrollControls horizontal damping={10} pages={numPages}>
+    <ScrollControls horizontal damping={10} pages={numPages} style={{ overscrollBehavior: 'none' }}>
       <Scroll>
         {renderPhotos.map((photo, i) => (
           <PhotoGridItem

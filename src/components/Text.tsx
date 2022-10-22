@@ -3,9 +3,11 @@ import type { CSSProperties } from 'styled-components'
 import styled from 'styled-components'
 
 type TextType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1' | 'b2' | 'b3'
+type TextWeight = 300 | 400 | 500 | 600
 
 type TextProps = {
   type: TextType
+  weight?: TextWeight
   color?: string
   children: ReactNode
   style?: CSSProperties
@@ -16,13 +18,12 @@ const TextContainer = styled.div`
   transition: var(--transition);
 `
 
-const Text: FC<TextProps> = ({ style: styleProp, type, color, children }) => {
+const Text: FC<TextProps> = ({ style: styleProp, type, weight, color, children }) => {
   let style: CSSProperties
   switch (type) {
     case 'h1':
       style = {
         fontSize: '45px',
-        fontWeight: '500',
       }
       break
     case 'h2':
@@ -66,7 +67,11 @@ const Text: FC<TextProps> = ({ style: styleProp, type, color, children }) => {
       }
   }
 
-  return <TextContainer style={{ ...style, ...styleProp, color }}>{children}</TextContainer>
+  return (
+    <TextContainer style={{ ...style, ...styleProp, color, fontWeight: weight }}>
+      {children}
+    </TextContainer>
+  )
 }
 
 export default Text

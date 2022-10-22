@@ -1,4 +1,4 @@
-import type { PhotoType } from '../notion/photography.requests'
+import type { PhotoType } from '../../notion/photography.requests'
 
 export type PhotoPosition = {
   x: number

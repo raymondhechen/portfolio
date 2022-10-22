@@ -4,6 +4,7 @@ import Text from '../components/Text'
 
 const MenuContainer = styled.div`
   width: auto;
+  min-width: 200px;
   height: 100%;
   padding: 12px 0;
   box-sizing: border-box;
@@ -19,13 +20,39 @@ const MenuContainer = styled.div`
 
 type MenuParams = {
   children: ReactNode
+  title: string
 }
 
-export const Menu = ({ children }: MenuParams) => {
-  return <MenuContainer>{children}</MenuContainer>
+export const Menu = ({ children, title }: MenuParams) => {
+  return (
+    <MenuContainer>
+      <MenuHeader>{title}</MenuHeader>
+      {children}
+    </MenuContainer>
+  )
+}
+
+const MenuHeaderContainer = styled.div`
+  display: flex;
+  padding: 4px 16px 12px 16px;
+`
+
+type MenuHeaderProps = {
+  children: ReactNode
+}
+
+export const MenuHeader = ({ children }: MenuHeaderProps) => {
+  return (
+    <MenuHeaderContainer>
+      <Text type="h6" weight={500}>
+        {children}
+      </Text>
+    </MenuHeaderContainer>
+  )
 }
 
 const MenuItemContainer = styled.div<{ active: boolean }>`
+  width: auto;
   display: flex;
   flex-direction: column;
   padding: 12px 16px;
@@ -56,7 +83,7 @@ export const MenuItem = ({ title, subtitle, active = false, onClick }: MenuItemP
         style={{ marginBottom: '4px' }}>
         {title}
       </Text>
-      <Text type="b2" color={active ? theme.colors.accentSolidHover : theme.colors.gray11}>
+      <Text type="b3" color={active ? theme.colors.accentSolidHover : theme.colors.gray11}>
         {subtitle}
       </Text>
     </MenuItemContainer>

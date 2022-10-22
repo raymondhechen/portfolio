@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
+const withTM = require('next-transpile-modules')(['three'])
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    domains: ['s3.us-west-2.amazonaws.com']
-  }
 }
 
-module.exports = nextConfig
+module.exports = withTM(nextConfig)

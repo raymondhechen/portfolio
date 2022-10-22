@@ -10,7 +10,7 @@ type Props = {
 
 const PhotographyMenu = ({ albums, activeId }: Props) => {
   return (
-    <Menu>
+    <Menu title="Albums">
       {albums.map((album) => {
         const dateString = new Date(album.date).toLocaleDateString('en-us', {
           year: 'numeric',
