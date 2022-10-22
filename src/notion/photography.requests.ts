@@ -10,8 +10,8 @@ export const fetchAlbums = async () => {
 
 export type PhotoType = {
   url: string
-  height?: number
-  width?: number
+  height: number
+  width: number
 }
 
 export const fetchAlbum = async (albumId: string): Promise<Album> => {
@@ -44,8 +44,8 @@ export const fetchAlbum = async (albumId: string): Promise<Album> => {
 }
 
 type PhotoDimension = {
-  width?: number
-  height?: number
+  width: number
+  height: number
 }
 
 export const fetchImageDimensions = async (url: string): Promise<PhotoDimension> => {
@@ -59,5 +59,5 @@ export const fetchImageDimensions = async (url: string): Promise<PhotoDimension>
   const arrayBuffer = await response.arrayBuffer()
   const buffer = Buffer.from(arrayBuffer)
   const dimensions = sizeOf(buffer)
-  return { width: dimensions.width, height: dimensions.height }
+  return { width: dimensions.width ?? 0, height: dimensions.height ?? 0 }
 }

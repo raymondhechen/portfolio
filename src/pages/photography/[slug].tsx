@@ -1,7 +1,16 @@
 import { fetchAlbum, fetchAlbums } from '../../notion/photography.requests'
 import { Album } from '../photography'
-import PhotographyMenu from '../../modules/PhotographyMenu'
+import PhotographyMenu from '../../modules/PhotoMenu'
 import { createSlug, createSlugMap, IParams, SlugMap } from '../../utilities/slugs'
+import styled from 'styled-components'
+import PhotoGrid from '../../modules/PhotoGrid'
+import { Canvas } from '@react-three/fiber'
+
+const FullContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+`
 
 type Props = {
   albumId: string
@@ -10,7 +19,20 @@ type Props = {
 }
 
 const PhotographyAlbumPage = ({ albumId, albums, slugMap }: Props) => {
-  return <PhotographyMenu albums={albums} activeId={albumId} />
+  const album = albums.find((album) => album.id === albumId)
+  if (!album) return <PhotographyMenu albums={albums} activeId={albumId} />
+
+  return (
+    <FullContainer>
+      <PhotographyMenu albums={albums} activeId={albumId} />
+      <FullContainer>
+        <Canvas>
+          <axesHelper />
+          <PhotoGrid photos={album?.photos} />
+        </Canvas>
+      </FullContainer>
+    </FullContainer>
+  )
 }
 
 export const getStaticProps = async ({ params }: { params: IParams }) => {
