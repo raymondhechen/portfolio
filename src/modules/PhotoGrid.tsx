@@ -3,7 +3,12 @@ import { PhotoType } from '../notion/photography.requests'
 import { useThree } from '@react-three/fiber'
 import PhotoGridItem from './PhotoGridItem'
 import { useEffect, useState } from 'react'
-import { computeNumberPages, computePhotoColumns, computeResizedPhotos } from './grid.utils'
+import {
+  computeNumberPages,
+  computePhotoPositions,
+  computeResizedPhotos,
+  PhotoPosition,
+} from './grid.utils'
 
 type Props = {
   photos: PhotoType[]
@@ -12,16 +17,19 @@ type Props = {
 const PhotoGrid = ({ photos }: Props) => {
   const { width: containerWidth } = useThree((state) => state.viewport)
   const [renderPhotos, setRenderPhotos] = useState<PhotoType[]>([])
-  const [renderColumns, setRenderColumns] = useState<number[]>([])
+  const [renderPositions, setRenderPositions] = useState<PhotoPosition[]>([])
   const [numPages, setNumPages] = useState<number>(1)
 
   useEffect(() => {
-    const resizedPhotos = computeResizedPhotos(photos, 5)
-    const photoColumns = computePhotoColumns(resizedPhotos)
-    const numPages = computeNumberPages(resizedPhotos, containerWidth)
+    const gap = 0.3
+    const halfContainerWidth = containerWidth / 2
+
+    const resizedPhotos = computeResizedPhotos(photos, halfContainerWidth)
+    const photoPositions = computePhotoPositions(resizedPhotos, halfContainerWidth / 2, gap) // halfContainerWidth / 2 is a bit arbitrary
+    const numPages = computeNumberPages(resizedPhotos, containerWidth, gap)
     setNumPages(numPages)
     setRenderPhotos(resizedPhotos)
-    setRenderColumns(photoColumns)
+    setRenderPositions(photoPositions)
   }, [photos, containerWidth])
 
   return (
@@ -32,7 +40,7 @@ const PhotoGrid = ({ photos }: Props) => {
             key={i}
             index={i}
             url={photo.url}
-            position={[renderColumns[i], 0, 0]}
+            position={[renderPositions[i].x, 0, 0]}
             scale={[photo.width, photo.height]}
           />
         ))}

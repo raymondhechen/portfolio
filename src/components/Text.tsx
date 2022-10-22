@@ -2,7 +2,7 @@ import type { FC, ReactNode } from 'react'
 import type { CSSProperties } from 'styled-components'
 import styled from 'styled-components'
 
-type TextType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1'
+type TextType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1' | 'b2' | 'b3'
 
 type TextProps = {
   type: TextType
@@ -51,7 +51,17 @@ const Text: FC<TextProps> = ({ type, color, children }) => {
       break
     case 'b1':
       style = {
+        fontSize: '17.5px',
+      }
+      break
+    case 'b2':
+      style = {
         fontSize: '15px',
+      }
+      break
+    case 'b3':
+      style = {
+        fontSize: '12.5px',
       }
   }
 

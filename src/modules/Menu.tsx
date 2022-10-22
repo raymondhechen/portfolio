@@ -49,10 +49,10 @@ export const MenuItem = ({ title, subtitle, active = false, onClick }: MenuItemP
 
   return (
     <MenuItemContainer onClick={onClick} active={active}>
-      <Text type="h6" color={active ? theme.colors.accentText : theme.colors.gray12}>
+      <Text type="b1" color={active ? theme.colors.accentText : theme.colors.gray12}>
         {title}
       </Text>
-      <Text type="b1" color={active ? theme.colors.accentSolidHover : theme.colors.gray11}>
+      <Text type="b2" color={active ? theme.colors.accentSolidHover : theme.colors.gray11}>
         {subtitle}
       </Text>
     </MenuItemContainer>
