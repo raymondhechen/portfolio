@@ -27,7 +27,6 @@ const PhotographyAlbumPage = ({ albumId, albums, slugMap }: Props) => {
       <PhotographyMenu albums={albums} activeId={albumId} />
       <FullContainer>
         <Canvas>
-          <axesHelper />
           <PhotoGrid photos={album?.photos} />
         </Canvas>
       </FullContainer>

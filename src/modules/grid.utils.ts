@@ -46,7 +46,7 @@ export const computeNumberPages = (
   containerWidth: number,
   gap: number,
 ): number => {
-  const totalWidth = photos.reduce((prev, photo) => prev + photo.width + gap, 0)
+  const totalWidth = photos.reduce((prev, photo) => prev + photo.width + gap, 0) - gap // remove the last gap at the end since extra
   // containerWidth / 2 is added buffer
   return (containerWidth / 2 + totalWidth) / containerWidth
 }

@@ -38,10 +38,10 @@ const PhotoGrid = ({ photos }: Props) => {
         {renderPhotos.map((photo, i) => (
           <PhotoGridItem
             key={i}
-            index={i}
             url={photo.url}
             position={[renderPositions[i].x, 0, 0]}
             scale={[photo.width, photo.height]}
+            allPhotos={renderPhotos}
           />
         ))}
       </Scroll>

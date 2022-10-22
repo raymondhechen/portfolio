@@ -30,7 +30,7 @@ const MenuItemContainer = styled.div<{ active: boolean }>`
   padding: 12px 16px;
   box-sizing: border-box;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: var(--transition);
   background-color: ${(props) => (props.active ? props.theme.colors.gray4 : 'transparent')};
   :hover {
     background-color: ${(props) => props.theme.colors.gray3};

@@ -6,7 +6,7 @@ import Icon from './Icon'
 const ButtonContainer = styled.button`
   background-color: transparent;
   color: ${(props) => props.theme.colors.gray10};
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: var(--transition);
   border: 0;
   box-sizing: border-box;
   padding: 4px;
