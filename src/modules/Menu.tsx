@@ -11,6 +11,7 @@ const MenuContainer = styled.div`
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   border-right: 1px solid ${(props) => props.theme.colors.gray7};
   transition: var(--transition);
   ::-webkit-scrollbar {

@@ -23,7 +23,7 @@ const Text: FC<TextProps> = ({ style: styleProp, type, weight, color, children }
   switch (type) {
     case 'h1':
       style = {
-        fontSize: '45px',
+        fontSize: '50px',
       }
       break
     case 'h2':

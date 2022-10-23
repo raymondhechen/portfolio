@@ -27,18 +27,22 @@ export const computePhotoPositions = (
   gap: number,
 ): PhotoPosition[] => {
   let col = -margin
-  return photos.map(({ width, height }) => {
-    const currCol = col
+  const positions: PhotoPosition[] = []
 
-    // divide width by 2 because threejs treats ([x, y, z]) as the center of the mesh
-    // thus, if we just add currCol + width, then the position will be off by half the width
-    const x = currCol + width / 2
-    const y = height / 2
+  // using array.map leads to bizarre race condition in nextjs
+  // where x is not properly assigned to column
+  for (const photo of photos) {
+    const { width, height } = photo
 
-    col += width + gap // add the full width to the image column to get the next column start
+    let currCol = col
+    let x = currCol + width / 2
+    let y = height / 2
 
-    return { x, y }
-  })
+    col += width + gap
+    positions.push({ x, y })
+  }
+
+  return positions
 }
 
 export const computeNumberPages = (
