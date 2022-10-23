@@ -2,13 +2,14 @@ import { ScrollControls, Scroll } from '@react-three/drei'
 import { PhotoType } from '../../notion/photography.requests'
 import { useThree } from '@react-three/fiber'
 import PhotoGridItem from './PhotoGridItem'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import {
   computeNumberPages,
   computePhotoPositions,
   computeResizedPhotos,
   PhotoPosition,
 } from './grid.utils'
+import PhotoGridLoading from './PhotoGridLoading'
 
 type Props = {
   photos: PhotoType[]
@@ -34,18 +35,24 @@ const PhotoGrid = ({ photos }: Props) => {
   }, [photos, containerWidth])
 
   return (
-    <ScrollControls horizontal damping={10} pages={numPages} style={{ overscrollBehavior: 'none' }}>
-      <Scroll>
-        {renderPhotos.map((photo, i) => (
-          <PhotoGridItem
-            key={i}
-            url={photo.url}
-            position={[renderPositions[i].x, 0, 0]}
-            scale={[photo.width, photo.height]}
-          />
-        ))}
-      </Scroll>
-    </ScrollControls>
+    <Suspense fallback={<PhotoGridLoading />}>
+      <ScrollControls
+        horizontal
+        damping={10}
+        pages={numPages}
+        style={{ overscrollBehavior: 'none' }}>
+        <Scroll>
+          {renderPhotos.map((photo, i) => (
+            <PhotoGridItem
+              key={i}
+              url={photo.url}
+              position={[renderPositions[i].x, 0, 0]}
+              scale={[photo.width, photo.height]}
+            />
+          ))}
+        </Scroll>
+      </ScrollControls>
+    </Suspense>
   )
 }
 
