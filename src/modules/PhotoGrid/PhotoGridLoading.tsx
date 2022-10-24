@@ -1,4 +1,4 @@
-import { Html, useProgress } from '@react-three/drei'
+import { Html } from '@react-three/drei'
 import styled, { useTheme } from 'styled-components'
 import { CustomTheme } from '../../styles/theme'
 
@@ -14,38 +14,22 @@ const LoadingBarProgress = styled.div`
   transition: width 0.2s ease;
 `
 
-const LoadingBar = ({
-  progress,
-  required,
-  theme,
-}: {
-  progress: number
-  required: number
-  theme: CustomTheme
-}) => {
+const LoadingBar = ({ progress, theme }: { progress: number; theme: CustomTheme }) => {
   return (
     <LoadingBarContainer style={{ backgroundColor: theme.colors.gray5 }}>
       <LoadingBarProgress
-        style={{
-          backgroundColor: theme.colors.accentSolid,
-          width: `${(progress / required) * 100}%`,
-        }}
+        style={{ backgroundColor: theme.colors.accentSolid, width: `${progress}%` }}
       />
     </LoadingBarContainer>
   )
 }
 
-const PhotoGridLoading = ({ progress: externalProgress }: { progress: number }) => {
-  const { loaded, total } = useProgress()
+const PhotoGridLoading = ({ progress }: { progress: number }) => {
   const theme = useTheme()
-
-  const internalProgress = (loaded / total) * 100
-  const totalProgress = externalProgress + internalProgress
-  const totalRequired = 200
 
   return (
     <Html as="div" center>
-      <LoadingBar progress={totalProgress} required={totalRequired} theme={theme} />
+      <LoadingBar progress={progress} theme={theme} />
     </Html>
   )
 }
