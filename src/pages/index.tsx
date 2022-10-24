@@ -37,7 +37,7 @@ const HomePage = () => {
             </Link>{' '}
             from{' '}
             <Link external url="https://duke.edu/">
-              <span style={{ color: '#012169' }}>Duke</span>
+              <span style={{ color: '#005587' }}>Duke</span>
             </Link>
             . I like taking photos, which I sell at{' '}
             <Link external url="https://paracosm.design/">
@@ -48,37 +48,25 @@ const HomePage = () => {
         </Section>
         <Section>
           <Text type="h2">
-            I was previously at{' '}
+            I was previously investing at{' '}
+            <Link external url="https://www.dormroomfund.com/">
+              <span style={{ color: '#551f92' }}>Dorm Room Fund</span>
+            </Link>
+            , sustaining growth at{' '}
             <Link external url="https://www.charliehealth.com/">
               <span style={{ color: '#23a67f' }}>Charlie Health</span>
-            </Link>{' '}
-            sustaining growth,{' '}
+            </Link>
+            , supporting data infra and perception at{' '}
             <Link external url="https://www.anduril.com/">
               <span style={{ color: '#7D7876' }}>Anduril</span>
-            </Link>{' '}
-            supporting data infra and perception,{' '}
+            </Link>
+            , improving ad controls at{' '}
             <Link external url="https://www.meta.com/">
               <span style={{ color: '#1778F2' }}>Meta</span>
-            </Link>{' '}
-            improving ad controls, and{' '}
+            </Link>
+            , and driving digital adoption at{' '}
             <Link external url="https://www.pendo.io/">
               <span style={{ color: '#EC2059' }}>Pendo</span>
-            </Link>{' '}
-            working on digital adoption. I was previously a partner at{' '}
-            <Link external url="https://www.dormroomfund.com/">
-              <span style={{ color: '#391463' }}>Dorm Room Fund</span>
-            </Link>
-            , and I&apos;m a fellow at{' '}
-            <Link external url="https://contrarycap.com/">
-              <span style={{ color: '#4d53fe' }}>Contrary</span>
-            </Link>
-            ,{' '}
-            <Link external url="https://pear.vc/">
-              <span style={{ color: '#bada55' }}>Pear</span>
-            </Link>
-            , and{' '}
-            <Link external url="https://beondeck.com/">
-              <span style={{ color: '#1b253d' }}>OnDeck</span>
             </Link>
             .
           </Text>
