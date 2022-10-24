@@ -57,7 +57,7 @@ const PhotoGrid = ({ urls }: Props) => {
   if (loadingProgress !== 100) return <PhotoGridLoading progress={loadingProgress} />
 
   return (
-    <Suspense>
+    <Suspense fallback={<PhotoGridLoading progress={loadingProgress} />}>
       <ScrollControls
         horizontal
         damping={10}
@@ -67,7 +67,7 @@ const PhotoGrid = ({ urls }: Props) => {
           {renderPhotos.map((photo, i) => (
             <PhotoGridItem
               key={i}
-              texture={photo.texture}
+              url={photo.url}
               position={[renderPositions[i].x, 0, 0]}
               scale={[photo.width, photo.height]}
             />

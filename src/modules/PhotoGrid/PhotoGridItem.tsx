@@ -1,18 +1,15 @@
+import { Image } from '@react-three/drei'
 import * as THREE from 'three'
 
 type Props = {
-  texture: THREE.Texture
+  url: string
   position: THREE.Vector3Tuple
   scale: THREE.Vector2Tuple
 }
 
-const PhotoGridItem = ({ position, scale, texture }: Props) => {
-  return (
-    <mesh position={position}>
-      <planeBufferGeometry args={scale} />
-      <meshBasicMaterial map={texture} />
-    </mesh>
-  )
+const PhotoGridItem = ({ position, scale, url }: Props) => {
+  // eslint-disable-next-line jsx-a11y/alt-text
+  return <Image position={position} scale={scale} url={url} />
 }
 
 export default PhotoGridItem
