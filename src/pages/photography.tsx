@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { fetchAlbum, fetchAlbums, PhotoType } from '../notion/photography.requests'
+import { fetchAlbum, fetchAlbums } from '../notion/photography.requests'
 import { createSlug } from '../utilities/slugs'
 
 export type Album = {
@@ -8,7 +8,7 @@ export type Album = {
   title: string
   date: string
   location: string
-  photos: PhotoType[]
+  photos: string[]
 }
 
 const PhotographyPage = ({ destination }: { destination: string }) => {
@@ -21,7 +21,7 @@ const PhotographyPage = ({ destination }: { destination: string }) => {
   return null
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const albumDatabase = await fetchAlbums()
   const albums = await Promise.all(albumDatabase.map((page) => fetchAlbum(page.id)))
 

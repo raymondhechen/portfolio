@@ -15,10 +15,9 @@ const FullContainer = styled.div`
 type Props = {
   albumId: string
   albums: Album[]
-  slugMap: SlugMap
 }
 
-const PhotographyAlbumPage = ({ albumId, albums, slugMap }: Props) => {
+const PhotographyAlbumPage = ({ albumId, albums }: Props) => {
   const album = albums.find((album) => album.id === albumId)
   if (!album) return <PhotographyMenu albums={albums} activeId={albumId} />
 
@@ -27,14 +26,16 @@ const PhotographyAlbumPage = ({ albumId, albums, slugMap }: Props) => {
       <PhotographyMenu albums={albums} activeId={albumId} />
       <FullContainer>
         <Canvas>
-          <PhotoGrid photos={album?.photos} />
+          <PhotoGrid urls={album?.photos} />
         </Canvas>
       </FullContainer>
     </FullContainer>
   )
 }
 
-export const getStaticProps = async ({ params }: { params: IParams }) => {
+export const getServerSideProps = async ({ res, params }: { res: any; params: IParams }) => {
+  res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59')
+
   const albumDatabase = await fetchAlbums()
   const albums = await Promise.all(albumDatabase.map((page) => fetchAlbum(page.id)))
   const slugMap = createSlugMap(albums)
@@ -46,12 +47,11 @@ export const getStaticProps = async ({ params }: { params: IParams }) => {
     props: {
       albumId,
       albums,
-      slugMap,
     },
   }
 }
 
-export const getStaticPaths = async () => {
+export const getServerSidePaths = async () => {
   const albumDatabase = await fetchAlbums()
   const albums = await Promise.all(albumDatabase.map((page) => fetchAlbum(page.id)))
   const paths = albums.map((album) => ({ params: { slug: createSlug(album.title) } }))

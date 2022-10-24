@@ -1,19 +1,18 @@
-import { Image } from '@react-three/drei'
-import { useRef } from 'react'
 import * as THREE from 'three'
-import { Mesh } from 'three'
 
 type Props = {
-  url: string
+  texture: THREE.Texture
   position: THREE.Vector3Tuple
   scale: THREE.Vector2Tuple
 }
 
-const PhotoGridItem = ({ position, scale, ...props }: Props) => {
-  const ref = useRef<Mesh>(null!)
-
-  // eslint-disable-next-line jsx-a11y/alt-text
-  return <Image ref={ref} position={position} scale={scale} {...props} />
+const PhotoGridItem = ({ position, scale, texture }: Props) => {
+  return (
+    <mesh position={position}>
+      <planeGeometry args={scale} />
+      <meshBasicMaterial map={texture} />
+    </mesh>
+  )
 }
 
 export default PhotoGridItem

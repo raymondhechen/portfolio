@@ -1,20 +1,45 @@
-import type { PhotoType } from '../../notion/photography.requests'
+import * as THREE from 'three'
+
+export type PhotoType = {
+  url: string
+  texture: THREE.Texture
+  width: number
+  height: number
+}
 
 export type PhotoPosition = {
   x: number
   y: number
 }
 
+export const loadPhotoDimensions = async (urls: string[]): Promise<PhotoType[]> => {
+  return Promise.all(
+    urls.map<Promise<PhotoType>>((url) => {
+      return new Promise((resolve, reject) => {
+        let img = new Image()
+        img.crossOrigin = 'anonymous' // cors for threejs
+        img.onload = () => {
+          const texture = new THREE.Texture(img)
+          texture.needsUpdate = true
+          resolve({ url, texture, width: img.width, height: img.height })
+        }
+        img.onerror = reject
+        img.src = url
+      })
+    }),
+  )
+}
+
 export const computeResizedPhotos = (photos: PhotoType[], rowHeight: number): PhotoType[] => {
   return photos.map((photo) => {
-    const { width, height, url } = photo
+    const { width, height } = photo
 
     const aspectRatio = width / height
     const newHeight = rowHeight
     const newWidth = newHeight * aspectRatio
 
     return {
-      url,
+      ...photo,
       width: newWidth,
       height: newHeight,
     }

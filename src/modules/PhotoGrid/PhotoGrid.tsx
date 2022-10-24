@@ -1,5 +1,4 @@
 import { ScrollControls, Scroll } from '@react-three/drei'
-import { PhotoType } from '../../notion/photography.requests'
 import { useThree } from '@react-three/fiber'
 import PhotoGridItem from './PhotoGridItem'
 import { Suspense, useEffect, useState } from 'react'
@@ -7,15 +6,17 @@ import {
   computeNumberPages,
   computePhotoPositions,
   computeResizedPhotos,
+  loadPhotoDimensions,
   PhotoPosition,
+  PhotoType,
 } from './grid.utils'
 import PhotoGridLoading from './PhotoGridLoading'
 
 type Props = {
-  photos: PhotoType[]
+  urls: string[]
 }
 
-const PhotoGrid = ({ photos }: Props) => {
+const PhotoGrid = ({ urls }: Props) => {
   const { width: containerWidth } = useThree((state) => state.viewport)
   const [renderPhotos, setRenderPhotos] = useState<PhotoType[]>([])
   const [renderPositions, setRenderPositions] = useState<PhotoPosition[]>([])
@@ -25,14 +26,17 @@ const PhotoGrid = ({ photos }: Props) => {
     const gap = 0.3
     const margin = containerWidth / 3
 
-    const resizedPhotos = computeResizedPhotos(photos, containerWidth / 2)
-    const photoPositions = computePhotoPositions(resizedPhotos, margin, gap) // halfContainerWidth / 2 is a bit arbitrary
-    const numPages = computeNumberPages(resizedPhotos, containerWidth, margin, gap)
+    loadPhotoDimensions(urls).then((photos) => {
+      console.log(photos)
+      const resizedPhotos = computeResizedPhotos(photos, containerWidth / 2)
+      const photoPositions = computePhotoPositions(resizedPhotos, margin, gap) // halfContainerWidth / 2 is a bit arbitrary
+      const numPages = computeNumberPages(resizedPhotos, containerWidth, margin, gap)
 
-    setNumPages(numPages)
-    setRenderPhotos(resizedPhotos)
-    setRenderPositions(photoPositions)
-  }, [photos, containerWidth])
+      setNumPages(numPages)
+      setRenderPhotos(resizedPhotos)
+      setRenderPositions(photoPositions)
+    })
+  }, [urls, containerWidth])
 
   return (
     <Suspense fallback={<PhotoGridLoading />}>
@@ -45,7 +49,7 @@ const PhotoGrid = ({ photos }: Props) => {
           {renderPhotos.map((photo, i) => (
             <PhotoGridItem
               key={i}
-              url={photo.url}
+              texture={photo.texture}
               position={[renderPositions[i].x, 0, 0]}
               scale={[photo.width, photo.height]}
             />

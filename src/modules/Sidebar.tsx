@@ -57,7 +57,7 @@ const Sidebar = ({ toggleTheme }: Props) => {
         <div style={{ height: '12px' }} />
         <Button
           type="tertiary"
-          icon="shadow"
+          icon="brightness"
           onClick={toggleTheme}
           active={theme.type === 'dark'}
         />

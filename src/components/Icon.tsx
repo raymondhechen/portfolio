@@ -2,13 +2,13 @@ import { CSSProperties, ReactNode } from 'react'
 import {
   IconBrandLinkedin,
   IconBrandTwitter,
+  IconBrightness,
   IconHome,
   IconPencil,
   IconPhoto,
-  IconShadow,
 } from '@tabler/icons'
 
-export type IconType = 'home' | 'photo' | 'pencil' | 'shadow' | 'linkedin' | 'twitter'
+export type IconType = 'home' | 'photo' | 'pencil' | 'brightness' | 'linkedin' | 'twitter'
 
 type Props = {
   type: IconType
@@ -32,8 +32,8 @@ const Icon = ({ type, color, size = 24, stroke = 1.5, style, className }: Props)
     case 'pencil':
       IconNode = <IconPencil />
       break
-    case 'shadow':
-      IconNode = <IconShadow />
+    case 'brightness':
+      IconNode = <IconBrightness />
       break
     case 'twitter':
       IconNode = <IconBrandTwitter />
