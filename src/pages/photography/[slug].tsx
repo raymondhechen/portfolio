@@ -33,9 +33,7 @@ const PhotographyAlbumPage = ({ albumId, albums }: Props) => {
   )
 }
 
-export const getServerSideProps = async ({ res, params }: { res: any; params: IParams }) => {
-  res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59')
-
+export const getStaticProps = async ({ params }: { params: IParams }) => {
   const albumDatabase = await fetchAlbums()
   const albums = await Promise.all(albumDatabase.map((page) => fetchAlbum(page.id)))
   const slugMap = createSlugMap(albums)
@@ -51,7 +49,7 @@ export const getServerSideProps = async ({ res, params }: { res: any; params: IP
   }
 }
 
-export const getServerSidePaths = async () => {
+export const getStaticPaths = async () => {
   const albumDatabase = await fetchAlbums()
   const albums = await Promise.all(albumDatabase.map((page) => fetchAlbum(page.id)))
   const paths = albums.map((album) => ({ params: { slug: createSlug(album.title) } }))

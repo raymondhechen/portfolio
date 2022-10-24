@@ -21,7 +21,7 @@ const PhotographyPage = ({ destination }: { destination: string }) => {
   return null
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const albumDatabase = await fetchAlbums()
   const albums = await Promise.all(albumDatabase.map((page) => fetchAlbum(page.id)))
 

@@ -12,24 +12,6 @@ export type PhotoPosition = {
   y: number
 }
 
-export const loadPhotoDimensions = async (urls: string[]): Promise<PhotoType[]> => {
-  return Promise.all(
-    urls.map<Promise<PhotoType>>((url) => {
-      return new Promise((resolve, reject) => {
-        let img = new Image()
-        img.crossOrigin = 'anonymous' // cors for threejs
-        img.onload = () => {
-          const texture = new THREE.Texture(img)
-          texture.needsUpdate = true
-          resolve({ url, texture, width: img.width, height: img.height })
-        }
-        img.onerror = reject
-        img.src = url
-      })
-    }),
-  )
-}
-
 export const computeResizedPhotos = (photos: PhotoType[], rowHeight: number): PhotoType[] => {
   return photos.map((photo) => {
     const { width, height } = photo

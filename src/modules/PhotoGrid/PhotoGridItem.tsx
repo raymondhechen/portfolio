@@ -9,7 +9,7 @@ type Props = {
 const PhotoGridItem = ({ position, scale, texture }: Props) => {
   return (
     <mesh position={position}>
-      <planeGeometry args={scale} />
+      <planeBufferGeometry args={scale} />
       <meshBasicMaterial map={texture} />
     </mesh>
   )

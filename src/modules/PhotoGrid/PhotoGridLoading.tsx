@@ -1,4 +1,4 @@
-import { Html, useProgress } from '@react-three/drei'
+import { Html } from '@react-three/drei'
 import styled, { useTheme } from 'styled-components'
 import { CustomTheme } from '../../styles/theme'
 
@@ -24,8 +24,7 @@ const LoadingBar = ({ progress, theme }: { progress: number; theme: CustomTheme 
   )
 }
 
-const PhotoGridLoading = () => {
-  const { progress } = useProgress()
+const PhotoGridLoading = ({ progress }: { progress: number }) => {
   const theme = useTheme()
 
   return (
