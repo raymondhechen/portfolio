@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from '../components/Link'
 import Text from '../components/Text'
 import Page from '../modules/Page'
+import Head from 'next/head'
 
 const Content = styled.div`
   display: flex;
@@ -25,6 +26,9 @@ const Section = styled.div`
 const HomePage = () => {
   return (
     <Page>
+      <Head>
+        <title>Raymond Chen</title>
+      </Head>
       <Content>
         <Title>
           <Text type="h1">Hey, I&apos;m Raymond!</Text>

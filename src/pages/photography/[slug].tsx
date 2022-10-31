@@ -1,10 +1,11 @@
 import { fetchAlbum, fetchAlbums } from '../../notion/photography.requests'
 import { Album } from '../photography'
 import PhotographyMenu from '../../modules/PhotoMenu'
-import { createSlug, createSlugMap, IParams, SlugMap } from '../../utilities/slugs'
+import { createSlug, createSlugMap, IParams } from '../../utilities/slugs'
 import styled from 'styled-components'
 import PhotoGrid from '../../modules/PhotoGrid/PhotoGrid'
 import { Canvas } from '@react-three/fiber'
+import Head from 'next/head'
 
 const FullContainer = styled.div`
   width: 100%;
@@ -23,6 +24,9 @@ const PhotographyAlbumPage = ({ albumId, albums }: Props) => {
 
   return (
     <FullContainer>
+      <Head>
+        <title>{album.title}</title>
+      </Head>
       <PhotographyMenu albums={albums} activeId={albumId} />
       <FullContainer>
         <Canvas>
