@@ -13,7 +13,7 @@ export const createSlug = (name: string) => {
   return slugify(name)
 }
 
-export const createSlugMap = (contentArray: Album[] | Post[]) => {
+export const createSlugMap = (contentArray: any[]) => {
   return contentArray.reduce<SlugMap>((prev: SlugMap, content: Album | Post) => {
     const { id, title } = content
     const slug = createSlug(title)
