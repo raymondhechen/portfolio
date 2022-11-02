@@ -10,7 +10,7 @@ type Props = {
 
 const WritingMenu = ({ posts, activeId }: Props) => {
   return (
-    <Menu title="Albums">
+    <Menu title="Writing">
       {posts.map((post) => {
         const dateString = new Date(post.date).toLocaleDateString('en-us', {
           year: 'numeric',

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { fetchPost, fetchPosts } from '../../notion/writing.requests'
 import { Post } from '../writing'
 import WritingMenu from '../../modules/WritingMenu'
+import WritingPost from '../../modules/WritingPost'
 
 const FullContainer = styled.div`
   width: 100%;
@@ -26,6 +27,7 @@ const PhotographyAlbumPage = ({ postId, posts }: Props) => {
         <title>{post.title}</title>
       </Head>
       <WritingMenu posts={posts} activeId={postId} />
+      <WritingPost post={post} />
     </FullContainer>
   )
 }

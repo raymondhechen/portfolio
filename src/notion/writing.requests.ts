@@ -25,7 +25,7 @@ export const fetchPost = async (postId: string): Promise<Post> => {
   return {
     id,
     title: Name.title[0]?.plain_text ?? '',
-    coAuthors: [Coauthors.multi_select.map(({ name }: { name: string }) => name)] ?? [],
+    coAuthors: Coauthors.multi_select.map(({ name }: { name: string }) => name) ?? [],
     date: Date.date?.start ?? '',
     paragraphs,
   } as Post

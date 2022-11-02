@@ -54,6 +54,7 @@ const Text: FC<TextProps> = ({ style: styleProp, type, weight, color, children }
     case 'b1':
       style = {
         fontSize: '17.5px',
+        lineHeight: '25px',
       }
       break
     case 'b2':
