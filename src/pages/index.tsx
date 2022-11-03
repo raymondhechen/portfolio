@@ -12,7 +12,10 @@ const Content = styled.div`
   height: 100%;
   width: 80%;
   color: ${(props) => props.theme.colors.gray12};
-  padding: 24px 0;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    width: 100%;
+  }
 `
 
 const Title = styled.div`
@@ -28,6 +31,7 @@ const HomePage = () => {
     <Page>
       <Head>
         <title>Raymond Chen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Content>
         <Title>

@@ -47,6 +47,10 @@ export const lightTheme = {
     danger1: red.red1,
     danger2: red.red2,
   },
+  breakpoints: {
+    tablet: '768px',
+    mobile: '425px',
+  },
 }
 
 export const darkTheme = {
@@ -82,5 +86,9 @@ export const darkTheme = {
     warning2: yellowDark.yellow2,
     danger1: redDark.red1,
     danger2: redDark.red2,
+  },
+  breakpoints: {
+    tablet: '768px',
+    mobile: '425px',
   },
 }
