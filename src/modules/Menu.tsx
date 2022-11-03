@@ -17,6 +17,10 @@ const MenuContainer = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    display: none;
+  }
 `
 
 type MenuParams = {

@@ -5,6 +5,7 @@ import { fetchPost, fetchPosts } from '../../notion/writing.requests'
 import { Post } from '../writing'
 import WritingMenu from '../../modules/WritingMenu'
 import WritingPost from '../../modules/WritingPost'
+import Page from '../../modules/Page'
 
 const FullContainer = styled.div`
   width: 100%;

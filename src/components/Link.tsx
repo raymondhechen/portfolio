@@ -4,6 +4,9 @@ import styled from 'styled-components'
 
 const StyledExternalLink = styled.a`
   text-decoration: none;
+  :visited {
+    color: ${(props) => props.theme.colors.accentText};
+  }
 `
 
 type Props = {

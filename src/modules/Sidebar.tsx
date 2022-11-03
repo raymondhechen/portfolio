@@ -17,6 +17,10 @@ const SidebarContainer = styled.div`
   align-items: center;
   padding: 12px;
   box-sizing: border-box;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    padding: 8px;
+  }
 `
 
 type Props = {

@@ -5,25 +5,27 @@ import type { CSSProperties } from 'styled-components'
 type TextType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1' | 'b2' | 'b3'
 type TextWeight = 300 | 400 | 500 | 600
 
-type TextStylesType = Record<
-  TextType,
-  {
-    desktop: string
-    tablet?: string
-    mobile?: string
-  }
+type TextStylesType = Partial<
+  Record<
+    TextType,
+    {
+      desktop: string
+      tablet?: string
+      mobile?: string
+    }
+  >
 >
 
-const TextStyles: TextStylesType = {
+const FontSizes: TextStylesType = {
   h1: {
     desktop: '50px',
-    tablet: '40px',
-    mobile: '30px',
+    tablet: '37.5px',
+    mobile: '27.5px',
   },
   h2: {
     desktop: '40px',
     tablet: '27.5px',
-    mobile: '22.5px',
+    mobile: '25px',
   },
   h3: {
     desktop: '35px',
@@ -36,9 +38,12 @@ const TextStyles: TextStylesType = {
   },
   h6: {
     desktop: '20px',
+    tablet: '17.5px',
   },
   b1: {
     desktop: '17.5px',
+    tablet: '15px',
+    mobile: '15px',
   },
   b2: {
     desktop: '15px',
@@ -48,17 +53,26 @@ const TextStyles: TextStylesType = {
   },
 }
 
+const LineHeights: TextStylesType = {
+  b1: {
+    desktop: '25px',
+    tablet: '20px',
+  },
+}
+
 const TextContainer = styled.div<{ type: TextType }>`
   color: ${(props) => props.theme.colors.gray12};
   transition: var(--transition);
-  font-size: ${(props) => TextStyles[props.type].desktop};
+  font-size: ${(props) => FontSizes[props.type]?.desktop};
+  line-height: ${(props) => LineHeights[props.type]?.desktop ?? 'inherit'};
 
   @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
-    font-size: ${(props) => TextStyles[props.type].tablet};
+    font-size: ${(props) => FontSizes[props.type]?.tablet};
+    line-height: ${(props) => LineHeights[props.type]?.tablet ?? 'inherit'};
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
-    font-size: ${(props) => TextStyles[props.type].tablet};
+    font-size: ${(props) => FontSizes[props.type]?.mobile};
   }
 `
 

@@ -1,6 +1,7 @@
 import Link from '../components/Link'
 import { Menu, MenuItem } from './Menu'
 import { createSlug } from '../utilities/slugs'
+import { parseDate } from '../utilities/dates'
 import type { Album } from '../pages/photography'
 
 type Props = {
@@ -11,17 +12,12 @@ type Props = {
 const PhotographyMenu = ({ albums, activeId }: Props) => {
   return (
     <Menu title="Albums">
-      {albums.map((album) => {
-        const dateString = new Date(album.date).toLocaleDateString('en-us', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })
-        const slug = createSlug(album.title)
-
+      {albums.map(({ date, title, id }) => {
+        const dateString = parseDate(date)
+        const slug = createSlug(title)
         return (
-          <Link key={album.id} url={`/photography/${slug}`}>
-            <MenuItem title={album.title} subtitle={dateString} active={album.id === activeId} />
+          <Link key={id} url={`/photography/${slug}`}>
+            <MenuItem title={title} subtitle={dateString} active={id === activeId} />
           </Link>
         )
       })}

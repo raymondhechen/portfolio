@@ -2,22 +2,17 @@ import styled from 'styled-components'
 import Link from '../components/Link'
 import Text from '../components/Text'
 import { Post } from '../pages/writing'
-
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  padding: 30px 40px;
-  box-sizing: border-box;
-`
+import Page from './Page'
 
 const Block = styled.div`
-  padding: 8px 0;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  padding: 8px 0;
+  box-sizing: border-box;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    padding: 6px 0;
+  }
 `
 
 const WritingPost = ({ post }: { post: Post }) => {
@@ -33,7 +28,7 @@ const WritingPost = ({ post }: { post: Post }) => {
   })
 
   return (
-    <Container>
+    <Page>
       <Text type="h2" weight={500}>
         {post.title}
       </Text>
@@ -49,7 +44,7 @@ const WritingPost = ({ post }: { post: Post }) => {
           </Block>
         ))}
       </Block>
-    </Container>
+    </Page>
   )
 }
 

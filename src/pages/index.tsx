@@ -11,9 +11,12 @@ const Content = styled.div`
   justify-content: center;
   height: 100%;
   width: 80%;
+  // brute force margin so that Page component can be reused for writing posts too
+  margin-left: 10px;
   color: ${(props) => props.theme.colors.gray12};
 
   @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    margin-left: 0;
     width: 100%;
   }
 `
