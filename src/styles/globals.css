@@ -16,4 +16,5 @@
 
 html, body {
   margin: 0;
+  height: 100%; /* need this to account for mobile browser bars */
 }

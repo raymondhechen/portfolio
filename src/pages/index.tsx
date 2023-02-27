@@ -50,7 +50,7 @@ const HomePage = () => {
             <Link external url="https://duke.edu/">
               <span style={{ color: '#005587' }}>Duke</span>
             </Link>
-            . I like taking photos, which I sell at{' '}
+            . I run a photography studio called{' '}
             <Link external url="https://paracosm.design/">
               <span style={{ color: '#7D7876' }}>Paracosm</span>
             </Link>
