@@ -50,11 +50,15 @@ const HomePage = () => {
             <Link external url="https://duke.edu/">
               <span style={{ color: '#005587' }}>Duke</span>
             </Link>
-            . I run a photography studio called{' '}
+            . I&apos;m building{' '}
             <Link external url="https://paracosm.design/">
               <span style={{ color: '#7D7876' }}>Paracosm</span>
-            </Link>
-            .
+            </Link>{' '}
+            and{' '}
+            <Link external url="https://futureconnoisseurs.com/">
+              <span style={{ color: '#edac07' }}>Future Connoisseurs</span>
+            </Link>{' '}
+            in my free time.
           </Text>
         </Section>
         <Section>
@@ -80,19 +84,6 @@ const HomePage = () => {
               <span style={{ color: '#EC2059' }}>Pendo</span>
             </Link>
             .
-          </Text>
-        </Section>
-        <Section>
-          <Text type="h2">
-            I&apos;m building{' '}
-            <Link external url="https://scope.so/">
-              <span style={{ color: '#f76c6c' }}>Scope</span>
-            </Link>{' '}
-            and{' '}
-            <Link external url="https://futureconnoisseurs.com/">
-              <span style={{ color: '#edac07' }}>Future Connoisseurs</span>
-            </Link>{' '}
-            in my free time.
           </Text>
         </Section>
       </Content>

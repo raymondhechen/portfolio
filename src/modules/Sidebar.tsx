@@ -29,36 +29,36 @@ type Props = {
 
 const Sidebar = ({ toggleTheme }: Props) => {
   const router = useRouter()
-
   const theme = useContext(ThemeContext)
-  const homePathMatch = router.pathname === '/'
-  const photographyPathMatch = router.pathname.startsWith('/photography')
-  const writingPathMatch = router.pathname.startsWith('/writing')
 
   return (
     <SidebarContainer>
-      <Column>
+      <Column style={{ gap: '12px' }}>
         <Link url="/">
-          <Button type="tertiary" icon="home" active={!!homePathMatch} />
+          <Button type="tertiary" icon="home" active={router.pathname === '/'} />
         </Link>
-        <div style={{ height: '12px' }} />
-        <Link url="/photography">
-          <Button type="tertiary" icon="photo" active={!!photographyPathMatch} />
+        <Link url="/futureconnoisseurs">
+          <Button
+            type="tertiary"
+            icon="brand-future-connoisseurs"
+            active={router.pathname.startsWith('/futureconnoisseurs')}
+          />
         </Link>
-        <div style={{ height: '12px' }} />
-        <Link url="/writing">
-          <Button type="tertiary" icon="pencil" active={!!writingPathMatch} />
+        <Link url="/retool">
+          <Button
+            type="tertiary"
+            icon="brand-retool"
+            active={router.pathname.startsWith('/retool')}
+          />
         </Link>
       </Column>
-      <Column>
+      <Column style={{ gap: '12px' }}>
         <Link url="https://twitter.com/raymondhechen" external>
           <Button type="tertiary" icon="twitter" />
         </Link>
-        <div style={{ height: '12px' }} />
         <Link url="https://www.linkedin.com/in/raymondhechen/" external>
           <Button type="tertiary" icon="linkedin" />
         </Link>
-        <div style={{ height: '12px' }} />
         <Button
           type="tertiary"
           icon="brightness"

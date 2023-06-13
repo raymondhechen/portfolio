@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import styled from 'styled-components'
+import styled, { CSSProperties } from 'styled-components'
 
 const ColumnContainer = styled.div`
   display: flex;
@@ -9,10 +9,11 @@ const ColumnContainer = styled.div`
 
 type Props = {
   children: ReactNode
+  style?: CSSProperties
 }
 
-const Column = ({ children }: Props) => {
-  return <ColumnContainer>{children}</ColumnContainer>
+const Column = ({ children, style }: Props) => {
+  return <ColumnContainer style={style}>{children}</ColumnContainer>
 }
 
 export default Column
