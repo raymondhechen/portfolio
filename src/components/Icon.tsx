@@ -9,6 +9,7 @@ import {
 } from '@tabler/icons'
 import IconFutureConnoisseurs from '../assets/futureconnoisseurs.svg'
 import IconRetool from '../assets/retool.svg'
+import IconParacosm from '../assets/paracosm.svg'
 
 export type IconType =
   | 'home'
@@ -19,6 +20,7 @@ export type IconType =
   | 'twitter'
   | 'brand-future-connoisseurs'
   | 'brand-retool'
+  | 'brand-paracosm'
 
 type Props = {
   type: IconType
@@ -58,6 +60,10 @@ const Icon = ({ type, color, size = 24, stroke = 1.5, style, className }: Props)
       break
     case 'brand-retool':
       IconNode = <IconRetool />
+      additionalProps.fill = 'hsl(247,3.4%,50.7%)'
+      break
+    case 'brand-paracosm':
+      IconNode = <IconParacosm />
       additionalProps.fill = 'hsl(247,3.4%,50.7%)'
       break
     default:

@@ -37,6 +37,13 @@ const Sidebar = ({ toggleTheme }: Props) => {
         <Link url="/">
           <Button type="tertiary" icon="home" active={router.pathname === '/'} />
         </Link>
+        <Link url="/paracosm">
+          <Button
+            type="tertiary"
+            icon="brand-paracosm"
+            active={router.pathname.startsWith('/paracosm')}
+          />
+        </Link>
         <Link url="/futureconnoisseurs">
           <Button
             type="tertiary"
