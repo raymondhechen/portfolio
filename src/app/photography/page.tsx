@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import Page from '@/modules/Page'
-import { styled } from 'styled-components'
-import { photographyRepository } from './repository'
-import Image from 'next/image'
+import Page from "@/modules/Page";
+import { styled } from "styled-components";
+import { photographyRepository } from "./repository";
+import Image from "next/image";
 
 const Content = styled.div`
   display: grid;
@@ -18,9 +18,9 @@ const Content = styled.div`
   &:after {
     padding-bottom: 30px;
     height: 100%;
-    content: '';
+    content: "";
   }
-`
+`;
 
 const ImageContainer = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ const ImageContainer = styled.div`
   position: relative;
   border-radius: 4px;
   overflow: hidden;
-`
+`;
 
 const PhotographyPage = () => {
   return (
@@ -37,16 +37,18 @@ const PhotographyPage = () => {
         {photographyRepository.map((photo) => (
           <ImageContainer key={photo}>
             <Image
-              alt={photo}
-              style={{ objectFit: 'cover' }}
               src={photo}
+              blurDataURL={photo}
+              alt={photo}
               fill
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
             />
           </ImageContainer>
         ))}
       </Content>
     </Page>
-  )
-}
+  );
+};
 
-export default PhotographyPage
+export default PhotographyPage;

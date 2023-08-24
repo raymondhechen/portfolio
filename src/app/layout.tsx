@@ -3,10 +3,11 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import StyledComponentsRegistry from '../lib/registry'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode } from 'react'
 import { ThemeProvider, styled } from 'styled-components'
 import { darkTheme, lightTheme } from '@/styles/theme'
 import Sidebar from '@/modules/Sidebar'
+import useDarkMode from '@/styles/useDarkMode'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,18 +20,7 @@ const AppContainer = styled.div`
 `
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true)
-
-  useEffect(() => {
-    const prefersLightTheme = window.matchMedia('(prefers-color-scheme: light)')
-    if (prefersLightTheme.matches) {
-      setIsDarkTheme(false)
-    }
-  }, [])
-
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme)
-  }
+  const { isDarkTheme, toggleTheme } = useDarkMode()
 
   return (
     <html lang="en">
