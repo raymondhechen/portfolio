@@ -1,14 +1,13 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
-const parseBoolean = (boolString: string | null) => {
-  if (boolString === null) return null
+const parseBoolean = (boolString: string) => {
   return boolString === 'true'
 }
 
 const useDarkMode = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean | null>(
-    parseBoolean(localStorage.getItem('dark')) ?? null
-  )
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true)
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem('dark')
