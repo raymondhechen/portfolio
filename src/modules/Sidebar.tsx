@@ -1,14 +1,16 @@
+'use client'
+
 import React from 'react'
-import { useRouter } from 'next/router'
 import { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import Button from '../components/Button'
 import Column from '../components/Column'
 import Link from '../components/Link'
+import { usePathname } from 'next/navigation'
 
 const SidebarContainer = styled.div`
   width: auto;
-  height: 100%;
+  height: 100vh;
   border-right: 1px solid ${(props) => props.theme.colors.gray7};
   transition: border 0.2s ease-in-out;
   display: flex;
@@ -28,34 +30,20 @@ type Props = {
 }
 
 const Sidebar = ({ toggleTheme }: Props) => {
-  const router = useRouter()
+  const pathname = usePathname()
   const theme = useContext(ThemeContext)
 
   return (
     <SidebarContainer>
       <Column style={{ gap: '12px' }}>
         <Link url="/">
-          <Button type="tertiary" icon="home" active={router.pathname === '/'} />
+          <Button type="tertiary" icon="home" active={pathname === '/'} />
         </Link>
-        <Link url="/paracosm">
+        <Link url="/photography">
           <Button
             type="tertiary"
-            icon="brand-paracosm"
-            active={router.pathname.startsWith('/paracosm')}
-          />
-        </Link>
-        <Link url="/futureconnoisseurs">
-          <Button
-            type="tertiary"
-            icon="brand-future-connoisseurs"
-            active={router.pathname.startsWith('/futureconnoisseurs')}
-          />
-        </Link>
-        <Link url="/retool">
-          <Button
-            type="tertiary"
-            icon="brand-retool"
-            active={router.pathname.startsWith('/retool')}
+            icon="photo"
+            active={pathname.startsWith('/photography')}
           />
         </Link>
       </Column>
@@ -70,7 +58,7 @@ const Sidebar = ({ toggleTheme }: Props) => {
           type="tertiary"
           icon="brightness"
           onClick={toggleTheme}
-          active={theme.type === 'dark'}
+          active={theme?.type === 'dark'}
         />
       </Column>
     </SidebarContainer>

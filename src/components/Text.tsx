@@ -1,6 +1,7 @@
+'use client'
+
 import styled from 'styled-components'
-import type { FC, ReactNode } from 'react'
-import type { CSSProperties } from 'styled-components'
+import type { CSSProperties, FC, ReactNode } from 'react'
 
 type TextType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'b1' | 'b2' | 'b3'
 type TextWeight = 300 | 400 | 500 | 600

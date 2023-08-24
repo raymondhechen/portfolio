@@ -1,5 +1,7 @@
-import type { ReactNode } from 'react'
-import styled, { CSSProperties } from 'styled-components'
+'use client'
+
+import type { CSSProperties, ReactNode } from 'react'
+import styled from 'styled-components'
 
 const ColumnContainer = styled.div`
   display: flex;

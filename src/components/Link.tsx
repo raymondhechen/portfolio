@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC, ReactNode } from 'react'
 import NextLink from 'next/link'
 import styled from 'styled-components'
@@ -18,11 +20,9 @@ type Props = {
 const Link: FC<Props> = ({ external, children, url }) => {
   if (external) {
     return (
-      <NextLink href={url} passHref>
-        <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
-          {children}
-        </StyledExternalLink>
-      </NextLink>
+      <StyledExternalLink href={url} target="_blank" rel="noopener noreferrer">
+        {children}
+      </StyledExternalLink>
     )
   }
 

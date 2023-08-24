@@ -1,3 +1,5 @@
+'use client'
+
 import { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 
@@ -8,8 +10,6 @@ const PageContainer = styled.div`
   flex-direction: column;
   // if overflow scroll happens and this component is nested in another full width/height element, there's actually no bottom padding
   // https://alexandergottlieb.com/2018/02/22/overflow-scroll-and-the-right-padding-problem-a-css-only-solution/
-  padding: 30px 40px;
-  box-sizing: border-box;
   overflow-y: auto;
 
   @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {

@@ -1,14 +1,16 @@
+'use client'
+
 import React from 'react'
 import styled from 'styled-components'
 import Link from '../components/Link'
 import Text from '../components/Text'
 import Page from '../modules/Page'
-import Head from 'next/head'
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 40px;
   height: 100%;
   width: 80%;
   // brute force margin so that Page component can be reused for writing posts too
@@ -32,10 +34,6 @@ const Section = styled.div`
 const HomePage = () => {
   return (
     <Page>
-      <Head>
-        <title>Raymond Chen</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <Content>
         <Title>
           <Text type="h1">Hey, I&apos;m Raymond!</Text>
@@ -51,10 +49,6 @@ const HomePage = () => {
               <span style={{ color: '#005587' }}>Duke</span>
             </Link>
             . I&apos;m building{' '}
-            <Link external url="https://paracosm.design/">
-              <span style={{ color: '#7D7876' }}>Paracosm</span>
-            </Link>{' '}
-            and{' '}
             <Link external url="https://futureconnoisseurs.com/">
               <span style={{ color: '#edac07' }}>Future Connoisseurs</span>
             </Link>{' '}
@@ -65,7 +59,7 @@ const HomePage = () => {
           <Text type="h2">
             I was previously investing at{' '}
             <Link external url="https://www.dormroomfund.com/">
-              <span style={{ color: '#551f92' }}>Dorm Room Fund</span>
+              <span style={{ color: '#6f2fb8' }}>Dorm Room Fund</span>
             </Link>
             , sustaining growth at{' '}
             <Link external url="https://www.charliehealth.com/">

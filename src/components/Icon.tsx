@@ -1,15 +1,14 @@
+'use client'
+
 import { CSSProperties, ReactNode } from 'react'
 import {
-  IconBrandLinkedin,
-  IconBrandTwitter,
-  IconBrightness,
-  IconHome,
-  IconPencil,
-  IconPhoto,
-} from '@tabler/icons'
-import IconFutureConnoisseurs from '../assets/futureconnoisseurs.svg'
-import IconRetool from '../assets/retool.svg'
-import IconParacosm from '../assets/paracosm.svg'
+  LinkedinIcon,
+  TwitterIcon,
+  HomeIcon,
+  PencilIcon,
+  ImageIcon,
+  MoonStarIcon,
+} from 'lucide-react'
 
 export type IconType =
   | 'home'
@@ -31,40 +30,35 @@ type Props = {
   className?: string
 }
 
-const Icon = ({ type, color, size = 24, stroke = 1.5, style, className }: Props) => {
+const Icon = ({
+  type,
+  color,
+  size = 22,
+  stroke = 1.5,
+  style,
+  className,
+}: Props) => {
   let IconNode: ReactNode
   let additionalProps: Record<string, string> = {}
 
   switch (type) {
     case 'home':
-      IconNode = <IconHome />
+      IconNode = <HomeIcon />
       break
     case 'photo':
-      IconNode = <IconPhoto />
+      IconNode = <ImageIcon />
       break
     case 'pencil':
-      IconNode = <IconPencil />
+      IconNode = <PencilIcon />
       break
     case 'brightness':
-      IconNode = <IconBrightness />
+      IconNode = <MoonStarIcon />
       break
     case 'twitter':
-      IconNode = <IconBrandTwitter />
+      IconNode = <TwitterIcon />
       break
     case 'linkedin':
-      IconNode = <IconBrandLinkedin />
-      break
-    case 'brand-future-connoisseurs':
-      IconNode = <IconFutureConnoisseurs />
-      additionalProps.fill = 'hsl(247,3.4%,50.7%)'
-      break
-    case 'brand-retool':
-      IconNode = <IconRetool />
-      additionalProps.fill = 'hsl(247,3.4%,50.7%)'
-      break
-    case 'brand-paracosm':
-      IconNode = <IconParacosm />
-      additionalProps.fill = 'hsl(247,3.4%,50.7%)'
+      IconNode = <LinkedinIcon />
       break
     default:
       return <div />
@@ -74,7 +68,7 @@ const Icon = ({ type, color, size = 24, stroke = 1.5, style, className }: Props)
     <IconNode.type
       size={size}
       color={color}
-      stroke={stroke}
+      strokeWidth={stroke}
       style={style}
       className={className}
       {...additionalProps}

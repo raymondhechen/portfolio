@@ -1,3 +1,5 @@
+'use client'
+
 import styled, { useTheme } from 'styled-components'
 import type { ReactNode } from 'react'
 import type { IconType } from './Icon'
@@ -30,7 +32,7 @@ const ButtonContainer = styled.button`
 type ButtonType = 'primary' | 'secondary' | 'tertiary'
 
 type Props = {
-  type: ButtonType
+  type?: ButtonType
   onClick?: () => void
   icon?: IconType
   children?: ReactNode
@@ -38,13 +40,15 @@ type Props = {
   active?: boolean
 }
 
-const Button = ({ type, onClick, icon, children, color, active = false }: Props) => {
+const Button = ({
+  type,
+  onClick,
+  icon,
+  children,
+  color,
+  active = false,
+}: Props) => {
   const theme = useTheme()
-
-  let IconComponent: ReactNode | undefined
-  if (icon) {
-    IconComponent = <Icon type={icon} />
-  }
 
   let ButtonComponent: ReactNode
   switch (type) {
@@ -56,8 +60,9 @@ const Button = ({ type, onClick, icon, children, color, active = false }: Props)
         <ButtonContainer
           onClick={onClick}
           theme={theme}
-          style={{ color: active ? theme.colors.accentSolid : color }}>
-          {icon && IconComponent}
+          style={{ color: active ? theme.colors.accentSolid : color }}
+        >
+          {icon && <Icon type={icon} />}
           {icon && children && <div style={{ width: '8px' }} />}
           {children}
         </ButtonContainer>
