@@ -10,7 +10,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 40px;
+  padding-left: 60px;
   height: 100%;
   width: 80%;
   // brute force margin so that Page component can be reused for writing posts too
