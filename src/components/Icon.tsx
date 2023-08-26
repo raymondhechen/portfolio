@@ -8,18 +8,17 @@ import {
   PencilIcon,
   ImageIcon,
   MoonStarIcon,
+  ScrollTextIcon,
 } from 'lucide-react'
 
 export type IconType =
   | 'home'
   | 'photo'
   | 'pencil'
+  | 'thread'
   | 'brightness'
   | 'linkedin'
   | 'twitter'
-  | 'brand-future-connoisseurs'
-  | 'brand-retool'
-  | 'brand-paracosm'
 
 type Props = {
   type: IconType
@@ -59,6 +58,9 @@ const Icon = ({
       break
     case 'linkedin':
       IconNode = <LinkedinIcon />
+      break
+    case 'thread':
+      IconNode = <ScrollTextIcon />
       break
     default:
       return <div />

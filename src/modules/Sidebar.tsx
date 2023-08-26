@@ -35,7 +35,7 @@ const Sidebar = ({ toggleTheme }: Props) => {
 
   return (
     <SidebarContainer>
-      <Column style={{ gap: '12px' }}>
+      <Column style={{ gap: '14px' }}>
         <Link url="/">
           <Button type="tertiary" icon="home" active={pathname === '/'} />
         </Link>
@@ -46,8 +46,15 @@ const Sidebar = ({ toggleTheme }: Props) => {
             active={pathname.startsWith('/photography')}
           />
         </Link>
+        <Link url="/threads">
+          <Button
+            type="tertiary"
+            icon="thread"
+            active={pathname.startsWith('/thread')}
+          />
+        </Link>
       </Column>
-      <Column style={{ gap: '12px' }}>
+      <Column style={{ gap: '14px' }}>
         <Link url="https://twitter.com/raymondhechen" external>
           <Button type="tertiary" icon="twitter" />
         </Link>

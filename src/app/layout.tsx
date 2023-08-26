@@ -2,12 +2,13 @@
 
 import './globals.css'
 import { Inter } from 'next/font/google'
-import StyledComponentsRegistry from '../lib/registry'
+import StyledComponentsRegistry from '../styles/registry'
 import { ReactNode } from 'react'
 import { ThemeProvider, styled } from 'styled-components'
 import { darkTheme, lightTheme } from '@/styles/theme'
 import Sidebar from '@/modules/Sidebar'
 import useDarkMode from '@/styles/useDarkMode'
+import { DarkModeProvider } from '@/styles/DarkModeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,12 +27,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-            <AppContainer>
-              <Sidebar toggleTheme={toggleTheme} />
-              {children}
-            </AppContainer>
-          </ThemeProvider>
+          <DarkModeProvider isDarkTheme={isDarkTheme}>
+            <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+              <AppContainer>
+                <Sidebar toggleTheme={toggleTheme} />
+                {children}
+              </AppContainer>
+            </ThemeProvider>
+          </DarkModeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
