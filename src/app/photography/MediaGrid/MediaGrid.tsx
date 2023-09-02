@@ -5,7 +5,7 @@ import { styled } from 'styled-components'
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: 25px;
   grid-gap: 10px;
   width: 100%;

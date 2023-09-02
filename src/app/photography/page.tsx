@@ -4,7 +4,7 @@ import Page from '@/modules/Page'
 import { styled } from 'styled-components'
 import MediaGrid from './MediaGrid/MediaGrid'
 import Media from './MediaGrid/Media'
-import { santaMonica, sequoia } from './repository'
+import { blueAngels, santaMonica, sequoia } from './repository'
 
 const Content = styled.div`
   padding: 30px;
@@ -33,6 +33,11 @@ const PhotographyPage = () => {
         </MediaGrid>
         <MediaGrid>
           {sequoia.map((photo) => (
+            <Media {...photo} />
+          ))}
+        </MediaGrid>
+        <MediaGrid>
+          {blueAngels.map((photo) => (
             <Media {...photo} />
           ))}
         </MediaGrid>
