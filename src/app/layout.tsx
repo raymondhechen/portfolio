@@ -1,41 +1,31 @@
-'use client'
-
+import type { Metadata } from 'next'
+import { Geist } from 'next/font/google'
+import Header from './Header'
+import Footer from './Footer'
 import './globals.css'
-import { Inter } from 'next/font/google'
-import StyledComponentsRegistry from '../styles/registry'
-import { ReactNode } from 'react'
-import { ThemeProvider, styled } from 'styled-components'
-import { darkTheme, lightTheme } from '@/styles/theme'
-import Sidebar from '@/modules/Sidebar'
-import useDarkMode from '@/styles/useDarkMode'
-import { DarkModeProvider } from '@/styles/DarkModeProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
 
-const AppContainer = styled.div`
-  background-color: ${(props) => props.theme.colors.gray1};
-  transition: background-color 0.2s ease-in-out;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-`
+export const metadata: Metadata = {
+  title: 'Raymond Chen',
+}
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  const { isDarkTheme, toggleTheme } = useDarkMode()
-
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <DarkModeProvider isDarkTheme={isDarkTheme}>
-            <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-              <AppContainer>
-                <Sidebar toggleTheme={toggleTheme} />
-                {children}
-              </AppContainer>
-            </ThemeProvider>
-          </DarkModeProvider>
-        </StyledComponentsRegistry>
+      <body
+        className={`${geistSans.className} flex flex-col gap-4 antialiased`}
+      >
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   )
