@@ -1,16 +1,12 @@
 import { WORLDS_ALBUMS } from '../data'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import Carousel from '@/components/Carousel'
 
-const AlbumPage = async ({
-  params,
-}: {
-  params: Promise<{ album: string }>
-}) => {
-  const { album } = await params
-  const foundAlbumIndex = WORLDS_ALBUMS.findIndex((a) => a.slug === album)
+const AlbumPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params
+  const foundAlbumIndex = WORLDS_ALBUMS.findIndex((a) => a.slug === slug)
   const foundAlbum = WORLDS_ALBUMS[foundAlbumIndex]
   if (!foundAlbum) {
     return notFound()
@@ -46,23 +42,13 @@ const AlbumPage = async ({
             {foundAlbum.description}
           </div>
         </div>
-        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-none pb-6">
-          {foundAlbum.images?.map((image, index) => (
-            <div key={index} className="flex-none snap-center">
-              <div className="relative h-[65vh]">
-                <Image
-                  src={image.src}
-                  alt={image.alt || foundAlbum.title}
-                  width={1600}
-                  height={1200}
-                  className="h-full w-auto rounded-sm object-contain"
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  priority={index < 2}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <Carousel
+          items={foundAlbum.images?.map((image) => ({
+            href: image.src,
+            imgSrc: image.src,
+            imgAlt: image.alt || foundAlbum.title,
+          }))}
+        />
       </div>
       <div className="flex w-full justify-between text-sm text-gray-500">
         {previousAlbum ? (
