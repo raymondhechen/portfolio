@@ -1,52 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-const ALBUMS = [
-  {
-    title: 'fjords',
-    cover: '/fjords.jpg',
-    year: 2025,
-  },
-  {
-    title: 'ocean beach',
-    cover: '/oceanbeach.jpg',
-    year: 2024,
-  },
-  {
-    title: 'mendocino',
-    cover: '/mendocino.jpg',
-    year: 2024,
-  },
-  {
-    title: 'sequoia',
-    cover: '/sequoia.jpg',
-    year: 2023,
-  },
-  {
-    title: "o'ahu",
-    cover: '/oahu.jpg',
-    year: 2023,
-  },
-  {
-    title: 'santorini',
-    cover: '/santorini.jpg',
-    year: 2022,
-  },
-]
+import { WORLDS_ALBUMS } from './data'
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-1 items-center overflow-hidden">
-      <div className="flex w-full items-center gap-4 overflow-x-auto overscroll-x-none px-12 py-8">
-        {ALBUMS.map((album) => (
+    <div className="flex flex-col gap-8">
+      <div>
+        <div className="text-2xl font-medium">worlds</div>
+        <div>a journey through landscapes and places.</div>
+      </div>
+      <div className="flex w-full snap-x snap-mandatory items-center gap-4 overflow-x-auto overscroll-x-none">
+        {WORLDS_ALBUMS.map((album) => (
           <Link
-            href={`/worlds/${album.title}`}
+            href={`/worlds/${album.slug}`}
             key={album.title}
             className="flex shrink-0 flex-col gap-2 transition-all hover:opacity-80"
           >
-            <div className="relative aspect-[2/3] h-[80vh]">
+            <div className="relative aspect-[2/3] h-[65vh] snap-center">
               <Image
-                src={album.cover}
+                src={album.thumbnail}
                 alt={album.title}
                 fill
                 sizes="(max-width: 768px) 80vh, 50vw"
@@ -61,6 +33,6 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </main>
+    </div>
   )
 }

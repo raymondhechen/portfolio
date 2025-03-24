@@ -21,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.className} flex flex-col gap-4 antialiased`}
+        className={`${geistSans.className} flex min-h-screen flex-col gap-4 antialiased`}
       >
         <Header />
-        {children}
+        <div className="w-full flex-1 px-6 py-2 sm:px-12 sm:py-4">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
