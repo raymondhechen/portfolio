@@ -1,7 +1,6 @@
 'use client'
 
 import clsx from 'clsx'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -26,7 +25,6 @@ const Header = () => {
   return (
     <div className="flex w-full items-center justify-between px-6 pt-6 sm:px-12">
       <Link href="/" className="flex items-center gap-2">
-        {/* <Image src="/logo.png" alt="logo" width={20} height={20} /> */}
         <h1 className="text-xl">raymond chen</h1>
       </Link>
 
@@ -70,8 +68,7 @@ const Header = () => {
               className="flex items-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Image src="/logo.png" alt="logo" width={20} height={20} />
-              <h1 className="text-2xl">raymond</h1>
+              <h1 className="text-2xl">raymond chen</h1>
             </Link>
             <button
               onClick={() => setIsMenuOpen(false)}
