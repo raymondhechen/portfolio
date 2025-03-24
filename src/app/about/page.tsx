@@ -27,8 +27,8 @@ const About = () => {
           </p>
           <p>
             Available for hire. Reach out at{' '}
-            <a href="mailto:hello@ray.day" className="underline">
-              hello@ray.day
+            <a href="mailto:hello@raymondchen.me" className="underline">
+              hello@raymondchen.me
             </a>
           </p>
         </div>

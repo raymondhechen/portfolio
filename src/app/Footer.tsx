@@ -6,8 +6,8 @@ const Footer = () => {
       <div>
         © {new Date().getFullYear()} Raymond Chen. All rights reserved.
       </div>
-      <Link href="mailto:hello@ray.day" className="hover:underline">
-        hello@ray.day
+      <Link href="mailto:hello@raymondchen.me" className="hover:underline">
+        hello@raymondchen.me
       </Link>
     </div>
   )
