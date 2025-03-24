@@ -2,6 +2,7 @@ import { WORLDS_ALBUMS } from '../data'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 const AlbumPage = async ({
   params,
@@ -25,7 +26,11 @@ const AlbumPage = async ({
   return (
     <div className="flex flex-col gap-2">
       <div>
-        <Link href="/worlds" className="text-sm text-gray-500 hover:underline">
+        <Link
+          href="/worlds"
+          className="flex items-center gap-1 text-sm text-gray-500 hover:underline"
+        >
+          <ArrowLeft className="size-4" />
           back to worlds
         </Link>
       </div>
@@ -63,16 +68,21 @@ const AlbumPage = async ({
         {previousAlbum ? (
           <Link
             href={`/worlds/${previousAlbum.slug}`}
-            className="hover:underline"
+            className="flex items-center gap-1 hover:underline"
           >
+            <ArrowLeft className="size-4" />
             previous world
           </Link>
         ) : (
           <div />
         )}
         {nextAlbum ? (
-          <Link href={`/worlds/${nextAlbum.slug}`} className="hover:underline">
+          <Link
+            href={`/worlds/${nextAlbum.slug}`}
+            className="flex items-center gap-1 hover:underline"
+          >
             next world
+            <ArrowRight className="size-4" />
           </Link>
         ) : (
           <div />
